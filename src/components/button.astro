@@ -4,18 +4,28 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 export const button = cva([
     "shadow-fill w-fit transition-all py-4 px-12 leading-normal font-semibold font-mono text-foreground",
-    "border-2 border-foreground rounded-lg",
-]);
+    "border-2 border-white rounded-lg",
+], {
+    variants: {
+        variant: {
+            primary: 'bg-secondary-background text-white',
+        }
+    },
+    defaultVariants: {
+        variant: 'primary',
+    },
+});
 
 export interface Props
   extends HTMLAttributes<"button">,
     VariantProps<typeof button> {}
 
-const { class: className } = Astro.props;
+const { class: className, variant = 'primary' } = Astro.props;
 ---
 
 <button class={button({
     class: className,
+    variant,
 })}>
     <slot />
 </button>
