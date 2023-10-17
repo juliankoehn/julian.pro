@@ -1,0 +1,28 @@
+---
+import Button from "@/components/button.astro"
+import cloudServer from "./cloud_server.svg"
+---
+
+<section class="relative isolate items-center w-full justify-start mt-6 box-border mx-auto px-3 lg:mt-20">
+    <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-2 lg:gap-x-8">
+        <div class="px-6 lg:px-0 lg:pt-4 space-y-8">
+            <h1 class="font-sans font-semibold text-foreground text-3xl lg:text-7xl">
+                <span class="text-secondary drop-shadow-xl">Innovative</span> Solutions To Improve Your Business
+            </h1>
+            <p class="text-lg lg:mb-2 lg:mt-4 lg:text-2xl lg:w-[30ch]">
+                Bringing your business into the digital age through innovative strategies and seamless execution.
+            </p>
+            <div class="flex gap-8">
+                <Button class="bg-orange-400">
+                    Say Hello
+                </Button>
+                <Button class="bg-white">
+                    Explore
+                </Button>
+            </div>
+        </div>
+        <div class="mt-16 sm:mt-24 lg:flex-shrink-0 lg:flex-grow">
+            <img class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl" src={cloudServer.src} width={cloudServer.width} height={cloudServer.height} />
+        </div>
+    </div>
+</section>

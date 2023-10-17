@@ -1,0 +1,41 @@
+---
+
+---
+<script>
+    let width: string = "0%";
+
+    const scrollHandler = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        width = `${(window.scrollY / scrollable) * 100}%`;
+        document.querySelector('.page-scroll-progress').style.width = width;
+    };
+
+    document.addEventListener('scroll', scrollHandler)
+</script>
+
+<div class="mx-auto max-w-7xl w-full sticky top-1 z-50">
+    <div class="bg-white border border-transparent sticky-border lg:w-full print:hidden p-4 xl:px-10">
+        <div class="page-scroll-progress" />
+        <div class="w-full mx-auto print:hidden max-w-6xl">
+            <div class="flex justify-between">
+                <div id="#logo" class="flex items-center justify-between lg:mr-3 lg:w-auto flex-row w-full">
+                    <span class="font-mono font-semibold">JK</span>
+                </div>
+                <div id="desk-nav" class="hidden lg:flex items-center">
+                    <nav class="flex gap-x-12">
+                        <a href="#" class="text-sm block text-center w-auto py-px font-mono relative">
+                            Home
+                        </a>
+                        <a href="#" class="text-sm block text-center w-auto py-px font-mono relative">
+                            About
+                        </a>
+                        <a href="#" class="text-sm block text-center w-auto py-px font-mono relative">
+                            Projects
+                        </a>
+                    </nav>
+                </div>
+                <div> </div>
+            </div>
+        </div>
+    </div>
+</div>

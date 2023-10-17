@@ -1,0 +1,73 @@
+---
+import type { Person, WithContext } from "schema-dts"
+import Navbar from "@/components/navbar.astro"
+import Footer from "@/components/footer.astro"
+
+import Hero from "@/sections/hero.astro"
+
+
+const metaData = {
+    title: "Julian Koehn",
+    summary: "I'm a software engineer, currently working at Astro.",
+    get description() {
+        return `${this.title} - ${this.summary}`
+    },
+}
+
+const jsonLd: WithContext<Person> = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Julian Koehn",
+    alternateName: "Julian",
+    description: metaData.summary,
+    email: "me@julian.pro"
+}
+
+if (Astro.site) {
+  jsonLd["@id"] = `${Astro.site}#identity`
+  jsonLd.url = Astro.site.toString()
+}
+
+---
+
+<html lang="en">
+	<head prefix="og: https://ogp.me/ns# profile: https://ogp.me/ns/profile#">
+        <!-- Common head tags -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />		
+		<meta name="generator" content={Astro.generator} />
+		<title>{metaData.title}</title>
+        <meta name="description" content={metaData.description} />
+        {Astro.site && <link rel="canonical" href={Astro.site} />}
+
+        <!-- Open Graph -->
+        <meta property="og:title" content={metaData.title} />
+        <meta property="og:description" content={metaData.summary} />
+        <meta property="og:type" content="profile" />
+        <meta property="profile:first_name" content="Stefan" />
+        <meta property="profile:last_name" content="Samson" />
+        <meta property="profile:username" content="SSbit01" />
+        <meta property="profile:gender" content="male" />
+        {Astro.site && (
+            <meta property="og:url" content={Astro.site} />
+            <meta property="og:image" content={`${Astro.site}images/og.png`} />
+        )}
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaData.title} />
+        <meta name="twitter:description" content={metaData.description} />
+        {Astro.site && <meta name="twitter:image" content={`${Astro.site}images/2-1.png`} />}
+        
+        <script src="https://statsy.observer/clnuimax10007ql0hx056h19p.js" defer></script>
+	</head>
+	<body class="mt-3 bg-background text-foreground">
+        <Navbar />
+        <main class="flex items-center flex-col w-full">
+            <Hero />
+        </main>
+        <Footer />
+	</body>
+</html>
