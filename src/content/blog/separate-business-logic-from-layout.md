@@ -3,7 +3,7 @@ title: Decouple Your Code - How to Separate Business Logic from UI
 description: Learn proven techniques like custom hooks, HOCs and redux to decouple React business logic from UI code for cleaner, more maintainable apps.
 author: "Julian Köhn"
 image:
-  url: "../../assets/images/use-scheduler.png"
+  url: "../../assets/images/eat_sleep_code_repeat.roman-synkevych.unsplash.jpg"
   alt: "Diagram showing separation of business logic and UI components."  
 date: 2023-10-18
 topics: ["react", "code quality", "clean code"]

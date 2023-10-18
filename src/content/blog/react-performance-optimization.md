@@ -3,7 +3,7 @@ title: React Performance Tuning - How to optimize your App
 description: Learn techniques like avoiding unnecessary re-renders, virtualizing lists, code splitting, and memoization to optimize and speed up React apps.
 author: "Julian Köhn"
 image:
-  url: "../../assets/images/use-scheduler.png"
+  url: "../../assets/images/speed.chuttersnap.unsplash.jpg"
   alt: "The Astro logo with the word One."
 date: 2023-10-20
 topics: ["react", "performance", "optimization"]
