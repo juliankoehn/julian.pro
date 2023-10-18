@@ -81,6 +81,7 @@ const { title, description, index = 'index' } = Astro.props;
     ></script>
   </head>
   <body class="mt-3 bg-background text-foreground">
+    <div id="top" />
     <Navbar />
     <main class="flex items-center flex-col w-full">
       <slot />
@@ -88,3 +89,15 @@ const { title, description, index = 'index' } = Astro.props;
     <Footer />
   </body>
 </html>
+
+<style>
+    :global(html) {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+     :global(html) {
+       scroll-behavior: auto;
+     }
+   }
+</style>
