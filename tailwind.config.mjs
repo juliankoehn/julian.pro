@@ -7,11 +7,11 @@ export default {
 	theme: {
 		extend: {
             colors: {
-                background: "#162847", // '#f7fff7',
-                foreground: colors.orange[100], // "#FFE5A6", // "#313638",
+                background: colors.white, // '#f7fff7',
+                foreground: colors.zinc[900], // "#FFE5A6", // "#313638",
                 secondary: {
-                    background: colors.orange[500],
-                    foreground: colors.orange[100],
+                    background: colors.blue[400],
+                    foreground: colors.blue[700],
                 }, // '#ffe66d',
             },
             typography: (theme) => ({
@@ -61,18 +61,18 @@ export default {
                 '.sticky-border': {
                     borderColor: theme('colors.foreground'),
                     borderRadius: theme('borderRadius.xl'),
-                    boxShadow: `4px 4px ${theme('colors.white')}`,
+                    boxShadow: `4px 4px ${theme('colors.black')}`,
                     position: 'relative',
                 },
                 '.sticky-border .page-scroll-progress': {
-                    backgroundColor: theme('colors.orange.500'),
+                    backgroundColor: theme('colors.blue.400'),
                     bottom: '-5px',
                     height: '4px',
                     maxWidth: 'calc(100% - 50px)',
                     position: 'absolute'
                 },
                 '.shadow-fill': {
-                    boxShadow: `4px 4px 0 ${theme('colors.white')}`
+                    boxShadow: `4px 4px 0 ${theme('colors.black')}`
                 },
                 '.shadow-fill:hover': {
                     '--tw-translate-x': '2px',
