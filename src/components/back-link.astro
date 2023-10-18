@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import { cx } from 'class-variance-authority';
+import cn from "clsx"
+
+export interface Props
+  extends HTMLAttributes<"a"> {}
+
+const props = Astro.props;
+---
+
+<a {...props} class={cn("text-primary flex gap-4 focus:outline-none group", props.class)}>
+    <span>
+        <svg class="w-8 h-8 group-hover:-translate-x-4 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+    </span>
+    <h6 class="text-lg font-medium text-primary">
+        <slot />
+    </h6>
+</a>

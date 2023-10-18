@@ -1,5 +1,26 @@
 ---
-
+const LINKS = [
+    {
+        name: 'Home',
+        to: '/#top'
+    },
+    {
+        name: 'About',
+        to: '/#about'
+    },
+    {
+        name: 'Blog',
+        to: '/blog'
+    }
+    // {
+    //     name: 'Projects',
+    //     to: '/#projects'
+    // },
+    // {
+    //     name: 'Contact',
+    //     to: '/#contact'
+    // },
+]
 ---
 <script>
     let width: string = "0%";
@@ -16,8 +37,9 @@
     document.addEventListener('scroll', scrollHandler)
 </script>
 
-<div class="mx-auto max-w-7xl px-6 lg:px-0 w-full sticky top-1 z-50">
-    <div class="bg-white border-2 border-black sticky-border lg:w-full print:hidden p-4 xl:px-10">
+<div class="px-5vw py-9 lg:py-12 sticky top-1 z-50">
+<div class="text-primary mx-auto max-w-8xl flex items-center justify-between">
+    <div class="bg-white border-2 border-black sticky-border w-full print:hidden p-4 xl:px-10">
         <div class="page-scroll-progress" />
         <div class="w-full mx-auto print:hidden">
             <div class="flex justify-between">
@@ -26,19 +48,17 @@
                 </a>
                 <div id="desk-nav" class="flex items-center">
                     <nav class="flex gap-x-6 lg:gap-x-12">
-                        <a href="/#top" class="text-sm block text-center w-auto py-px font-mono relative underlined">
-                            Home
-                        </a>
-                        <a href="/#about" class="text-sm block text-center w-auto py-px font-mono relative underlined">
-                            About
-                        </a>
-                        <a href="#" class="text-sm block text-center w-auto py-px font-mono relative underlined">
-                            Projects
-                        </a>
+                        {LINKS.map((link) => (
+                            <a href={link.to} class="text-sm block text-center w-auto py-px font-mono relative underlined">
+                                {link.name}    
+                            </a>
+                        ))}
+                        
                     </nav>
                 </div>
                 <div> </div>
             </div>
         </div>
     </div>
+</div>
 </div>

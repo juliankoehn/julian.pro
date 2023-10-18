@@ -1,0 +1,73 @@
+---
+import BackLink from '@/components/back-link.astro';
+import Layout from '@/layouts/layout.astro';
+import { Image } from 'astro:assets';
+import { type CollectionEntry, getCollection } from 'astro:content'
+
+const posts = await getCollection('blog')
+
+export async function getStaticPaths() {
+    const blogEntries = await getCollection('blog');
+
+	return blogEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry }
+	}))
+}
+type Props = {
+    entry: CollectionEntry<'blog'>
+}
+
+const { entry } = Astro.props;
+
+
+const MAX_POSTS = 3
+
+const getRelatedPosts = (post: CollectionEntry<'blog'>) => {
+    const relatedPosts = posts.filter(
+		(p) => p.slug !== post.slug && p.data.topics.some((t) => post.data.topics.includes(t))
+	)
+	return relatedPosts.slice(0, MAX_POSTS)
+}
+
+const relatedPosts = getRelatedPosts(entry)
+
+const { Content, remarkPluginFrontmatter } = await entry.render();
+---
+<Layout title={entry.data.title}>
+    
+<div class="px-5vw w-full mx-auto max-w-7xl">
+    <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl mb-10 mt-24 lg:mb-24">
+        <div class="col-span-full flex justify-between lg:col-span-8 lg:col-start-3">
+            <BackLink href="/blog">
+                Back to overview
+            </BackLink>
+        </div>
+    </div>
+
+    <header class="relative">
+        <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl mb-12">
+            <div class="col-span-full lg:col-span-8 lg:col-start-3">
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                    {entry.data.title}
+                </h2>
+                <p class="text-lg font-medium text-gray-400 dark:text-slate-500 mt-2">
+                    {entry.data.date.toLocaleDateString()} - {remarkPluginFrontmatter.minutesRead}
+                </p>
+            </div>
+            {entry.data.image && (
+                <div class="col-span-full mt-10 lg:col-span-10 lg:col-start-2 lg:mt-16">
+                    <div class="aspect-h-4 aspect-w-3 md:aspect-h-2 md:aspect-w-3">
+                        <Image class="rounded-lg object-cover object-center transition-opacity" src={entry.data.image.url} alt={entry.data.image.alt} />    
+                    </div>
+                </div>
+            )}
+        </div>
+        
+    </header>
+</div>
+<div class="prose">
+<Content />
+</div>
+</Layout>
+

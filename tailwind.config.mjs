@@ -7,12 +7,18 @@ export default {
 	theme: {
 		extend: {
             colors: {
+                primary: {
+                    DEFAULT: colors.black,
+                },
                 background: colors.white, // '#f7fff7',
                 foreground: colors.zinc[900], // "#FFE5A6", // "#313638",
                 secondary: {
                     background: colors.blue[400],
                     foreground: colors.blue[700],
                 }, // '#ffe66d',
+            },
+            spacing: {
+                '5vw': '5vw',
             },
             typography: (theme) => ({
                 primary: {
@@ -102,7 +108,9 @@ export default {
                     boxShadow: 'var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)',
                     transform: 'translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))'
                 },
-                
+                '.stack-sm': {
+                    boxShadow: `10px 10px 0 -1px ${theme('colors.black')}, 10px 10px 0 ${theme('colors.black')}`,
+                }
             })
         }),
     ],

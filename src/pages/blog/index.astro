@@ -1,0 +1,60 @@
+---
+import BlogPost from "@/components/blog-post.astro";
+import Layout from "@/layouts/layout.astro";
+import { getCollection } from 'astro:content';
+
+const allBlogPosts = await getCollection('blog').then(
+    (collection) => collection.sort(
+        (a, b) => new Date(b.data.date).getMilliseconds() - new Date(a.data.date).getMilliseconds()
+    )
+);
+
+const tags = [...new Set(allBlogPosts.map((post) => post.data.topics).flat())];
+
+const pageTitle = "Blog";
+---
+
+<Layout title={pageTitle}>
+  <section class="w-full bg-white px-5vw py-24 sm:py-32">
+    <div class="max-w-8xl mx-auto w-full">
+      <h2 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+        Coding Insights
+        <br />
+         Enhance Your Skills
+      </h2>
+      <p class="text-primary max-w-xl leading-8 mt-6">
+        My blog shares practical insights into mastering languages like Golang,
+        Node.js, TypeScript, and React. Follow along with hands-on tutorials and
+        in-depth articles to grow as a developer.
+      </p>
+    </div>
+  </section>
+  <div class="w-full px-5vw mx-auto">
+    <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-8xl mb-14">
+        <div class="text-lg font-medium text-primary col-span-full mb-6">Search by Topics</div>
+        <div class="col-span-full -mb-4 -mr-4 flex flex-wrap lg:col-span-10">
+            {
+                tags.map((tag) => (
+                    <a href={`/blog/topics/${tag}`} class="relative mb-4 me-4 block h-auto w-auto cursor-pointer rounded-full px-6 py-3 transition text-primary bg-slate-100 hover:bg-slate-200">
+                        <span>{tag}</span>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+  </div>
+
+  <section class="w-full px-5vw relative">
+    <div
+      class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl mb-64"
+    >
+      {
+        allBlogPosts.map((post) => (
+          <div class="col-span-4 mb-10">
+            <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image} />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
