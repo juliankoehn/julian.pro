@@ -1,8 +1,11 @@
 ---
 import Layout from "@/layouts/layout.astro";
 import type { Person, WithContext } from "schema-dts"
-import Navbar from "@/components/navbar.astro"
-import Footer from "@/components/footer.astro"
+import Golang from "@/assets/golang.svg"
+import DockerWhale from "@/assets/docker-whale.svg"
+import Terraform from "@/assets/terraform.svg"
+import Kubernetes from "@/assets/kubernetes.svg"
+import Github from "@/assets/github.svg"
 
 import Hero from "@/sections/hero.astro"
 
@@ -37,15 +40,35 @@ if (Astro.site) {
             <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
                 <div class="mx-auto w-full max-w-xl lg:mx-0">
                     <h2 class="font-sans font-semibold text-slate-950 text-3xl lg:text-6xl">Bringing Innovative Solutions to Life</h2>
-                    <div class="mt-6 text-lg leading-8 text-gray-600">
+                    <div class="mt-6 text-lg leading-8 text-gray-600 space-y-4">
                         <p>I'm Julian, a passionate full-stack developer, consultant, and coach driven to help companies succeed. I live and breathe code, designing tailored software, apps, and SaaS solutions from the ground up. My expertise spans everything from planning databases and architectures to coding front-end and back-end systems.</p>
                         <p>Beyond development, I help teams scale up through coaching and mentoring. I assist colleagues in advancing their skills and learning new languages like Golang. My leadership strengths build positive team cultures focused on growth.</p>
                         <p>On the infrastructure side, I handle complete IaaS setup with Terraform for AWS, Azure, and more. I can deploy entire Kubernetes clusters to support containerized services. My infrastructure skills combine with development knowledge to deliver comprehensive solutions.</p>
                         <p>I pride myself on bringing fresh ideas to make technology work for you. I rapidly prototype and test new concepts to find creative ways of overcoming challenges. My diverse set of talents allows me to architect robust, customized products that help your business reach the next level. Whether it's coaching colleagues or building infrastructure, I'm driven to excel and help you succeed.</p>
                     </div>
                 </div>
-                <div class="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
-                    logos
+                <div class="mx-auto grid w-full max-w-xl grid-cols-1 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
+                    <div class="grid grid-cols-3 gap-8">
+                        
+                       
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-full py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:max-w-none">
+                <h2 class="text-lg font-semibold leading-8 text-slate-950">Tech Stack</h2>
+                <div class="mx-auto mt-10 flex flex-row flex-wrap items-start gap-x-8 gap-y-10 lg:mx-0">
+                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={DockerWhale.src} width={DockerWhale.width} height={DockerWhale.height} alt="Docker" />
+                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={Terraform.src} width={Terraform.width} height={Terraform.height} alt="Terraform" />
+                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={Kubernetes.src} width={Kubernetes.width} height={Kubernetes.height} alt="Kubernetes" />
+                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={Github.src} width={Github.width} height={Github.height} alt="Github" />
+                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={Golang.src} width={Golang.width} height={Golang.height} alt="Golang" />
                 </div>
             </div>
         </div>
