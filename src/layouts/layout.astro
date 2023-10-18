@@ -3,7 +3,7 @@ import type { Person, WithContext } from "schema-dts";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
 
-import Hero from "@/sections/hero.astro";
+import { Umami } from 'astro-analytics';
 
 const metaData = {
   title: "Julian Koehn",
@@ -81,6 +81,7 @@ const { title, description, index = 'index' } = Astro.props;
     ></script>
   </head>
   <body class="mt-3 bg-background text-foreground">
+    <Umami id="12bd22fd-98f0-4a4a-93dd-969a281d68c7" src="https://analytics.eu.umami.is/script.js" />
     <div id="top" />
     <Navbar />
     <main class="flex items-center flex-col w-full">
