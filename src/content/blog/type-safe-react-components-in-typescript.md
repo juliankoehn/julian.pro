@@ -6,7 +6,7 @@ image:
   url: "../../assets/images/use-scheduler.png"
   alt: "The Astro logo with the word One."
 date: 2023-10-19
-topics: ["astro", "blogging", "learning in public"]
+topics: ["react", "typescript", "type safety"]
 ---
 
 TypeScript brings typed goodness to React. Writing components in TS provides end-to-end catch safety nets. It takes a bit more work upfront, but prevents entire classes of runtime errors later on.

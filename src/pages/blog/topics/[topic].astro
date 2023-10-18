@@ -1,28 +1,8 @@
 ---
 import Layout from "@/layouts/layout.astro";
 
-export async function getStaticPaths() {
-  const allPosts = await Astro.glob("../*.md");
-
-  const uniqueTags = [
-    ...new Set(allPosts.map((post) => post.frontmatter.topics).flat()),
-  ];
-
-  return uniqueTags.map((topic) => {
-    const filteredPosts = allPosts.filter((post) =>
-      post.frontmatter.topics.includes(topic)
-    );
-    return {
-      params: { topic },
-      props: { posts: filteredPosts },
-    };
-  });
-}
-
-const { topic } = Astro.params;
-const { posts } = Astro.props;
 ---
 
-<Layout title={topic}>
-    <p>Posts tagged with {topic}</p>
+<Layout>
+   work in progress
 </Layout>
