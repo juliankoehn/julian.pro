@@ -58,6 +58,26 @@ export default {
         require('@tailwindcss/typography'),
         plugin(function ({ addBase, addComponents, addUtilities, theme }) {
             addComponents({
+                '.underlined': {
+                    position: 'relative',
+                    whiteSpace: 'nowrap'
+                },
+                '.underlined:after': {
+                    bottom: '-4px',
+                    content: '""',
+                    display: 'block',
+                    height: '2px',
+                    left: 0,
+                    position: 'absolute',
+                    transform: 'scaleX(0)',
+                    transformOrigin: 'left center',
+                    transition: 'transform .2s ease',
+                    width: '100%',
+                },
+                '.underlined:hover:after, .underlined:focus:after': {
+                    backgroundColor: 'currentColor',
+                    transform: 'scaleX(1)',
+                },
                 '.sticky-border': {
                     borderColor: theme('colors.foreground'),
                     borderRadius: theme('borderRadius.xl'),
@@ -82,22 +102,7 @@ export default {
                     boxShadow: 'var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)',
                     transform: 'translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))'
                 },
-                '.fancy': {
-                    position: 'relative',
-                },
-                '.fancy:after': {
-                    "--deco-height": "0.3125em",
-                    content: '" "',
-                    position: "absolute",
-                    left: "0",
-                    right: "0",
-                    bottom: "calc(var(--deco-height) * -0.625)",
-                    height: "var(--deco-height)",
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='currentColor' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")`,
-                    backgroundSize: "auto 100%",
-                    backgroundRepeat: "round",
-                    backgroundPosition: "0em",
-                }
+                
             })
         }),
     ],
