@@ -197,5 +197,3 @@ Decoupling requires more upfront effort. But saves exponentially more down the r
 - Loosely coupled code reduces technical debt and maintenance
 
 With techniques like hooks, HOCs and redux, you can build resilient, scalable React codebases that stand the test of time.
-
-What strategies have worked for you? Share your experiences below!

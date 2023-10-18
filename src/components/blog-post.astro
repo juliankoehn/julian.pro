@@ -25,9 +25,9 @@ const { title, url, date, image } = Astro.props;
 ---
 
 <a href={url} class="rounded-xl bg-white border-2 border-black shadow-fill group flex flex-col overflow-hidden transition-transform hover:scale-105 hover:-rotate-1">
-    <div class="aspect-h-4 aspect-w-3 rounded-lg">
+    <div class="aspect-video rounded-lg">
         {image && (
-            <Image src={image.url} alt={image.alt} width={400} height={500} />
+            <Image class="object-cover object-center w-full" src={image.url} alt={image.alt} width={400} height={500} />
         )}
     </div>
     <div class="px-6 py-4 border-t border-black flex flex-col justify-between flex-1">

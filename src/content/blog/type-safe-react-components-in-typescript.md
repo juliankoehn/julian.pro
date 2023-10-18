@@ -252,5 +252,3 @@ It requires more coding overhead. But reduces debugging and maintaining apps lon
 - TypeScript prevents bugs and eases maintenance
 
 Typed components take a bit more work. But pay off exponentially in long term productivity and resilience.
-
-What tips do you have for typing React apps? Share your experiences below!

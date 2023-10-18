@@ -169,4 +169,4 @@ Memoization reduces duplicate calculations.
 - Batch state changes to prevent "thrashing" 
 - Memoize expensive computations   
 
-With these techniques, even large React apps can be optimized. Have other tips? Share below!
+With these techniques, even large React apps can be optimized.

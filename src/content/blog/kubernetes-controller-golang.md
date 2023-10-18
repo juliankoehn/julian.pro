@@ -8,7 +8,7 @@ topics:
   - programming
 author: "Julian Köhn"
 image:
-  url: "../../assets/images/use-scheduler.png"
+  url: "../../assets/images/kubernetes.jpg"
   alt: "The Astro logo with the word One."
 date: 2023-10-20
 --- 
@@ -420,5 +420,3 @@ Controllers are powerful for encapsulating business logic and automation workflo
 With core libraries like controller-runtime, writing production-ready controllers is straightforward.
 
 The patterns here will help guide you in developing robust, scalable controllers.
-
-Have you built custom controllers? Share your experiences below!

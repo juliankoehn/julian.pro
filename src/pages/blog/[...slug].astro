@@ -65,9 +65,13 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
         </div>
         
     </header>
+
+    <main>
+        <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl prose prose-light mb-24 break-words dark:prose-dark">
+            <Content />
+        </div>
+    </main>
 </div>
-<div class="prose lg:prose-xl">
-<Content />
-</div>
+
 </Layout>
 
