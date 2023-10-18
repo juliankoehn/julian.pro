@@ -57,8 +57,14 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
             </div>
             {entry.data.image && (
                 <div class="col-span-full mt-10 lg:col-span-10 lg:col-start-2 lg:mt-16">
-                    <div class="aspect-h-4 aspect-w-3 md:aspect-h-2 md:aspect-w-3">
-                        <Image class="rounded-lg object-cover object-center transition-opacity" src={entry.data.image.url} alt={entry.data.image.alt} />    
+                    <div class="aspect-video md:aspect-h-2 md:aspect-w-3">
+                        <Image
+                            class="rounded-lg object-cover object-center transition-opacity"
+                            src={entry.data.image.url}
+                            alt={entry.data.image.alt}
+                            width={940}
+                            quality={75}
+                        />    
                     </div>
                 </div>
             )}

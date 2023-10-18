@@ -50,7 +50,7 @@ const pageTitle = "Blog";
     >
       {
         allBlogPosts.map((post) => (
-          <div class="col-span-4 mb-10">
+          <div class="col-span-4 mb-10 flex">
             <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image} />
           </div>
         ))
