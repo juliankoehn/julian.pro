@@ -34,10 +34,5 @@ const { title, url, date, image } = Astro.props;
         <h3 class="font-medium text-2xl md:text-3xl text-black dark:text-white">
             {title}
         </h3>
-        {date && (
-            <p>
-                {new Date(date).toLocaleDateString()}
-            </p>
-        )}
     </div>
 </a>

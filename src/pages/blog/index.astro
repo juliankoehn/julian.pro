@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 
 const allBlogPosts = await getCollection('blog').then(
     (collection) => collection.sort(
-        (a, b) => new Date(b.data.date).getMilliseconds() - new Date(a.data.date).getMilliseconds()
+        (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
     )
 );
 
