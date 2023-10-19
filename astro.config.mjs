@@ -8,8 +8,10 @@ import prefetch from "@astrojs/prefetch";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind(), prefetch()],
-  site: 'https://julian.pro',
+  site: "https://julian.pro",
   markdown: {
-    remarkPlugins: [remarkReadingTime]
-  }
+    remarkPlugins: [
+      remarkReadingTime,
+    ],
+  },
 });

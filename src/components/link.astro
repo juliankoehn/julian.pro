@@ -8,7 +8,8 @@ export const button = cva([
 ], {
     variants: {
         variant: {
-            primary: 'bg-secondary-background text-white',
+            primary: 'bg-slate-700 text-white',
+            secondary: 'bg-white text-black',
         }
     },
     defaultVariants: {
@@ -20,12 +21,13 @@ export interface Props
   extends HTMLAttributes<"a">,
     VariantProps<typeof button> {}
 
-const { class: className, ...restProps } = Astro.props;
+const { class: className, variant, ...restProps } = Astro.props;
 ---
 
 <a
   class={button({
     class: className,
+    variant,
   })}
   {...restProps}
 >

@@ -6,7 +6,10 @@ image:
   url: "../../assets/images/speed.chuttersnap.unsplash.jpg"
   alt: "The Astro logo with the word One."
 date: 2023-10-20
-topics: ["react", "performance", "optimization"]
+topics: 
+    - "react"
+    - "performance"
+    - "optimization"
 ---
 
 React is fast by default but can feel sluggish if you don't pay attention to performance. Luckily there are proven techniques to optimize React apps.

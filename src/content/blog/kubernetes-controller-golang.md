@@ -5,7 +5,6 @@ topics:
   - kubernetes
   - golang
   - controllers
-  - programming
 author: "Julian Köhn"
 image:
   url: "../../assets/images/kubernetes.jpg"
