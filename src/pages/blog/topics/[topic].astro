@@ -1,0 +1,44 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "@/layouts/layout.astro";
+import { getTaxonomy } from "@/lib/taxonomy-parser.astro";
+import { getSinglePage } from '@/lib/content-parser.astro';
+import taxonomyFilter from "@/lib/utils/taxonomy-filter";
+import BlogListHeader from '@/components/blog-list-header.astro';
+import BlogPost from '@/components/blog-post.astro';
+
+export const getStaticPaths = (async () => {
+    const categories = await getTaxonomy(
+        "blog",
+        "topics"
+    );
+
+    return categories.map((category) => {
+        return {
+            params: { topic: category },
+        };
+    });
+}) satisfies GetStaticPaths;
+
+const { topic } = Astro.params;
+const posts = await getSinglePage("blog");
+const filterByCategories = taxonomyFilter(posts, "topics", topic!);
+
+---
+
+<Layout title={topic}>
+    <BlogListHeader />
+    <section class="w-full px-5vw relative">
+    <div
+      class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl mb-64"
+    >
+      {
+        filterByCategories.map((post) => (
+          <div class="col-span-4 mb-10 flex">
+            <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image} />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

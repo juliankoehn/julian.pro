@@ -3,12 +3,13 @@ import BackLink from '@/components/back-link.astro';
 import BlogPost from '@/components/blog-post.astro';
 import Layout from '@/layouts/layout.astro';
 import { Image } from 'astro:assets';
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry} from 'astro:content'
+import { getSinglePage } from '@/lib/content-parser.astro';
 
-const posts = await getCollection('blog')
+const posts = await getSinglePage('blog')
 
 export async function getStaticPaths() {
-    const blogEntries = await getCollection('blog');
+    const blogEntries = await getSinglePage('blog');
 
 	return blogEntries.map((entry) => ({
 		params: { slug: entry.slug },

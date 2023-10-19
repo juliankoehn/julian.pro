@@ -1,25 +1,49 @@
 ---
-import BlogListHeader from '@/components/blog-list-header.astro';
-import BlogPost from "@/components/blog-post.astro";
-import Pagination from '@/components/pagination.astro';
-import Layout from "@/layouts/layout.astro";
 import { getSinglePage } from '@/lib/content-parser.astro';
-import { slugify } from '@/lib/utils/slugify';
+import Layout from "@/layouts/layout.astro";
+import BlogListHeader from '@/components/blog-list-header.astro';
 import { sortByDate } from '@/lib/utils/sort';
+import { getTaxonomy } from '@/lib/taxonomy-parser.astro';
+import BlogPost from '@/components/blog-post.astro';
+import Pagination from '@/components/pagination.astro';
 
 const PAGE_SIZE = 6;
+
+const { slug } = Astro.params;
 
 const posts = await getSinglePage("blog")
 const sortedPosts = sortByDate(posts)
 
-const totalPages: number = Math.ceil(posts.length / PAGE_SIZE);
-const currentPosts = sortedPosts.slice(0, PAGE_SIZE);
+const categories = await getTaxonomy("blog", "topics");
 
-const tags = [...new Set(posts.map((post) => post.data.topics).flat())];
+const totalPages = Math.ceil(posts.length / PAGE_SIZE);
+const currentPage = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
+const indexOfLastPost = currentPage * PAGE_SIZE;
+const indexOfFirstPost = indexOfLastPost - PAGE_SIZE;
+
+const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
+
+export async function getStaticPaths() {
+  const posts = await getSinglePage("blog");
+  const totalPages = Math.ceil(posts.length / 2);
+  const paths: Array<{
+    params: {
+        slug: string;
+    }
+  }> = [];
+
+  for (let i = 1; i < totalPages; i++) {
+    paths.push({
+      params: {
+        slug: (i + 1).toString(),
+      },
+    });
+  }
+  return paths;
+}
 
 const pageTitle = "Blog";
 ---
-
 <Layout title={pageTitle}>
   <BlogListHeader />
   <div class="w-full px-5vw mx-auto">
@@ -27,8 +51,8 @@ const pageTitle = "Blog";
         <div class="text-lg font-medium text-primary col-span-full mb-6">Search by Topics</div>
         <div class="col-span-full -mb-4 -mr-4 flex flex-wrap lg:col-span-10">
             {
-                tags.map((tag) => (
-                    <a href={`/blog/topics/${slugify(tag)}`} class="relative mb-4 me-4 block h-auto w-auto cursor-pointer rounded-full px-6 py-3 transition text-primary bg-slate-100 hover:bg-slate-200">
+                categories.map((tag) => (
+                    <a href={`/blog/topics/${tag}`} class="relative mb-4 me-4 block h-auto w-auto cursor-pointer rounded-full px-6 py-3 transition text-primary bg-slate-100 hover:bg-slate-200">
                         <span>{tag}</span>
                     </a>
                 ))
@@ -52,7 +76,7 @@ const pageTitle = "Blog";
       <div class="col-span-full">
         <Pagination
             section={"blog"}
-            currentPage={1}
+            currentPage={currentPage}
             totalPages={totalPages}
           />
       </div>
