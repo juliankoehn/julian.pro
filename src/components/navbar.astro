@@ -32,12 +32,22 @@ const LINKS = [
         if (el) {
             el.style.width = width;
         }
+
+        // if the page is scrolled, we want to reduce padding on the nav
+        const nav = document.querySelector('#nav-container') as HTMLElement
+        if (nav) {
+            if (window.scrollY > 0) {
+                nav.classList.remove('py-9','lg:py-12')
+            } else {
+                nav.classList.add('py-9','lg:py-12')
+            }
+        }
     };
 
     document.addEventListener('scroll', scrollHandler)
 </script>
 
-<div class="px-5vw py-9 lg:py-12 sticky top-1 z-50">
+<div id="nav-container" class="px-5vw py-9 transition-all sticky top-1 z-50">
 <div class="text-primary mx-auto max-w-8xl flex items-center justify-between">
     <div class="bg-white border-2 border-black sticky-border w-full print:hidden p-4 xl:px-10">
         <div class="page-scroll-progress" />
