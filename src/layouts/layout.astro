@@ -48,6 +48,7 @@ const { title, description, index = 'index' } = Astro.props;
     <title>{title ? `${title} - ${metaData.title}` : metaData.title}</title>
     <meta name="description" content={description ?? metaData.description} />
     <meta name="robots" content=`${index}, follow` />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     {Astro.site && <link rel="canonical" href={Astro.site} />}
 
     <!-- Open Graph -->

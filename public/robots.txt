@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://julian.pro/sitemap-index.xml
