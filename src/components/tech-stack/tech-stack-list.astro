@@ -1,0 +1,37 @@
+---
+import { Icon } from "astro-icon";
+
+export type TechStackItem = {
+    title: string;
+    icon: string;
+    pack?: string;
+    url: string;
+}
+
+export interface Props {
+    items: TechStackItem[];
+    title: string;
+}
+
+const { items, title }: Props = Astro.props;
+---
+
+<div class="w-full space-y-2">
+    <div class="relative">
+        <h3 class="text-lg font-semibold leading-8">
+            {title}
+        </h3>
+        {items && (
+        <div class="-mx-6 mt-10 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
+            {items?.map((item) => (
+                <a href={item.url} rel="noreferrer" target="_blank" class="bg-gray-400/5 hover:bg-gray-400/10 p-8 sm:p-10 flex flex-col items-center gap-2">
+                    <Icon class="max-h-12 w-full object-contain" name={item.icon} pack={item.pack} />
+                    <span>
+                        {item.title}    
+                    </span>
+                </a>
+            ))}
+        </div>
+        )}
+    </div>
+</div>

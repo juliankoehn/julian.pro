@@ -1,0 +1,77 @@
+---
+import TechStackList, { type TechStackItem } from './tech-stack-list.astro';
+
+const frameworks: TechStackItem[] = [
+    {
+        title: "React",
+        icon: "mdi:react",
+        url: "https://reactjs.org/",
+    },
+    {
+        title: "Vue",
+        icon: "mdi:vuejs",
+        url: "https://vuejs.org/",
+    },
+    {
+        title: "tailwindcss",
+        icon: "mdi:tailwind",
+        url: "https://tailwindcss.com/",
+    },
+    {
+        title: "Laravel",
+        icon: "mdi:laravel",
+        url: "https://laravel.com/",
+    },
+    {
+        title: 'Terraform',
+        icon: 'mdi:terraform',
+        url: 'https://www.terraform.io/',
+    },
+    {
+        title: 'Next.js',
+        icon: 'teenyicons:nextjs-solid',
+        url: 'https://nextjs.org/',
+    }
+]
+
+const platforms: TechStackItem[] = [
+    {
+        title: "Kubernetes",
+        icon: "mdi:kubernetes",
+        url: "https://kubernetes.io/",
+    },
+    {
+        title: 'AWS',
+        icon: 'mdi:aws',
+        url: 'https://aws.amazon.com/',
+    },
+    {
+        title: 'Azure',
+        icon: 'mdi:azure',
+        url: 'https://azure.microsoft.com/',
+    }
+]
+
+const languages: TechStackItem[] = [
+    {
+        title: 'Go',
+        icon: 'mdi:language-go',
+        url: 'https://golang.org/',
+    },
+    {
+        title: 'TypeScript',
+        icon: 'mdi:language-typescript',
+        url: 'https://www.typescriptlang.org/',
+    },
+    {
+        title: 'PHP',
+        icon: 'mdi:language-php',
+        url: 'https://www.php.net/',
+    }
+]
+---
+<div class="mx-auto max-w-8xl px-5vw grid grid-cols-1 gap-8 w-full">
+    <TechStackList title="Frameworks" items={frameworks} />
+    <TechStackList title="Platforms" items={platforms} />
+    <TechStackList title="Languages" items={languages} />
+</div>

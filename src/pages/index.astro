@@ -1,11 +1,7 @@
 ---
 import Layout from "@/layouts/layout.astro";
 import type { Person, WithContext } from "schema-dts"
-import Golang from "@/assets/golang.svg"
-import DockerWhale from "@/assets/docker-whale.svg"
-import Terraform from "@/assets/terraform.svg"
-import Kubernetes from "@/assets/kubernetes.svg"
-import Github from "@/assets/github.svg"
+import TechStack from "@/components/tech-stack/tech-stack.astro"
 
 import Hero from "@/sections/hero.astro"
 
@@ -50,19 +46,8 @@ if (Astro.site) {
        
     </section>
 
-    <section class="relative w-full py-24 bg-white">
-        <div class="mx-auto max-w-8xl px-5vw">
-            <div class="mx-auto max-w-2xl lg:max-w-none">
-                <h2 class="text-lg font-semibold leading-8 text-slate-950">Tech Stack</h2>
-                <div class="mx-auto mt-10 flex flex-row flex-wrap items-start gap-x-8 gap-y-10 lg:mx-0">
-                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={DockerWhale.src} width={DockerWhale.width} height={DockerWhale.height} alt="Docker" />
-                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={Terraform.src} width={Terraform.width} height={Terraform.height} alt="Terraform" />
-                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={Kubernetes.src} width={Kubernetes.width} height={Kubernetes.height} alt="Kubernetes" />
-                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={Github.src} width={Github.width} height={Github.height} alt="Github" />
-                    <img class="max-h-12 max-w-[6rem] object-contain object-left" src={Golang.src} width={Golang.width} height={Golang.height} alt="Golang" />
-                </div>
-            </div>
-        </div>
+   
+    <section class="relative w-full py-24 sm:py-32">
+        <TechStack />
     </section>
-    
 </Layout>
