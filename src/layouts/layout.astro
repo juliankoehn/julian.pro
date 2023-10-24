@@ -1,5 +1,6 @@
 ---
 import type { Person, WithContext } from "schema-dts";
+import { ViewTransitions } from 'astro:transitions';
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
 
@@ -59,6 +60,7 @@ const { title, description, index = 'index' } = Astro.props;
     <meta property="profile:last_name" content="Samson" />
     <meta property="profile:username" content="SSbit01" />
     <meta property="profile:gender" content="male" />
+    <ViewTransitions />
     {
       Astro.site && (
         <>
