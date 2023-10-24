@@ -1,0 +1,58 @@
+---
+import Pagination from '@/components/pagination.astro';
+import UseCaseCard from '@/components/use-case-card.astro';
+import Layout from "@/layouts/layout.astro";
+
+import { getSinglePage } from '@/lib/content-parser.astro';
+import { slugify } from '@/lib/utils/slugify';
+import { sortByDate } from '@/lib/utils/sort';
+
+const PAGE_SIZE = 6;
+
+const posts = await getSinglePage("cases")
+const sortedPosts = sortByDate(posts)
+
+const totalPages: number = Math.ceil(posts.length / PAGE_SIZE);
+const currentPosts = sortedPosts.slice(0, PAGE_SIZE);
+---
+
+<Layout title={`Cases`} >
+    <section class="w-full bg-white px-5vw py-24 sm:py-32">
+        <div class="max-w-8xl mx-auto w-full">
+            <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+                <span class="block font-display text-base font-semibold text-neutral-950">My work</span>
+                <span class="sr-only"> - </span>
+                <span class="text-3xl sm:text-4xl mt-6 max-w-5xl font-display">Konzepte durch Praxisbeispiele zum Leben erwecken</span>
+            </h1>
+            <p class="text-primary max-w-xl leading-8 mt-6">
+                Meine Fallstudien demonstrieren meinen strategischen Ansatz bei der Entwicklung digitaler Produkte, Marken und Kampagnen. Diese konkreten Beispiele heben die Lösungen hervor, die ich implementiert habe, um komplexe Business-Herausforderungen in verschiedenen Branchen zu meistern.
+            </p>
+        </div>
+    </section>
+
+    <section class="w-full px-5vw relative">
+        <div
+            class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-8xl mb-64"
+        >
+            <div class="col-span-full">
+                <h2 class="font-display text-2xl font-semibold">Case studies</h2>
+            </div>
+            
+        {
+            currentPosts.map((post) => (
+            <div class="col-span-full mt-10">
+                <UseCaseCard url={`/cases/${post.slug}`} item={post.data} />
+            </div>
+            ))
+        }
+
+        <div class="col-span-full">
+            <Pagination
+                section={"blog"}
+                currentPage={1}
+                totalPages={totalPages}
+            />
+        </div>
+        </div>
+  </section>
+</Layout>

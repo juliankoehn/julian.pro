@@ -1,4 +1,5 @@
 ---
+import Icon from 'astro-icon';
 const LINKS = [
     {
         name: 'Home',
@@ -7,6 +8,10 @@ const LINKS = [
     {
         name: 'About',
         to: '/#about'
+    },
+    {
+        name: 'Cases',
+        to: '/cases'
     },
     {
         name: 'Blog',
@@ -23,52 +28,89 @@ const LINKS = [
 ]
 ---
 <script>
-    let width: string = "0%";
 
-    const scrollHandler = () => {
-        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-        width = `${(window.scrollY / scrollable) * 100}%`;
-        const el = document.querySelector('.page-scroll-progress') as HTMLElement
-        if (el) {
-            el.style.width = width;
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('#navbar-burger'), 0);
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        // remove "hidden" class and add "block" class to $target
+    if ($target) {
+        
+       
+
+        // if its open, add event listener to close on ESC
+        if ($target.classList.contains('block')) {
+            $target.classList.remove('block','scale-100');
+             $target.classList.add('hidden','scale-0');
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    $target.classList.remove('block');
+                    $target.classList.add('hidden');
+                }
+            });
+        } else {
+             $target.classList.add('block','scale-100');
+             $target.classList.remove('hidden','scale-0');
+            document.removeEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    $target.classList.remove('block');
+                    $target.classList.add('hidden');
+                }
+            });
         }
+    }
 
-        // if the page is scrolled, we want to reduce padding on the nav
-        const nav = document.querySelector('#nav-container') as HTMLElement
-        if (nav) {
-            if (window.scrollY > 0) {
-                nav.classList.remove('py-9','lg:py-12')
-            } else {
-                nav.classList.add('py-9','lg:py-12')
-            }
-        }
-    };
+    });
+  });
 
-    document.addEventListener('scroll', scrollHandler)
+});
 </script>
 
-<div id="nav-container" class="px-5vw py-9 transition-all sticky top-1 z-50">
-<div class="text-primary mx-auto max-w-8xl flex items-center justify-between">
-    <div class="bg-white border-2 border-black sticky-border w-full print:hidden p-4 xl:px-10">
-        <div class="page-scroll-progress" />
-        <div class="w-full mx-auto print:hidden">
-            <div class="flex justify-between">
-                <a href="/" class="flex items-center justify-between lg:mr-3 lg:w-auto flex-row w-full underlined">
-                    <span class="font-mono font-semibold text-slate-950 select-none">Julian Koehn</span>
+<div class="px-5vw py-9 lg:py-12">
+    <div class="text-primary mx-auto flex max-w-8xl items-center justify-between">
+        <div class="flex justify-center gap-4 align-middle">
+            <a href="/" class="flex items-center justify-between lg:mr-3 lg:w-auto flex-row w-full underlined">
+                <span class="font-sans font-semibold text-slate-950 select-none">Julian Koehn</span>
+            </a>
+        </div>
+        <div class="flex lg:hidden">
+            <button id="navbar-burger" data-target="navbar-mobile" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <Icon name="mdi:menu" class="h-6 w-6" />
+            </button>
+        </div>
+        <nav class="hidden lg:flex lg:items-center space-x-8">
+            {LINKS.map((link) => (
+                <a href={link.to} class="text-sm block text-center w-auto py-px font-sans relative underlined">
+                    {link.name}    
                 </a>
-                <div id="desk-nav" class="flex items-center">
-                    <nav class="flex gap-x-6 lg:gap-x-12">
-                        {LINKS.map((link) => (
-                            <a href={link.to} class="text-sm block text-center w-auto py-px font-mono relative underlined">
-                                {link.name}    
-                            </a>
-                        ))}
-                        
-                    </nav>
-                </div>
-                <div> </div>
+            ))}
+        </nav>
+        <div class="hidden"></div>
+       
+    </div>  
+     <!-- Mobile menu, show/hide based on menu open state. -->
+    <div id="navbar-mobile" class="hidden lg:hidden transition-transform scale-0 mt-24" role="dialog" aria-modal="true">
+        <div>
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                {LINKS.map((link) => (
+                    <a href={link.to} class="text-2xl font-bold block text-center w-auto py-px font-sans relative underlined">
+                        {link.name}    
+                    </a>
+                ))}
             </div>
         </div>
     </div>
-</div>
 </div>

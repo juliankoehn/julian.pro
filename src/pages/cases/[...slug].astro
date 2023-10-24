@@ -1,0 +1,116 @@
+---
+import BackLink from "@/components/back-link.astro";
+import BlogPost from "@/components/blog-post.astro";
+import Layout from "@/layouts/layout.astro";
+import { Image } from "astro:assets";
+import { type CollectionEntry } from "astro:content";
+import { getSinglePage } from "@/lib/content-parser.astro";
+
+const posts = await getSinglePage("cases");
+
+export async function getStaticPaths() {
+  const blogEntries = await getSinglePage("cases");
+
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+type Props = {
+  entry: CollectionEntry<"cases">;
+};
+
+const { entry } = Astro.props;
+
+const { Content } = await entry.render();
+---
+
+<Layout title={`Case Study: ${entry.data.title}`}>
+  <article class="w-full mx-auto">
+    <header class="relative">
+      <div
+        class="mx-auto max-w-8xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40 text-center"
+      >
+        <div class="mx-auto max-w-2xl lg:max-w-none">
+            <h1>
+                <span class="block font-display text-base font-semibold text-gray-950">Case Study</span>
+                <span class="sr-only"> - </span>
+                <span class="mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-gray-950 [text-wrap:balance] sm:text-6xl mx-auto">
+                    {entry.data.title}
+                </span>
+            </h1>  
+            <div class="mt-6 max-w-3xl text-xl text-gray-600 mx-auto">
+                <p>
+                    {entry.data.description}
+                </p>
+            </div>    
+        </div>
+        <!-- {
+          entry.data.image && (
+            <div class="col-span-full mt-10 lg:col-span-10 lg:col-start-2 lg:mt-16">
+              <div class="aspect-video md:aspect-h-2 md:aspect-w-3">
+                <Image
+                  class="rounded-lg object-cover object-center transition-opacity"
+                  src={entry.data.image.url}
+                  alt={entry.data.image.alt}
+                  width={940}
+                  quality={75}
+                />
+              </div>
+            </div>
+          )
+        } -->
+      </div>
+
+      <div class="mt-24">
+        <div class="border-t border-gray-200 bg-white/50 sm:mt-32 lg:mt-40">
+            <div class="mx-auto max-w-8xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:max-w-none">
+                    <div class="mx-auto max-w-5xl">
+                        <dl class="-mx-6 grid grid-cols-1 text-sm text-gray-950 sm:mx-0 sm:grid-cols-3">
+                            <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
+                                <dt class="font-semibold">Client</dt>
+                                <dd>
+                                    {entry.data.kunde}
+                                </dd>
+                            </div>
+                            <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
+                                <dt class="font-semibold">Runtime</dt>
+                                <dd>
+                                    {entry.data.laufzeit}
+                                </dd>
+                            </div>
+                            <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
+                                <dt class="font-semibold">Service</dt>
+                                <dd>
+                                    {entry.data.tags.join(", ")}
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-y border-gray-200 bg-gray-100">
+            <div class="-my-px mx-auto max-w-[76rem] bg-gray-200">
+                <div class="group relative">
+
+                </div>
+            </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="mx-auto max-w-8xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
+        <div class="mx-auto max-w-2xl lg:max-w-none">
+            <div class="[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0">
+                <div class="prose">
+                    <Content />
+                </div>
+            </div>
+        </div>
+        
+    </main>
+  </article>
+</Layout>
