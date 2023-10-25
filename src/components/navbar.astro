@@ -1,5 +1,7 @@
 ---
 import Icon from 'astro-icon';
+import cx from "clsx"
+import { cva } from 'class-variance-authority';
 const LINKS = [
     {
         name: 'Home',
@@ -26,59 +28,49 @@ const LINKS = [
     //     to: '/#contact'
     // },
 ]
+
+const navigationClasses = cva([
+    // mobile
+    'hidden max-lg:absolute max-lg:top-full max-lg:inset-x-0 max-lg:shadow max-lg:w-full gap-0 max-lg:overflow-auto max-lg:z-50',
+    'max-lg:py-8 max-lg:bg-background',
+    // desktop
+    'lg:flex lg:items-center gap-8'])
 ---
 <script>
+    let initialized = false;
 
+    function initialize() {
 
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('#navbar-burger'), 0);
 
-document.addEventListener('DOMContentLoaded', () => {
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('#navbar-burger'), 0);
+            if (!$target) return;
 
-  // Add a click event on each of them
-  $navbarBurgers.forEach( el => {
-    el.addEventListener('click', () => {
-
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        // remove "hidden" class and add "block" class to $target
-    if ($target) {
-        
-       
-
-        // if its open, add event listener to close on ESC
-        if ($target.classList.contains('block')) {
-            $target.classList.remove('block','scale-100');
-             $target.classList.add('hidden','scale-0');
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    $target.classList.remove('block');
-                    $target.classList.add('hidden');
-                }
+            $target.classList.toggle('hidden');    
             });
-        } else {
-             $target.classList.add('block','scale-100');
-             $target.classList.remove('hidden','scale-0');
-            document.removeEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    $target.classList.remove('block');
-                    $target.classList.add('hidden');
-                }
-            });
-        }
+        });
     }
 
+    window.addEventListener("DOMContentLoaded", () => {
+        if (!initialized) {
+            initialize();
+        }
     });
-  });
 
-});
+    document.addEventListener("astro:after-swap", () => {
+        if (!initialized) {
+            initialize();
+        }
+    });
+
 </script>
 
-<div class="px-5vw py-9 lg:py-12">
+<div class="px-5vw py-9 lg:py-12 relative">
     <div class="text-primary mx-auto flex max-w-8xl items-center justify-between">
         <div class="flex justify-center gap-4 align-middle">
             <a href="/" class="flex items-center justify-between lg:mr-3 lg:w-auto flex-row w-full underlined">
@@ -86,14 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
             </a>
         </div>
         <div class="flex lg:hidden">
-            <button id="navbar-burger" data-target="navbar-mobile" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <button id="navbar-burger" data-target="primary-nav" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                 <span class="sr-only">Open main menu</span>
                 <Icon name="mdi:menu" class="h-6 w-6" />
             </button>
         </div>
-        <nav class="hidden lg:flex lg:items-center space-x-8">
+        <nav id="primary-nav" class={cx(navigationClasses())}>
             {LINKS.map((link) => (
-                <a href={link.to} class="text-sm block text-center w-auto py-px font-sans relative underlined">
+                <a href={link.to} class="text-lg lg:text-sm block text-center w-auto py-px font-sans relative underlined">
                     {link.name}    
                 </a>
             ))}
@@ -101,16 +93,4 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="hidden"></div>
        
     </div>  
-     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div id="navbar-mobile" class="hidden lg:hidden transition-transform scale-0 mt-24" role="dialog" aria-modal="true">
-        <div>
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                {LINKS.map((link) => (
-                    <a href={link.to} class="text-2xl font-bold block text-center w-auto py-px font-sans relative underlined">
-                        {link.name}    
-                    </a>
-                ))}
-            </div>
-        </div>
-    </div>
 </div>
