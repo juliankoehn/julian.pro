@@ -6,12 +6,13 @@ kunde: K.I.T. Group GmbH
 branche: SaaS Krankentransport
 image:
   url: "../../assets/cases/images/opade_icm_screenshot.png"
-  alt: "The Astro logo with the word One."
+  alt: "Opade Plattform Screenshot"
 links:
   - title: Website
     url: https://www.kit-group.org/
   - title: Plattform
     url: https://opade.live/
+logo: 'customers/kit_group'
 tags:
     - Go
     - Microservices
@@ -38,3 +39,11 @@ Die Plattform ist für Multi-Tenancy konzipiert und ermöglicht die verwaltung m
 In meiner Rolle als Lead-Entwickler habe ich die Planung und Koordination des agilen Entwicklungsteams übernommen. Mit Hilfe von Terraform haben wir eine reproduzierbare Infrastructure-as-Code Umgebung geschaffen.
 
 Die Plattform überzeugt durch ihre Flexibilität, Skalierbarkeit und hohe Verfügbarkeit. Sie ermöglicht modernste Event-Konzepte und Interaktionsmöglichkeiten für Teilnehmer.
+
+## Herausforderungen
+
+Die K.I.T. hatte bereits im Vorfeld eine Agentur mit Osteuropäischen Entwicklern beauftragt, die allerdings nicht in der Lage war, die Anforderungen zu erfüllen. Daher wurde ich als Lead-Entwickler hinzugezogen, um das Projekt zu retten.
+
+Innerhalb von wenigen monaten mussten wir eine Lösung für die bereits geplanten Events bereitstellen, die eine hohe Verfügbarkeit und Skalierbarkeit bietet. Gleichzeitig mussten wir die Anforderungen der Kunden berücksichtigen, die sich in einem sehr dynamischen Umfeld bewegen.
+
+Durch meine langjährige Erfahrung im Bereich von Microservices und Cloud-Technologien konnte ich die Anforderungen schnell analysieren und eine passende Lösung konzipieren. Durch die agile Entwicklung konnten wir die Plattform innerhalb des Zeitplans und Budgets erfolgreich umsetzen.

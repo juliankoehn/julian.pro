@@ -4,6 +4,12 @@ description: Entwicklung eines SaaS-Survey-Systems für Mitarbeiter-Befragungen 
 laufzeit: "2023"
 kunde: bestmed360
 branche: SaaS Krankentransport
+logo: 'customers/bestmed'
+links:
+    - title: Website
+      url: https://www.bestmed360.com/
+    - title: Arbeitsplatz mitgestalten
+      url: https://arbeitsplatz-mitgestalten.de/
 tags:
     - Survey-System
     - SaaS
@@ -13,6 +19,8 @@ tags:
     - Kubernetes
     - PostgreSQL
 ---
+
+## Übersicht
 
 Für Bestmed360 habe ich ein SaaS-basiertes Survey-System entwickelt, das Unternehmen bei der Analyse der psychologischen Belastung ihrer Mitarbeiter unterstützt. Die Lösung kommt unter anderem bei Verbänden wie der VBG zum Einsatz.
 

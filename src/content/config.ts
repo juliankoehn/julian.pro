@@ -7,6 +7,7 @@ const caseSchema = ({ image }: SchemaContext)  => z.object({
         kunde: z.string(),
         branche: z.string(),
         tags: z.array(z.string()),
+        logo: z.string().optional(),
         image: z.object({
             url: image(),
             alt: z.string(),

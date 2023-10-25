@@ -4,6 +4,10 @@ description: Konzeption und Entwicklung eines modernen, headless CMS für Verlag
 laufzeit: 2020 - Laufend
 kunde: knk Content Management Solutions GmbH
 branche: SaaS Krankentransport
+logo: 'customers/knk'
+links:
+    - title: Website
+      url: https://www.knk.de/
 tags:
     - Go
     - React
