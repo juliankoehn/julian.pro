@@ -4,6 +4,14 @@ description: Entwicklung einer hochskalierbaren digitalen Event-Plattform basier
 laufzeit: "2022"
 kunde: K.I.T. Group GmbH
 branche: SaaS Krankentransport
+image:
+  url: "../../assets/cases/images/opade_icm_screenshot.png"
+  alt: "The Astro logo with the word One."
+links:
+  - title: Website
+    url: https://www.kit-group.org/
+  - title: Plattform
+    url: https://opade.live/
 tags:
     - Go
     - Microservices
@@ -17,11 +25,13 @@ tags:
     - Multi Tenancy
 ---
 
+## Übersicht
+
 Für die K.I.T. Group GmbH habe ich eine skalierbare digitale Event-Plattform entwickelt, die auf modernen Technologien wie Golang, Microservices und Kubernetes basiert.
 
-Das Backend wird durch verschiedene Golang Microservices realisiert, die untereinander per gRPC kommunizieren. Dies ermöglicht ein hohes Maß an Flexibilität und Skalierbarkeit. Für Echtzeitkommunikation in Chats kommt Websockets zum Einsatz.
+Das Backend wird durch verschiedene Golang Microservices realisiert, die untereinander per gRPC kommunizieren. Dies ermöglicht ein hohes Maß an Flexibilität und Skalierbarkeit. Für Echtzeitkommunikation der Chats sowie Livestream Status kommen Websockets zum Einsatz.
 
-Das Frontend habe ich mit Typescript und Next.js umgesetzt. Für die Video-Streaming-Komponenten habe ich Cloudflare Video integriert.
+Das Frontend wurde mit Typescript und Next.js umgesetzt. Für die Video-Streaming-Komponenten kommt Cloudflare Video zum Einsatz.
 
 Die Plattform ist für Multi-Tenancy konzipiert und ermöglicht die verwaltung mehrerer Events und Kundenbereiche. Sie ist auf AWS mit Kubernetes als Container-Orchestrierung gehostet.
 

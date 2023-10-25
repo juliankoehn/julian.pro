@@ -1,12 +1,20 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z, type SchemaContext } from 'astro:content';
 
-const caseSchema = z.object({
+const caseSchema = ({ image }: SchemaContext)  => z.object({
         title: z.string(),
         description: z.string(),
         laufzeit: z.string(),
         kunde: z.string(),
         branche: z.string(),
         tags: z.array(z.string()),
+        image: z.object({
+            url: image(),
+            alt: z.string(),
+        }).optional(),
+        links: z.array(z.object({
+            title: z.string(),
+            url: z.string(),
+        })).optional(),
     })
 
 const caseCollection = defineCollection({
@@ -29,7 +37,7 @@ const blogCollection = defineCollection({
     })
 });
 
-export type Case = z.infer<typeof caseSchema>;
+export type Case = z.infer<ReturnType<typeof caseSchema>>;
 
 export const collections = {
   'blog': blogCollection,

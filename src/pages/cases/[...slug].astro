@@ -45,21 +45,20 @@ const { Content } = await entry.render();
                 </p>
             </div>    
         </div>
-        <!-- {
-          entry.data.image && (
-            <div class="col-span-full mt-10 lg:col-span-10 lg:col-start-2 lg:mt-16">
-              <div class="aspect-video md:aspect-h-2 md:aspect-w-3">
-                <Image
-                  class="rounded-lg object-cover object-center transition-opacity"
-                  src={entry.data.image.url}
-                  alt={entry.data.image.alt}
-                  width={940}
-                  quality={75}
-                />
-              </div>
-            </div>
-          )
-        } -->
+
+        <div class="mx-auto max-w-2xl mt-24">
+            <h3 class="font-display font-semibold text-gray-950 text-2xl">
+                Was wir gemacht haben
+            </h3>
+            <ul role="list" class="my-6 flex flex-wrap items-center justify-center gap-4">
+            {entry.data.tags.map((tag) => (
+                <li class="inline-flex items-center px-3 py-1.5 rounded-full bg-gray-950 text-white text-sm font-medium">
+                    {tag}
+                </li>
+            ))}
+            </ul>
+        </div>
+        
       </div>
 
       <div class="mt-24">
@@ -69,23 +68,28 @@ const { Content } = await entry.render();
                     <div class="mx-auto max-w-5xl">
                         <dl class="-mx-6 grid grid-cols-1 text-sm text-gray-950 sm:mx-0 sm:grid-cols-3">
                             <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
-                                <dt class="font-semibold">Client</dt>
+                                <dt class="font-semibold">Kunde</dt>
                                 <dd>
                                     {entry.data.kunde}
                                 </dd>
                             </div>
                             <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
-                                <dt class="font-semibold">Runtime</dt>
+                                <dt class="font-semibold">Laufzeit</dt>
                                 <dd>
                                     {entry.data.laufzeit}
                                 </dd>
                             </div>
+                           
                             <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
-                                <dt class="font-semibold">Service</dt>
-                                <dd>
-                                    {entry.data.tags.join(", ")}
+                                <dt class="font-semibold">Links</dt>
+                                <dd class="flex flex-col gap-y-1">
+                                    {entry.data.links?.map((link) => (
+                                        <a href={link.url} class="inline-block mr-2" target="_blank" rel="noopener noreferrer">
+                                            {link.title}
+                                        </a>
+                                    ))}
                                 </dd>
-                            </div>
+                            </div>                    
                         </dl>
                     </div>
                 </div>
@@ -94,7 +98,17 @@ const { Content } = await entry.render();
         <div class="border-y border-gray-200 bg-gray-100">
             <div class="-my-px mx-auto max-w-[76rem] bg-gray-200">
                 <div class="group relative">
-
+                    {
+                        entry.data.image && (
+                                <Image
+                                    class="rounded-lg object-cover object-center transition-all grayscale group-hover:grayscale-0"
+                                    src={entry.data.image.url}
+                                    alt={entry.data.image.alt}
+                                    width={1280}
+                                    quality={90}
+                                />
+                        )
+                    }
                 </div>
             </div>
         </div>
