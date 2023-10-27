@@ -5,7 +5,7 @@ author: "Julian Köhn"
 image:
   url: "../../assets/images/ferenc-almasi-tvHtIGbbjMo-unsplash.jpg"
   alt: "Photo by Ferenc Almasi on Unsplash"
-date: 2023-10-25
+date: 2023-10-22
 topics: 
     - react
     - callbacks

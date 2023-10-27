@@ -5,7 +5,7 @@ author: "Julian Köhn"
 image:
   url: "../../assets/images/artem-sapegin-ZMraoOybTLQ-unsplash.jpg"
   alt: "Photo by Artem Sapegin on Unsplash"  
-date: 2023-10-27
+date: 2023-10-23
 topics:
     - react
     - state management
