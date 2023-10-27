@@ -28,7 +28,7 @@ const pageTitle = "Blog";
         <div class="col-span-full -mb-4 -mr-4 flex flex-wrap lg:col-span-10">
             {
                 tags.map((tag) => (
-                    <a href={`/blog/topics/${slugify(tag)}`} class="relative mb-4 me-4 block h-auto w-auto cursor-pointer rounded-full px-6 py-3 transition text-primary bg-slate-100 hover:bg-slate-200">
+                    <a href={`/blog/topics/${slugify(tag)}`} class="relative mb-4 me-4 block h-auto w-auto cursor-pointer rounded-full px-3 py-1 text-sm transition text-primary bg-slate-100 hover:bg-slate-200">
                         <span>{tag}</span>
                     </a>
                 ))
@@ -44,7 +44,9 @@ const pageTitle = "Blog";
       {
         currentPosts.map((post) => (
           <div class="col-span-4 mb-10 flex">
-            <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image} />
+            <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image}
+                description={post.data.description}
+            />
           </div>
         ))
       }

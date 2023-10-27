@@ -35,7 +35,7 @@ const filterByCategories = taxonomyFilter(posts, "topics", topic!);
       {
         filterByCategories.map((post) => (
           <div class="col-span-4 mb-10 flex">
-            <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image} />
+            <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image} description={post.data.description} />
           </div>
         ))
       }
