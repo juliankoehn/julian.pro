@@ -9,8 +9,8 @@ topics:
   - agiles manifest
 author: "Julian Köhn"
 image:
-  url: "../../assets/images/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg"
-  alt: "Photo by Hal Gatewood on Unsplash"
+  url: "../../assets/images/irfan-simsar-wxWulfjN-G0-unsplash.jpg"
+  alt: "Photo by İrfan Simsar on Unsplash"
 date: 2023-10-27
 ---
 
