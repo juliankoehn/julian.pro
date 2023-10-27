@@ -14,7 +14,7 @@ topics:
     - CSS
 ---
 
-Styling spielt eine entscheidende Rolle, um React-Projekte visuell ansprechend und benutzerfreundlich zu gestalten. In diesem Artikel werden wir uns mit dem utility-first CSS-Framework [Tailwind CSS](https://tailwindcss.com/) beschäftigen und es mit anderen beliebten Styling-Ansätzen wie BEM, SCSS, CSS und CSS-Modulen vergleichen.
+Styling spielt eine entscheidende Rolle, um React-Projekte visuell ansprechend und benutzerfreundlich zu gestalten. In diesem Artikel werden wir uns mit dem utility-first CSS-Framework [Tailwind CSS](https://tailwindcss.com/) beschäftigen und es mit anderen beliebten Styling-Ansätzen wie BEM, [SCSS](https://sass-lang.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) und [CSS-Modulen](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/) vergleichen.
 
 ## tailwindcss verstehen
 
@@ -43,7 +43,7 @@ In diesem Beispiel verwenden wir die Tailwind CSS-Klassen `container`, `mx-auto`
 
 ## Vergleich von tailwindcss mit BEM
 
-Die BEM (Block, Element, Modifier)-Methodik wird in React-Projekten häufig für das Styling verwendet. BEM bietet einen strukturierten Ansatz für die Benennung von Klassen und die Organisation von Styles. Der Vergleich zwischen tailwindcss und BEM konzentriert sich auf Entwicklungsgeschwindigkeit, Skalierbarkeit und Code-Wartbarkeit.
+Die [BEM (Block, Element, Modifier)-Methodik](https://getbem.com/introduction/) wird in React-Projekten häufig für das Styling verwendet. BEM bietet einen strukturierten Ansatz für die Benennung von Klassen und die Organisation von Styles. Der Vergleich zwischen tailwindcss und BEM konzentriert sich auf Entwicklungsgeschwindigkeit, Skalierbarkeit und Code-Wartbarkeit.
 
 In einem BEM-basierten Styling-Ansatz müssten wir separate CSS-Dateien erstellen und Klassen mit spezifischen Namen definieren. Hier ist ein Beispiel für die Verwendung von BEM in einem React-Projekt:
 
