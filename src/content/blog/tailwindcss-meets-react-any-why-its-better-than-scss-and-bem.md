@@ -229,8 +229,30 @@ In diesem Beispiel haben wir eine separate `App.module.css`-Datei erstellt und d
 
 CSS-Module bieten Vorteile bei der Modularität und Encapsulation, da Styles auf Komponentenebene isoliert sind. Allerdings kann dies zu mehr Code führen und die Wartbarkeit erschweren.
 
+## Performance
+
+Neben modularerem Code hilft Tailwind auch die Performance zu optimieren.
+
+Bei gewöhnlichem CSS müssen zur Laufzeit alle definierten Styles geladen und verarbeitet werden - auch wenn sie gar nicht verwendet werden.
+
+Tailwind hingegen enthält nur die tatsächlich benötigten Klassen für die aktuelle Seite. Unbenutzte Styles werden automatisch beim Build entfernt.
+
+Dadurch wird der Transferierte Byte-Umfang deutlich reduziert, was sich positiv auf Ladezeit und TTFB (Time To First Byte) auswirkt.
+
+Zudem können die CSS Klassen komplett zur Build-Zeit in das HTML integriert werden. Das spart die zusätzliche Network-Latenz zum Nachladen der CSS Datei.
+
+Weiterhin ermöglicht Tailwind "Purging", um wirklich nur benötigten CSS-Code zu behalten.
+
+In Summe sorgt Tailwind also für eine deutlich optimierte Performance vs. gewöhnliches CSS. Die Vorteile sind:
+
+- Geringeres CSS Bundle
+- Kein separates CSS-File nötig
+- Schnelleres Rendering
+- Besserer TTFB
+- Weniger Netzwerk-Requests
+
+Allerdings sollte man bei sehr komplexen UIs auch die Paketgröße im Auge behalten und gegebenenfalls Purging anpassen.
+
 ## Fazit:
 
 Tailwind CSS ist eine leistungsstarke und effiziente Styling-Lösung für React-Projekte. Sein nützlichkeitsorientierter Ansatz ermöglicht eine schnellere Entwicklung und weniger Aufwand beim Schreiben von CSS-Code. Der Vergleich mit anderen beliebten Styling-Ansätzen wie BEM, SCSS, CSS und CSS-Modulen zeigt die Vorteile und Einsatzbereiche von Tailwind CSS auf.
-
-In einem weiteren Artikel werde ich auf Performance-Aspekte von Tailwind CSS eingehen und zeigen, wie du die Dateigröße deiner React-Projekte reduzieren kannst und so den `ttfb` (time to first byte) verbessern kannst.
