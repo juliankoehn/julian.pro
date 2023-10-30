@@ -1,7 +1,8 @@
+import type { APIContext} from "astro"
 import rss from "@astrojs/rss";
 import { getSinglePage } from "@/lib/content-parser.astro";
 
-export async function GET(context) {
+export async function GET(context: APIContext) {
     const posts = await getSinglePage("blog")
 
   return rss({
@@ -12,7 +13,7 @@ export async function GET(context) {
       "Mein Blog teilt praktische Einsichten, um Sprachen wie Golang, Node.js, TypeScript und React zu meistern. Folge praktischen Tutorials und ausführlichen Artikeln, um als Entwickler zu wachsen.",
     // Ziehe die "site" deines Projektes von dem Endpunkt-Kontext ein
     // https://docs.astro.build/de/reference/api-reference/#endpunkt-kontext
-    site: context.site,
+    site: context.site!,
     // Liste von `<item>`-Elementen in der XML-Ausgabe
     // Siehe Abschnitt "Generieren von 'items'" für Beispiele mit Inhalts-Sammlungen und Glob-Imports
     // add `xmlns:media="http://search.yahoo.com/mrss/"`
@@ -28,17 +29,17 @@ export async function GET(context) {
       "dc:creator": "me@julian.pro (Julian Köhn)",
       // custom data for media. The url must be the full url (including https://)
       customData: `<media:content
-          type="image/${post.data.image.url.format == "jpg" ? "jpeg" : "png"}"
-          width="${post.data.image.url.width}"
-          height="${post.data.image.url.height}"
+          type="image/${post.data.image?.url.format == "jpg" ? "jpeg" : "png"}"
+          width="${post.data.image?.url.width}"
+          height="${post.data.image?.url.height}"
           medium="image"
-          url="${context.site + post.data.image.url.src}" />
+          url="${context.site + post.data.image!.url.src}" />
           <enclosure
              type="image/${
-               post.data.image.url.format == "jpg" ? "jpeg" : "png"
+               post.data.image!.url.format == "jpg" ? "jpeg" : "png"
              }"
              length="1000"
-             url="${context.site + post.data.image.url.src}" />
+             url="${context.site + post.data.image!.url.src}" />
       `,
     })),
     // (optional) Benutzerdefinierten XML-Code einfügen

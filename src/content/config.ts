@@ -34,7 +34,7 @@ const blogCollection = defineCollection({
         image: z.object({
             url: image(),
             alt: z.string(),
-        }).optional(),
+        }),
     })
 });
 
