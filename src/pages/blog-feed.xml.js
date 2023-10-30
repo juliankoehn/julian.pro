@@ -39,7 +39,6 @@ export async function GET(context) {
              width="${post.data.image.url.width}"
              height="${post.data.image.url.height}"
              url="${context.site + post.data.image.url.src}" />
-          />
       `,
     })),
     // (optional) Benutzerdefinierten XML-Code einfügen
