@@ -37,7 +37,7 @@ export async function GET(context) {
              type="image/${
                post.data.image.url.format == "jpg" ? "jpeg" : "png"
              }"
-              length="${post.data.image.url.size}"
+             length="1000"
              url="${context.site + post.data.image.url.src}" />
       `,
     })),
