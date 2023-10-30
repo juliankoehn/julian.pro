@@ -18,6 +18,7 @@ export async function GET(context) {
     // add `xmlns:media="http://search.yahoo.com/mrss/"`
     xmlns: {
       media: "http://search.yahoo.com/mrss/",
+      atom: "http://www.w3.org/2005/Atom",
     },
     items: posts.map((post) => ({
       title: post.data.title,
@@ -42,6 +43,8 @@ export async function GET(context) {
       `,
     })),
     // (optional) Benutzerdefinierten XML-Code einfügen
-    customData: `<language>de</language>`,
+    customData: `<language>de</language>
+        <atom:link href="${context.site}blog-feed.xml" rel="self" type="application/rss+xml" />
+    `,
   });
 }
