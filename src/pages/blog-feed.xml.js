@@ -15,12 +15,24 @@ export async function GET(context) {
     site: context.site,
     // Liste von `<item>`-Elementen in der XML-Ausgabe
     // Siehe Abschnitt "Generieren von 'items'" für Beispiele mit Inhalts-Sammlungen und Glob-Imports
-
+    // add `xmlns:media="http://search.yahoo.com/mrss/"`
+    xmlns: {
+      media: "http://search.yahoo.com/mrss/",
+    },
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.date,
       description: post.data.description,
       link: `/blog/${post.slug}/`,
+      "dc:creator": "me@julian.pro (Julian Köhn)",
+      // custom data for media. The url must be the full url (including https://)
+      customData: `<media:content
+          type="image/${post.data.image.url.format == "jpg" ? "jpeg" : "png"}"
+          width="${post.data.image.url.width}"
+          height="${post.data.image.url.height}"
+          medium="image"
+          url="${context.site + post.data.image.url.src}" />
+      `,
     })),
     // (optional) Benutzerdefinierten XML-Code einfügen
     customData: `<language>de</language>`,
