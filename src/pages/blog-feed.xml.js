@@ -32,6 +32,14 @@ export async function GET(context) {
           height="${post.data.image.url.height}"
           medium="image"
           url="${context.site + post.data.image.url.src}" />
+          <enclosure
+             type="image/${
+               post.data.image.url.format == "jpg" ? "jpeg" : "png"
+             }"
+             width="${post.data.image.url.width}"
+             height="${post.data.image.url.height}"
+             url="${context.site + post.data.image.url.src}" />
+          />
       `,
     })),
     // (optional) Benutzerdefinierten XML-Code einfügen
