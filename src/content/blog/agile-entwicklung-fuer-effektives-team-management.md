@@ -12,6 +12,8 @@ image:
   url: "../../assets/images/irfan-simsar-wxWulfjN-G0-unsplash.jpg"
   alt: "Photo by İrfan Simsar on Unsplash"
 date: 2023-10-27
+categories:
+    - leadership
 ---
 
 Agile Software-Entwicklung setzt auf kleine, inkrementelle Release-Zyklen und enge Team-Kollaboration. Diese Methoden verbessern Feedback, Anpassungsfähigkeit und Effizienz deutlich.
