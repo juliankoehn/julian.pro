@@ -4,6 +4,7 @@ import Link from './link.astro';
 
 ---
 
+
 <section class="w-full mx-auto px-5vw max-w-8xl mt-24 sm:mt-32 lg:mt-40">
     <div class="mx-auto max-w-2xl lg:max-w-none">
         <div class="rounded-3xl bg-gray-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
@@ -31,33 +32,85 @@ import Link from './link.astro';
         </div>
     </div>
 </section>
-<footer class="w-full isolate relative print:hidden pb-16">
-    <div class="flex items-center flex-col">
-        <div class="max-w-8xl w-full mx-auto box-border px-5vw mt-16">
-            <div class="flex flex-col w-full lg:flex-row lg:justify-between lg:text-right text-center text-foreground">
-                <div class="flex items-center flex-col lg:flex-row">
-                    <p class="w-full text-center font-normal font-sans leading-8 lg:text-left max-w-md mt-3 lg:mt-0">
-                        <a href="https://statsy.com/share/julian.pro" target="_blank" title="A link to an external site performance analysis resource called Statsy">
-                            <img alt="A badge showing the page's CO2 performace" height="50" loading="lazy" src={`https://statsy.com/api/badge?url=${Astro.url}`} width="220" decoding="async" class="dark:invert border rounded-xl">
-                        </a>
-                    </p>
-                </div>
-                <div class="flex items-center justify-center flex-col-reverse flex-wrap lg:flex-row lg:justify-end lg:pt-0 pt-12">
-                    <div class="lg:mt-0 mt-12">
-                        <p class="text-sm font-mono">&copy; 2015-{ new Date().getFullYear()} by Julian Koehn.</p>
-                        
-                    </div>
-                    <div class="flex lg:ml-4 gap-4">
-                        <a class="p-1 rounded-lg transition-all flex items-center" target="_blank" href="https://www.linkedin.com/in/julian-koehn/" title="LinkedIn">
-                            <Icon name="mdi:linkedin" class="w-6 h-6 my-[5px] text-gray-950" />
-                           
-                        </a>
-                        <a class="p-1 rounded-lg transition-all flex items-center" target="_blank" href="https://github.com/juliankoehn" title="GitHub Profile">
-                            <Icon name="mdi:github" class="w-6 h-6 my-[5px] text-gray-950" />
-                        </a>
-                    </div>
+
+
+<footer class="relative px-5vw print:hidden border-t border-gray-200 pb-16 pt-16 dark:border-gray-600 mt-14">
+    <div class="relative mx-auto grid max-w-8xl grid-cols-4 grid-rows-max-content gap-x-4 md:grid-cols-8 xl:grid-cols-12 xl:gap-x-6">
+        <div class="col-span-full md:col-span-3 xl:row-span-2">
+            <div class="text-xl font-medium md:text-2xl text-black dark:text-white">
+                Julian Koehn
+            </div>
+            <p class="text-secondary mt-6 max-w-md text-2xl">
+                Softwareentwickler, Consultant und Mentor.
+            </p>
+            <div class="text-secondary mt-6 flex items-center justify-between gap-4 xl:flex-col xl:items-start">
+                <div class="flex gap-4">
+                    <a class="p-1 rounded-lg transition-all flex items-center" target="_blank" href="https://www.linkedin.com/in/julian-koehn/" title="LinkedIn" rel="noopener noreferrer nofollow">
+                        <Icon name="mdi:linkedin" class="w-6 h-6 my-[5px] text-gray-950" />                   
+                    </a>
+                    <a class="p-1 rounded-lg transition-all flex items-center" target="_blank" href="https://github.com/juliankoehn" title="GitHub Profile" rel="noopener noreferrer nofollow">
+                        <Icon name="mdi:github" class="w-6 h-6 my-[5px] text-gray-950" />
+                    </a>
                 </div>
             </div>
         </div>
+        <div class="col-span-2 md:col-start-8 md:mt-0">
+            <p class="w-full text-center font-normal font-sans leading-8 lg:text-left max-w-md mt-3 lg:mt-0">
+                <a href="https://statsy.com/share/julian.pro" target="_blank" rel="noopener noreferrer nofollow" title="A link to an external site performance analysis resource called Statsy">
+                    <img alt="A badge showing the page's CO2 performace" height="50" loading="lazy" src={`https://statsy.com/api/badge?url=${Astro.url}`} width="220" decoding="async" class="dark:invert border rounded-xl">
+                </a>
+            </p>
+        </div>
+        <div class="col-span-2 md:col-start-10">
+            <div class="text-lg font-medium text-black dark:text-white">
+                Kontakt
+            </div>
+            <ul class="mt-4">
+                <li class="py-1">
+                    <a href="/contact" class="text-secondary underlined inline-block whitespace-nowrap text-lg hover:text-team-current focus:text-team-current focus:outline-none">
+                        Email
+                    </a>
+                    
+                </li>
+                <li class="py-1">
+                    <a
+                        target="_blank" href="https://www.linkedin.com/in/julian-koehn/" title="LinkedIn"
+                        rel="noopener noreferrer nofollow"
+                        class="text-secondary underlined inline-block whitespace-nowrap text-lg hover:text-team-current focus:text-team-current focus:outline-none"
+                    >
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-span-full grid grid-cols-12 mt-12">
+            <div
+                class="col-span-full md:col-span-9 text-sm text-gray-500 dark:text-slate-500"
+                itemscope
+                itemtype="https://schema.org/Organization"
+            >
+                <span class="mr-4 font-semibold" itemprop="name">
+                    Julian Koehn
+                </span>
+                <span
+                    class="block mr-4 md:inline"
+                    itemprop="address"
+                    itemscope
+                    itemtype="https://schema.org/PostalAddress"
+                >
+                    <span itemprop="streetAddress">Unterjörn 19a</span>,{' '}
+                    <span itemprop="postalCode">24536</span>,{' '}
+                    <span itemprop="addressLocality">Neumünster</span>
+                </span>
+            </div>
+            <div class="col-span-full md:col-span-3 text-sm text-gray-500 dark:text-slate-500">
+                <div class="w-full flex md:justify-end gap-4">
+                    <a href="/impressum" class="underlined">
+                        Impressum
+                    </a>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </footer>
