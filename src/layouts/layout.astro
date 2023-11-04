@@ -1,5 +1,6 @@
 ---
 import type { Person, WithContext } from "schema-dts";
+import { SEO, type Props as SEOProps } from "astro-seo";
 import { ViewTransitions } from 'astro:transitions';
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
@@ -29,34 +30,40 @@ if (Astro.site) {
 export interface Props {
 	title?: string;
 	description?: string;
-	index?: string;
+	index?: boolean;
     children: any;
+    seo?: SEOProps;
 }
 
-const { title, description, index = 'index' } = Astro.props;
+const { title, description, index = true, seo } = Astro.props;
 ---
 
 <html lang="de">
   <head prefix="og: https://ogp.me/ns# profile: https://ogp.me/ns/profile#">
+    <SEO
+        {...seo}
+        title={title ?? metaData.title}
+        titleDefault="Julian Koehn"
+        titleTemplate="%s - Julian Koehn"
+        description={description ?? metaData.description}
+        noindex={!index}
+        nofollow={false}
+        charset='utf-8'
+    />
     <!-- Common head tags -->
-    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title ? `${title} - ${metaData.title}` : metaData.title}</title>
-    <meta name="description" content={description ?? metaData.description} />
-    <meta name="robots" content=`${index}, follow` />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    {Astro.site && <link rel="canonical" href={Astro.site} />}
 
     <!-- Open Graph -->
     <meta property="og:title" content={metaData.title} />
     <meta property="og:description" content={metaData.summary} />
     <meta property="og:type" content="profile" />
-    <meta property="profile:first_name" content="Stefan" />
-    <meta property="profile:last_name" content="Samson" />
-    <meta property="profile:username" content="SSbit01" />
+    <meta property="profile:first_name" content="Julian" />
+    <meta property="profile:last_name" content="Koehn" />
+    <meta property="profile:username" content="juliankoehn" />
     <meta property="profile:gender" content="male" />
     <ViewTransitions />
     {
