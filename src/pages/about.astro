@@ -1,25 +1,93 @@
 ---
+import Hero from '@/components/hero.astro';
 import Layout from '@/layouts/layout.astro';
+import { Image } from 'astro:assets';
+import MacbookCode from "@/assets/images/mohammad-rahmani-8qEB0fTe9Vw-unsplash.jpg";
+import TechStack from '@/components/tech-stack/tech-stack.astro';
+
+const bullets = [
+    {
+        title: 'Softwareentwicklung.',
+        content: 'Von Frontend- und Backend-Technologien bis hin zur Entwicklung von mobilen Apps.'
+    },
+    {
+        title: "Technische Beratung.",
+        content: "Für strategische Entscheidungen, technische Herausforderungen und Optimierung deiner Technologieinfrastruktur.",
+    },
+    {
+        title: "Coaching und Mentoring.",
+        content: "Für Einzel- und Teamcoaching zur Stärkung deines Entwicklerteams."
+    },
+    {
+        title: "Projektmanagement.",
+        content: "Effiziente Planung, Leitung und erfolgreicher Abschluss von Projekten."
+    },
+    {
+        title: "Qualitäts- und Performance-Optimierung.",
+        content: "Steigerung der Leistung und Qualität deiner Anwendungen."
+    }
+]
 
 ---
 
 <Layout>
-    <section class="relative mt-6 lg:mt-20">
-        <div class="w-full max-w-8xl px-6 lg:px-8">
-            <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
-                <div class="mx-auto w-full max-w-xl lg:mx-0">
-                    <h2 class="text-3xl font-bold tracking-tight text-foreground">Bringing Innovative Solutions to Life</h2>
-                    <div class="prose prose-primary lg:prose-xl text-start mt-8">
-                        <p>I'm Julian, a passionate full-stack developer, consultant, and coach driven to help companies succeed. I live and breathe code, designing tailored software, apps, and SaaS solutions from the ground up. My expertise spans everything from planning databases and architectures to coding front-end and back-end systems.</p>
-                        <p>Beyond development, I help teams scale up through coaching and mentoring. I assist colleagues in advancing their skills and learning new languages like Golang. My leadership strengths build positive team cultures focused on growth.</p>
-                        <p>On the infrastructure side, I handle complete IaaS setup with Terraform for AWS, Azure, and more. I can deploy entire Kubernetes clusters to support containerized services. My infrastructure skills combine with development knowledge to deliver comprehensive solutions.</p>
-                        <p>I pride myself on bringing fresh ideas to make technology work for you. I rapidly prototype and test new concepts to find creative ways of overcoming challenges. My diverse set of talents allows me to architect robust, customized products that help your business reach the next level. Whether it's coaching colleagues or building infrastructure, I'm driven to excel and help you succeed.</p>
+    <Hero
+        subtitle='Softwareentwickler, Consultant und Mentor.'
+        heading="Julian Köhn"
+        description="ich bin hier, um dir zu helfen. Mein Ziel ist es, dich und dein Team dabei zu unterstützen, bessere Software zu entwickeln und technologische Herausforderungen zu meistern."
+    />
+    <section class="relative px-5vw w-full">
+        <div class="max-w-8xl w-full">
+            <div class="mx-auto max-w-2xl lg:max-w-none">
+                <div class="lg:flex lg:items-center lg:justify-end">
+                    <div class="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
+                        <div class="w-[33.75rem] flex-none lg:w-[45rem]">
+                            <div class="justify-center lg:justify-end relative flex aspect-[719/680] w-full grayscale">
+                                <Image
+                                    src={MacbookCode}
+                                    alt="Macbook with code"
+                                    class="object-cover object-center w-full h-full rounded-lg"
+                                    width={655}
+                                />
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
-                    logos
+                    <div>
+                        <ul
+                            role="list"
+                            class="text-base text-gray-600 mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4"
+                        >
+                        {bullets.map((bullet) => (
+                            <li class="group mt-10 first:mt-0">
+                                <div
+                                    class="pt-10 group-first:pt-0 group-first:before:hidden group-first:after:hidden relative before:absolute after:absolute before:bg-neutral-950 after:bg-neutral-950/10 before:left-0 before:top-0 before:h-px before:w-6 after:left-8 after:right-0 after:top-0 after:h-px"
+                                >
+                                    <strong class="font-semibold text-gray-950">
+                                        {bullet.title}{" "}
+                                    </strong>
+                                    {bullet.content}
+                                </div>
+                            </li>
+                        ))}
+                        
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <section class="relative px-5vw py-24">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Warum du auf mich<br /> zählen kannst
+            </h2>
+            <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
+                Meine Leidenschaft für Technologie und Softwareentwicklung treibt mich an, die besten Lösungen
+                für meine Kunden zu finden. Mein Ziel ist es, deine technologische Vision in die Realität
+                umzusetzen und dich auf dem Weg zum Erfolg zu begleiten.
+            </p>
+        </div>
+    </section>
+    <section class="relative w-full py-24 sm:py-32">
+        <TechStack />
     </section>
 </Layout>

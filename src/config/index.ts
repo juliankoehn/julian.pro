@@ -11,3 +11,22 @@ export const config = {
     },
     metadata: {},
 }  
+
+export const primaryNav = [
+   {
+        name: 'Home',
+        to: '/#top'
+    },
+    {
+        name: 'About',
+        to: '/about'
+    },
+    {
+        name: 'Cases',
+        to: '/cases'
+    },
+    {
+        name: 'Blog',
+        to: '/blog'
+    }
+]

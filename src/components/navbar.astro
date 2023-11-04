@@ -2,32 +2,8 @@
 import Icon from 'astro-icon';
 import cx from "clsx"
 import { cva } from 'class-variance-authority';
-const LINKS = [
-    {
-        name: 'Home',
-        to: '/#top'
-    },
-    {
-        name: 'About',
-        to: '/#about'
-    },
-    {
-        name: 'Cases',
-        to: '/cases'
-    },
-    {
-        name: 'Blog',
-        to: '/blog'
-    }
-    // {
-    //     name: 'Projects',
-    //     to: '/#projects'
-    // },
-    // {
-    //     name: 'Contact',
-    //     to: '/#contact'
-    // },
-]
+import { primaryNav } from '@/config';
+
 
 const navigationClasses = cva([
     // mobile
@@ -84,7 +60,7 @@ const navigationClasses = cva([
             </button>
         </div>
         <nav id="primary-nav" class={cx(navigationClasses())}>
-            {LINKS.map((link) => (
+            {primaryNav.map((link) => (
                 <a href={link.to} class="text-lg lg:text-sm block text-center w-auto py-px font-sans relative underlined">
                     {link.name}    
                 </a>

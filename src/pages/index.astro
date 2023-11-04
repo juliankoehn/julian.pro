@@ -3,7 +3,12 @@ import Layout from "@/layouts/layout.astro";
 import type { Person, WithContext } from "schema-dts"
 import TechStack from "@/components/tech-stack/tech-stack.astro"
 
-import Hero from "@/sections/hero.astro"
+import PageHero from "@/sections/hero.astro"
+import Hero from '@/components/hero.astro';
+import { getSinglePage } from '@/lib/content-parser.astro';
+import { sortByDate } from '@/lib/utils/sort';
+import BlogPost from '@/components/blog-post.astro';
+import Link from '@/components/link.astro';
 
 
 const metaData = {
@@ -28,25 +33,46 @@ if (Astro.site) {
   jsonLd.url = Astro.site.toString()
 }
 
+const posts = await getSinglePage("blog")
+const sortedPosts = sortByDate(posts)
+
+const totalPages: number = Math.ceil(posts.length / 3);
+const currentPosts = sortedPosts.slice(0, 3);
+
+
 ---
 <Layout>
-    <Hero />
-    <section id="about" class="relative w-full py-24 mt-6 lg:mt-20 px-5vw">
-        <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl">
-            <div class="col-span-full mt-12 lg:col-span-6 lg:col-start-4 lg:mt-0">
-                <h2 class="leading-tight text-primary font-sans font-semibold text-3xl lg:text-4xl">Hi 👏, I'm Julian K&ouml;hn. I bring Innovative Solutions to Life</h2>
-                <div class="mt-6 text-lg leading-8 text-gray-600 space-y-4">
-                        <p>I'm Julian, a passionate full-stack developer, consultant, and coach driven to help companies succeed. I live and breathe code, designing tailored software, apps, and SaaS solutions from the ground up. My expertise spans everything from planning databases and architectures to coding front-end and back-end systems.</p>
-                        <p>Beyond development, I help teams scale up through coaching and mentoring. I assist colleagues in advancing their skills and learning new languages like Golang. My leadership strengths build positive team cultures focused on growth.</p>
-                        <p>On the infrastructure side, I handle complete IaaS setup with Terraform for AWS, Azure, and more. I can deploy entire Kubernetes clusters to support containerized services. My infrastructure skills combine with development knowledge to deliver comprehensive solutions.</p>
-                        <p>I pride myself on bringing fresh ideas to make technology work for you. I rapidly prototype and test new concepts to find creative ways of overcoming challenges. My diverse set of talents allows me to architect robust, customized products that help your business reach the next level. Whether it's coaching colleagues or building infrastructure, I'm driven to excel and help you succeed.</p>
-                    </div>
-            </div>
-        </div>
-       
-    </section>
+    <PageHero />
 
-   
+
+    
+    <Hero
+        heading='Neueste Blogbeiträge'
+        description='Bleib auf dem Laufenden mit unseren aktuellsten Blogbeiträgen, in denen ich Einblicke, Tipps und Trends im Bereich der Softwareentwicklung und Technologie teile. Hier sind meine drei letzten Veröffentlichungen, die dir wertvolles Wissen bieten.'
+    />
+    <section class="w-full px-5vw relative">
+    <div
+      class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-8xl"
+    >
+      {
+        currentPosts.map((post) => (
+          <div class="col-span-4 mb-10 flex">
+            <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image}
+                description={post.data.description}
+            />
+          </div>
+        ))
+      }
+
+      <div class="col-span-full">
+        <Link href="/blog">
+            Mehr lesen
+        </Link>
+       
+      </div>
+    </div>
+  </section>
+    
     <section class="relative w-full py-24 sm:py-32">
         <TechStack />
     </section>
