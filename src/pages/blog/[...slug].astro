@@ -74,11 +74,16 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
             </BackLink>
         </div>
     </div>
-
+<article
+    class="w-full block"
+    itemscope
+    itemtype="https://schema.org/BlogPosting"
+    itemid={Astro.url.href}
+>
     <header class="relative">
         <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl mb-12">
             <div class="col-span-full lg:col-span-8 lg:col-start-3">
-                <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                <h1 class="text-3xl font-bold tracking-tight sm:text-4xl" itemprop="name">
                     {entry.data.title}
                 </h1>
                 <p class="text-lg font-medium text-gray-400 dark:text-slate-500 mt-2">
@@ -103,11 +108,13 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
     </header>
 
     <main>
-        <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl prose prose-light mb-24 break-words dark:prose-dark">
+        <div
+            itemprop="articleBody"
+            class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl prose prose-light mb-24 break-words dark:prose-dark">
             <Content />
         </div>
     </main>
-
+</article>
     <!-- related articles -->
     {relatedPosts?.length > 0 && (
         <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl">
