@@ -38,9 +38,9 @@ Es erfolgt kein Tracking, und wir haben auf diese Daten keinen direkten Zugriff,
 
 Wir setzen für die Zurverfügungstellung unserer Website folgenden Hoster ein:
 
-GitHub Inc.
-88 Colin P Kelly Jr St
-San Francisco, CA 94107
+GitHub Inc.  
+88 Colin P Kelly Jr St  
+San Francisco, CA 94107  
 United States
 
 Dieser ist Empfänger deiner personenbezogenen Daten. Dies entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO, selbst keinen Server in unseren Räumlichkeiten vorhalten zu müssen. Der Serverstandort ist in den USA.
