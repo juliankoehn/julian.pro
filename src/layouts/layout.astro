@@ -41,6 +41,11 @@ const { title, description, index = true, seo } = Astro.props;
 <html lang="de">
   <head prefix="og: https://ogp.me/ns# profile: https://ogp.me/ns/profile#">
     <SEO
+        twitter={{
+            card: "summary_large_image",
+            title: title ?? metaData.title,
+            description: description ?? metaData.description,
+        }}
         {...seo}
         title={title ?? metaData.title}
         titleDefault="Julian Koehn"
@@ -64,24 +69,6 @@ const { title, description, index = true, seo } = Astro.props;
     <meta property="profile:username" content="juliankoehn" />
     <meta property="profile:gender" content="male" />
     <ViewTransitions />
-    {
-      Astro.site && (
-        <>
-          <meta property="og:url" content={Astro.site} />
-          <meta property="og:image" content={`${Astro.site}images/og.png`} />
-        </>
-      )
-    }
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={metaData.title} />
-    <meta name="twitter:description" content={metaData.description} />
-    {
-      Astro.site && (
-        <meta name="twitter:image" content={`${Astro.site}images/2-1.png`} />
-      )
-    }
 
     <script src="https://statsy.observer/clnuimax10007ql0hx056h19p.js" defer
     ></script>
