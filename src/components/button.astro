@@ -3,12 +3,14 @@ import type { HTMLAttributes } from "astro/types";
 import { cva, type VariantProps } from "class-variance-authority";
 
 export const button = cva([
-    "shadow-fill w-fit transition-all py-4 px-12 leading-normal font-semibold font-mono text-foreground",
-    "border-2 border-black rounded-lg",
+    'align-middle select-none font-sans font-bold text-center uppercase transition-all',
+    'text-xs py-3 px-6 rounded-lg',
+  "w-fit leading-normal font-semibold font-mono text-foreground",
 ], {
     variants: {
         variant: {
-            primary: 'bg-secondary-background text-white',
+            primary: 'bg-gray-950 hover:bg-gray-950/80 text-white',
+            secondary: 'bg-white text-black',
         }
     },
     defaultVariants: {

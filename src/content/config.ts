@@ -8,6 +8,14 @@ const categoryCollection = defineCollection({
     }),
 });
 
+const pagesCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+    }),
+});
+
 const caseSchema = ({ image }: SchemaContext)  => z.object({
         title: z.string(),
         description: z.string(),
@@ -53,4 +61,5 @@ export const collections = {
   'blog': blogCollection,
   'cases': caseCollection,
   'categories': categoryCollection,
+  'pages': pagesCollection,
 };

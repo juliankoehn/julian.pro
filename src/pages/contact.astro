@@ -1,0 +1,21 @@
+---
+import ContactForm from '@/components/contact-form.astro';
+import Hero from '@/components/hero.astro';
+import Layout from '@/layouts/layout.astro';
+---
+
+<Layout title={`Kontakt`}>
+    <Hero
+        subtitle='Bille Bille'
+        heading='Kontakt'
+        description='Dein Anliegen ist mir wichtig. Schreib mir eine Nachricht und ich melde mich so schnell wie möglich bei dir.'
+    />
+    
+
+    <section class="relative px-5vw w-full">
+         <div class="grid gap-10 max-w-4xl w-full">
+            <ContactForm />
+        </div>
+    </section>
+   
+</Layout>
