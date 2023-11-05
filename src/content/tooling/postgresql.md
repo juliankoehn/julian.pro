@@ -21,7 +21,7 @@ benefits:
     icon: "mdi:account-multiple"
   - title: "Kostenlos und Open Source"
     description: "PostgreSQL ist eine kostenlose und Open-Source-Datenbanklösung, die dir Kosten spart und Flexibilität bietet."
-    icon: "mdi:opensource"
+    icon: "mdi:hand-extended-outline"
 
 whyChooseTool:
   eyebrow: "Warum PostgreSQL?"
