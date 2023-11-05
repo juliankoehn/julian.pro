@@ -1,5 +1,6 @@
 ---
 title: "Google Drive – Dein Cloud-Speicher und mehr"
+name: Google Drive
 description: "Entdecke die Vorteile von Google Drive und wie es dir hilft, Dateien zu speichern, zu organisieren und nahtlos zusammenzuarbeiten. Tritt jetzt bei und greif auf deine Daten von überall aus zu!"
 ctaLabel: "Jetzt beitreten"
 benefits:
@@ -46,7 +47,7 @@ whyChooseTool:
     - title: "Integrationen und Erweiterungen"
       description: "Erweitere die Funktionalität von Google Drive mit Apps und Integrationen, die deine Arbeit noch effizienter machen."
       icon: "mdi:puzzle"
-      
+
     - title: "Datenvisualisierung"
       description: "Verwende Google Drive zur Speicherung und Visualisierung von Daten in Diagrammen, Tabellen und Berichten für bessere Entscheidungen."
       icon: "mdi:chart-scatter-plot"

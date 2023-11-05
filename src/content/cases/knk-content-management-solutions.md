@@ -8,6 +8,9 @@ logo: 'customers/knk'
 links:
     - title: Website
       url: https://www.knk.de/
+tooling:
+    - kubernetes
+    - postgresql
 tags:
     - Go
     - React

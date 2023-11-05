@@ -32,6 +32,7 @@ const caseSchema = ({ image }: SchemaContext)  => z.object({
             title: z.string(),
             url: z.string(),
         })).optional(),
+        tooling: z.array(reference('tooling')).optional(),
     })
 
 
@@ -62,6 +63,7 @@ export type Case = z.infer<ReturnType<typeof caseSchema>>;
 const toolingCollection = defineCollection({
     type: 'content',
     schema: ({ image }) => z.object({
+        name: z.string(),
         title: z.string(),
         description: z.string(),
         benefits: z.array(z.object({

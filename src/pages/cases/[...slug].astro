@@ -3,7 +3,7 @@ import BackLink from "@/components/back-link.astro";
 import BlogPost from "@/components/blog-post.astro";
 import Layout from "@/layouts/layout.astro";
 import { Image } from "astro:assets";
-import { type CollectionEntry } from "astro:content";
+import { getEntries, type CollectionEntry } from "astro:content";
 import { getSinglePage } from "@/lib/content-parser.astro";
 
 const posts = await getSinglePage("cases");
@@ -20,7 +20,10 @@ type Props = {
   entry: CollectionEntry<"cases">;
 };
 
+
 const { entry } = Astro.props;
+
+const tools = await getEntries(entry.data.tooling || []);
 
 const { Content } = await entry.render();
 ---
@@ -48,12 +51,17 @@ const { Content } = await entry.render();
 
         <div class="mx-auto max-w-2xl mt-24">
             <h3 class="font-display font-semibold text-gray-950 text-2xl">
-                Was wir gemacht haben
+                Was wir eingesetzt haben
             </h3>
             <ul role="list" class="my-6 flex flex-wrap items-center justify-center gap-4">
-            {entry.data.tags.map((tag) => (
-                <li class="inline-flex items-center px-3 py-1.5 rounded-full bg-gray-950 text-white text-sm font-medium">
-                    {tag}
+            {tools?.map((tool) => (
+                <li>
+                    <a
+                        href={`/tooling/${tool.slug}`}
+                        class="inline-flex items-center px-3 py-1.5 rounded-full bg-gray-950 text-white text-sm font-medium transition-colors hover:bg-gray-700"
+                    >
+                        {tool.data.name}    
+                    </a>    
                 </li>
             ))}
             </ul>

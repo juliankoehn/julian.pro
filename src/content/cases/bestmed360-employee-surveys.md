@@ -10,6 +10,9 @@ links:
       url: https://www.bestmed360.com/
     - title: Arbeitsplatz mitgestalten
       url: https://arbeitsplatz-mitgestalten.de/
+tooling:
+    - kubernetes
+    - postgresql
 tags:
     - Survey-System
     - SaaS

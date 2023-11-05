@@ -1,5 +1,6 @@
 ---
 title: Slack - Deine Kommunikationszentrale
+name: Slack
 description: Entdecke Slack, die ultimative Plattform für Teamkommunikation und Zusammenarbeit. Verbinde dich nahtlos mit deinem Team, wo immer du bist.
 ctaLabel: "Jetzt beitreten"
 benefits:

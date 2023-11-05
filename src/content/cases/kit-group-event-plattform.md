@@ -13,6 +13,9 @@ links:
   - title: Plattform
     url: https://opade.live/
 logo: 'customers/kit_group'
+tooling:
+    - kubernetes
+    - aws
 tags:
     - Go
     - Microservices

@@ -1,5 +1,6 @@
 ---
 title: "Kubernetes - Der De-Facto Standard für Container Orchestrierung"
+name: "Kubernetes"
 description: "Lerne die Vorteile von Kubernetes kennen und warum sich der Standard für Container Orchestrierung und Management durchgesetzt hat."
 
 benefits:

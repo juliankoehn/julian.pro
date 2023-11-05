@@ -4,6 +4,10 @@ description: Konzeption und Entwicklung der Lerninhalts-Plattform Wizdom mit Git
 laufzeit: "2021"
 kunde: Tribune Group GmbH
 branche: E-Learning
+tooling:
+    - laravel
+    - hetzner
+    - mysql
 tags:
     - Laravel
     - MySQL

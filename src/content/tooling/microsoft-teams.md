@@ -1,5 +1,6 @@
 ---
 title: Microsoft Teams - Dein Kommunikationshub
+name: "Microsoft Teams"
 description: Erfahre mehr über Microsoft Teams, die führende Plattform für Teamkommunikation und Zusammenarbeit. Verbinde dich mit deinem Team, egal wo du bist.
 ctaLabel: "Jetzt loslegen"
 benefits:

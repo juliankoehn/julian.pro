@@ -1,5 +1,6 @@
 ---
 title: "Cloudflare – Dein Partner für sichere und schnelle Online-Präsenz"
+name: "Cloudflare"
 description: "Entdecke die Vorteile von Cloudflare und wie du deine Website optimieren, schützen und beschleunigen kannst. Wir sind an deiner Seite für deinen Online-Erfolg!"
 ctaLabel: "Kontakt aufnehmen"
 benefits:

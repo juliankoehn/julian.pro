@@ -11,6 +11,9 @@ image:
 links:
     - title: Website
       url: https://www.modecentrum-hamburg.de/
+tooling:
+    - kubernetes
+    - ovh
 tags:
     - Digital Signage
     - Distributed Systems

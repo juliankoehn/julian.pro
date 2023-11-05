@@ -4,6 +4,10 @@ description: Velcure digitalisiert und optimiert Krankentransport-Prozesse durch
 laufzeit: 2023 - Laufend
 kunde: Velcure GmbH
 branche: SaaS Krankentransport
+tooling:
+    - kubernetes
+    - azure
+    - postgresql
 tags:
     - SaaS
     - Go

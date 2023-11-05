@@ -1,5 +1,6 @@
 ---
 title: "Shopware E-Commerce Lösung"
+name: Shopware
 description: "Überzeuge dich von den Vorteilen von Shopware für deinen Online-Shop. Dieser Text fasst die wichtigsten Benefits, Anwendungsfälle und FAQs zusammen."
 
 benefits:
