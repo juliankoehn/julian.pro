@@ -8,6 +8,9 @@ tooling:
     - kubernetes
     - azure
     - postgresql
+    - react
+    - golang
+    - typescript
 tags:
     - SaaS
     - Go

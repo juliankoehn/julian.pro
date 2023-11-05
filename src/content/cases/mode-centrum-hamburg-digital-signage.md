@@ -14,6 +14,10 @@ links:
 tooling:
     - kubernetes
     - ovh
+    - react
+    - golang
+    - ubuntu-core
+    - typescript
 tags:
     - Digital Signage
     - Distributed Systems

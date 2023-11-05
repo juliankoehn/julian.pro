@@ -1,6 +1,7 @@
 ---
 title: "Amazon Web Services (AWS) – Deine Cloud-Plattform für Innovation"
-name: "aws"
+name: AWS
+category: hosting
 description: "Entdecke die vielfältigen Vorteile von AWS und wie du mithilfe unserer Cloud-Dienste deine Projekte vorantreiben und Innovationen voranbringen kannst. Sei bereit für die Zukunft!"
 ctaLabel: "Jetzt loslegen"
 benefits:

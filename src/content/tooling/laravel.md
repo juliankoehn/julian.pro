@@ -1,6 +1,7 @@
 ---
 title: "Laravel - Das mächtige PHP Framework"
 name: Laravel
+category: frameworks
 description: "Lerne die Vorteile von Laravel kennen - dem beliebten PHP Framework für moderne, skalierbare Webanwendungen."
 
 benefits:

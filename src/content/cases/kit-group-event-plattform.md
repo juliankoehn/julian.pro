@@ -16,6 +16,11 @@ logo: 'customers/kit_group'
 tooling:
     - kubernetes
     - aws
+    - react
+    - terraform
+    - nextjs
+    - golang
+    - typescript
 tags:
     - Go
     - Microservices

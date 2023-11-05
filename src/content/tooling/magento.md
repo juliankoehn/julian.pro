@@ -1,6 +1,7 @@
 ---
 title: "Maximiere deinen E-Commerce-Erfolg mit Magento: Dein Partner für herausragende Online-Shops"
 name: "Magento"
+category: shops
 description: "Erfahre, wie Magento als führende E-Commerce-Plattform deine Online-Präsenz auf die nächste Stufe heben kann."
 
 benefits:

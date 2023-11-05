@@ -5,6 +5,7 @@ const categoryCollection = defineCollection({
     schema: z.object({
         name: z.string(),
         description: z.string(),
+        tooling: z.boolean().optional(),
     }),
 });
 
@@ -66,6 +67,7 @@ const toolingCollection = defineCollection({
         name: z.string(),
         title: z.string(),
         description: z.string(),
+        category: reference('categories').optional(),
         benefits: z.array(z.object({
             title: z.string(),
             description: z.string(),

@@ -1,6 +1,7 @@
 ---
 title: Deine Azure Cloud-Dienstleistungen
 name: azure
+category: hosting
 description: Entdecke, wie Microsoft Azure deine Cloud-Anforderungen erfüllen kann. Unsere Azure-Experten bieten maßgeschneiderte Dienstleistungen und Lösungen für dich.
 ctaLabel: "Jetzt starten"
 benefits:

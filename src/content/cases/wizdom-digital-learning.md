@@ -8,6 +8,8 @@ tooling:
     - laravel
     - hetzner
     - mysql
+    - react
+    - typescript
 tags:
     - Laravel
     - MySQL

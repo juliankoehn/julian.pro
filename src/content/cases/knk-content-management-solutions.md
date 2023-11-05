@@ -11,6 +11,9 @@ links:
 tooling:
     - kubernetes
     - postgresql
+    - react
+    - golang
+    - typescript
 tags:
     - Go
     - React

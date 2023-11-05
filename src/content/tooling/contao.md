@@ -1,6 +1,7 @@
 ---
 title: Deine Contao Lösungen
 name: Contao
+category: cms
 description: Entdecke, wie Contao deine Webseiten-Anforderungen optimal erfüllen kann. Unsere Contao-Experten bieten maßgeschneiderte Lösungen und Dienstleistungen für dich.
 benefits:
   - title: "Benutzerfreundliche CMS"

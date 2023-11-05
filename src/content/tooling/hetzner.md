@@ -1,6 +1,7 @@
 ---
 title: "Entdecke die Vorteile von Hetzner: Dein Partner für Hosting und mehr"
 name: "Hetzner"
+category: hosting
 description: "Erfahre, wie Hetzner als vertrauenswürdiger Hosting-Partner deinem Unternehmen zum Erfolg verhelfen kann."
 benefits:
   - title: "Zuverlässigkeit"

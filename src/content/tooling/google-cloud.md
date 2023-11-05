@@ -1,6 +1,7 @@
 ---
 title: "Entdecke die Vorteile von Google Cloud"
 name: Google Cloud
+category: hosting
 description: "Die Zukunft des Cloud-Computings ist hier. Erfahre, wie Google Cloud dein Unternehmen auf das nächste Level hebt."
 benefits:
   - title: "Skalierbarkeit"

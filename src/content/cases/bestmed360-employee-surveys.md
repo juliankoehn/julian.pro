@@ -13,6 +13,10 @@ links:
 tooling:
     - kubernetes
     - postgresql
+    - react
+    - terraform
+    - golang
+    - typescript
 tags:
     - Survey-System
     - SaaS
