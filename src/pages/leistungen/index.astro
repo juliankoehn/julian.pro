@@ -1,0 +1,96 @@
+---
+import Layout from '@/layouts/layout.astro';
+import clsx from 'clsx';
+---
+
+<Layout title="Leistungen"
+    description="Meine Leistungen für deine Digitalisierung."
+    index={false}
+>
+
+<section class="relative px-5vw w-full py-24 sm:py-32">
+    <div class="max-w-8xl mx-auto w-full">
+        <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl max-w-2xl">
+            <span class="text-3xl sm:text-4xl mt-6 max-w-5xl font-display">
+                Womit ich gerne Arbeite
+            </span>
+        </h1>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 py-24">
+        {/** Toolset */}
+        <div class={clsx(
+            "relative pt-6",
+            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
+            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
+        )}>
+            <h5 class="font-display text-2xl font-medium text-gray-950">
+                Projektmanagement & Kollaboration
+            </h5>
+        </div>
+        <div class={clsx(
+            "relative",
+            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
+            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
+        )}>
+            <h5>
+               Web- & App-Entwicklung
+            </h5>
+        </div>
+        <div class={clsx(
+            "relative",
+            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
+            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
+        )}>
+            <h5>
+               Content-Management-Systeme
+            </h5>
+        </div>
+        <div class={clsx(
+            "relative",
+            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
+            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
+        )}>
+            <h5>
+               Shops
+            </h5>
+        </div>
+        <div class={clsx(
+            "relative",
+            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
+            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
+        )}>
+            <h5>
+               Hosting & Virtualisierung
+            </h5>
+        </div>
+        <div class={clsx(
+            "relative",
+            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
+            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
+        )}>
+            <h5>
+               Datenbanken
+            </h5>
+        </div>
+        <div class={clsx(
+            "relative",
+            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
+            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
+        )}>
+            <h5>
+               DevTools
+            </h5>
+        </div>
+        <div class={clsx(
+            "relative",
+            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
+            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
+        )}>
+            <h5>
+               Dokumentation
+            </h5>
+        </div>
+    </div>
+</section>
+
+</Layout>

@@ -1,0 +1,163 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getSinglePage } from '@/lib/content-parser.astro';
+import Layout from '@/layouts/layout.astro';
+import { marked } from 'marked';
+import Icon from 'astro-icon';
+import Link from '@/components/link.astro';
+
+export const getStaticPaths = ( async () => {
+    const pages = await getSinglePage("tooling");
+    
+    const paths = pages.map((page) => ({
+        params: {
+            slug: page.slug,
+        },
+        props: { page },
+    }));
+    return paths;
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const data =  page.data;
+const { Content } = await page.render();
+---
+<Layout
+    index={true}
+    title={data.title}
+    description={data.description}
+>
+
+
+
+<section class="w-full px-5vw py-24 sm:py-32">
+    <div class="max-w-8xl mx-auto w-full">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            <div class="block">
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    {data.title}
+                </h1>
+                <p class="text-primary max-w-xl leading-7 mt-6">
+                    {data.description}
+                </p>
+                {data.ctaLabel && (
+                    <div class="mt-6">
+                        <Link href="/contact">
+                            {data.ctaLabel}    
+                        </Link>
+                    </div>
+                )}
+            </div>
+            <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
+                {data.benefits?.map((benefit) => (
+                    <div>
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-950">
+                                <Icon class="h-6 w-6 text-white" name={benefit.icon} />
+                            </div>
+                            {benefit.title}  
+                        </dt>
+                        <dd class="mt-1 text-base leading-7 text-gray-600">
+                            {benefit.description}    
+                        </dd>
+                    </div>
+                ))}
+            </dl>
+        </div>
+    </div>
+</section>
+
+{data.whyChooseTool && (
+    <section class="w-full px-5vw py-24 sm:py-32">
+        <div class="max-w-8xl mx-auto w-full">
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <h2 class="text-base font-semibold leading-7 text-gray-600">
+                    {data.whyChooseTool.eyebrow}
+                </h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    {data.whyChooseTool.heading}    
+                </p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                    {data.whyChooseTool.advantages}    
+                </p>
+            </div>
+            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                    {data.whyChooseTool.useCases?.map((usecase) => (
+                        <div class="flex flex-col">
+                            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-950">
+                                    <Icon class="h-6 w-6 text-white" name={usecase.icon} />
+                                </div> 
+                                <div>
+                                    {usecase.title}
+                                </div>
+                            </dt>
+                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                                <p class="flex-auto">
+                                    {usecase.description}
+                                </p>  
+                                {usecase.link && (
+                                    <p class="mt-6">
+                                        <a
+                                            href={usecase.link}
+                                            class="text-sm font-semibold leading-6 text-gray-600 underlined"
+                                            rel="noopener noreferrer"
+                                            target="_blank"
+                                        >
+                                            Erfahre mehr <span aria-hidden="true">→</span>
+                                        </a>
+                                    </p>
+                                )}  
+                            </dd>
+                        </div>
+                    ))}  
+                </dl>    
+            </div>
+        </div>
+    </section>
+)}
+
+{/** FAQ Block */}
+{data.faq && (
+    <section class="w-full px-5vw py-24 sm:py-32 bg-gray-950 text-white">
+        <div class="max-w-8xl mx-auto w-full">
+            <div class="mx-auto max-w-4xl divide-y divide-white/10">
+                <h2 class="text-2xl font-bold leading-10 tracking-tight">
+                    {data.faq.heading}    
+                </h2>
+                <dl class="mt-10 pt-4 divide-y divide-white/10">
+                    {data.faq.questions.map((q) => (
+                        <div class="py-4">
+                            <dt class="text-base font-semibold leading-7">
+                                {q.question}    
+                            </dt>
+                            <dd class="mt-2 text-base leading-7 text-gray-300"
+                                set:html={marked.parse(q.answer)}
+                            />
+                        </div>
+                    ))}
+                </dl>
+            </div>
+        </div>
+    </section>
+)}
+
+{data.ctaSection && (
+    <section class="w-full px-5vw py-24 sm:py-32">
+        <div class="max-w-8xl mx-auto w-full lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl max-w-2xl">
+                {data.ctaSection.actionCall}
+            </h2>
+            <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+                <Link
+                    href="/contact"
+                >
+                    {data.ctaSection.actionLabel} 
+                </Link>    
+            </div>
+        </div>    
+    </section>
+)}
+
+</Layout>

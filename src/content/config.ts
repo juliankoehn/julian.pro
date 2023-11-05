@@ -34,6 +34,8 @@ const caseSchema = ({ image }: SchemaContext)  => z.object({
         })).optional(),
     })
 
+
+
 const caseCollection = defineCollection({
     type: 'content',
     schema: caseSchema,
@@ -57,9 +59,58 @@ const blogCollection = defineCollection({
 
 export type Case = z.infer<ReturnType<typeof caseSchema>>;
 
+const toolingCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) => z.object({
+        title: z.string(),
+        description: z.string(),
+        benefits: z.array(z.object({
+            title: z.string(),
+            description: z.string(),
+            icon: z.string(),
+        })),
+        ctaLabel: z.string().optional(),
+    
+        whyChooseTool: z.object({
+            eyebrow: z.string(), // Überschrift
+            heading: z.string(), // Überschrift
+            advantages: z.string(), // Vertiefte Erklärung der Vorteile
+            useCases: z.array(z.object({
+                title: z.string(), // Titel des Anwendungsfalls
+                description: z.string(), // Beschreibung des Anwendungsfalls
+                icon: z.string(), // Icon des Anwendungsfalls "mdi:icon"
+                link: z.string().optional(), // Link zum Anwendungsfall
+            })).max(8), // Informationen zu Anwendungsfällen
+        }).optional(),
+
+        featureOverview: z.object({
+            mainFeatures: z.array(z.string()), // Liste der Hauptfunktionen
+            integrationOptions: z.array(z.string()), // Informationen zu Integrationen
+        }).optional(),
+        customerReviewsOrSuccessStories: z.array(
+            z.object({
+                reviewOrStory: z.string(), // Kundenbewertung oder Erfolgsgeschichte
+            })
+        ).optional(),
+        ctaSection: z.object({
+            actionCall: z.string(), // Action call, Heading
+            actionLabel: z.string(), // Weiterer CTA-Button
+        }).optional(),
+        faq: z.object({
+            heading: z.string(), // Überschrift
+            questions: z.array(z.object({
+                question: z.string(), // Frage in den FAQ
+                answer: z.string(), // Antwort auf die Frage
+            }))
+        }).optional(),
+    })
+});
+
+
 export const collections = {
   'blog': blogCollection,
   'cases': caseCollection,
   'categories': categoryCollection,
   'pages': pagesCollection,
+  'tooling': toolingCollection,
 };
