@@ -1,6 +1,8 @@
 ---
 title: "Shopify - Die E-Commerce Lösung für schnellen Verkaufserfolg"
 name: Shopify
+category: shops
+icon: "logos:shopify"
 description: "Shopify ist eine All-in-One E-Commerce Plattform zum einfachen Erstellen und Verwalten von Online-Shops und Marken."
 
 benefits:

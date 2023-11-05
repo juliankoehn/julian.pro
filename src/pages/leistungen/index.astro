@@ -1,6 +1,36 @@
 ---
 import Layout from '@/layouts/layout.astro';
+import { getSinglePage } from '@/lib/content-parser.astro';
+import { Icon } from 'astro-icon/components';
+import { type CollectionEntry, getEntry } from 'astro:content';
 import clsx from 'clsx';
+
+// get all categories
+const allToolings = await getSinglePage('tooling');
+
+
+
+const collectCategories = async () => {
+    const categories: Map<string, CollectionEntry<'categories'>> = new Map();
+
+    for (const tooling of allToolings) {
+        if (!tooling.data.category) {
+            continue;
+        }
+        const category = tooling.data.category.id
+
+        if (!categories.has(category)) {
+            const c = await getEntry('categories', category)
+            categories.set(category, c);
+        }
+    }
+
+    return categories;
+}
+
+const categories = await collectCategories();
+
+
 ---
 
 <Layout title="Leistungen"
@@ -12,11 +42,48 @@ import clsx from 'clsx';
     <div class="max-w-8xl mx-auto w-full">
         <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl max-w-2xl">
             <span class="text-3xl sm:text-4xl mt-6 max-w-5xl font-display">
-                Womit ich gerne Arbeite
+                Womit wir gerne Arbeiten
             </span>
         </h1>
     </div>
-    <div class="grid gap-8 md:grid-cols-2 py-24">
+    <ul role="list" class="grid grid-cols-1 gap-10 sm:grid-cols-2 mt-8">
+        {Array.from(categories.values()).map((category) => (
+            <li class={clsx(
+                "text-base text-gray-600 before:bg-gray-950 after:bg-gray-100",
+            )}>
+                <div
+                    class="pl-8 relative before:absolute after:absolute before:bg-neutral-950 after:bg-neutral-950/10 before:left-0 before:top-0 before:h-6 before:w-px after:bottom-0 after:left-0 after:top-8 after:w-px"
+                >
+                    <h5 class="font-display text-2xl font-medium text-gray-950">
+                        {category.data.name}
+                    </h5>
+                    <div class="relative mb-4 flex flex-wrap gap-2">
+                        {allToolings.filter((t) => {
+                            if (!t.data.category) {
+                                return false;
+                            }
+                            return t.data.category?.id === category.id;
+                        }).map((tool) => {
+                            if (!tool.data.icon) return null;
+
+                            return (
+                                <div>
+                                    <Icon
+                                        class="w-6 h-6"
+                                        name={tool.data.icon}
+                                    />
+                                </div>
+                            )
+                        })}   
+                    </div>
+                    <p class="">
+                        {category.data.description}    
+                    </p>
+                </div>
+                
+                
+            </li>
+        ))}
         {/** Toolset */}
         <div class={clsx(
             "relative pt-6",
@@ -36,24 +103,8 @@ import clsx from 'clsx';
                Web- & App-Entwicklung
             </h5>
         </div>
-        <div class={clsx(
-            "relative",
-            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
-            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
-        )}>
-            <h5>
-               Content-Management-Systeme
-            </h5>
-        </div>
-        <div class={clsx(
-            "relative",
-            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
-            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
-        )}>
-            <h5>
-               Shops
-            </h5>
-        </div>
+ 
+   
         <div class={clsx(
             "relative",
             'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
@@ -90,7 +141,7 @@ import clsx from 'clsx';
                Dokumentation
             </h5>
         </div>
-    </div>
+    </ul>
 </section>
 
 </Layout>
