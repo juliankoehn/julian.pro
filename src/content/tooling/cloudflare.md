@@ -30,23 +30,22 @@ whyChooseTool:
     - title: "Webseitenbeschleunigung"
       description: "Beschleunige deine Website und sorge für ein optimales Benutzererlebnis mit Cloudflare's Content Delivery Network (CDN)."
       icon: "mdi:speedometer"
-      link: "https://www.cloudflare.com/content-delivery-network/"
+
     - title: "Sicherheitslösungen"
       description: "Schütze deine Website vor Bedrohungen, einschließlich DDoS-Angriffen, mit Cloudflare's Sicherheitsdiensten."
       icon: "mdi:shield-check"
-      link: "https://www.cloudflare.com/ddos-protection/"
+
     - title: "IPv6-Implementierung"
       description: "Erreiche ein globales Publikum und sorge für reibungslose Verbindungen mit Cloudflare's IPv6-Unterstützung."
       icon: "mdi:numeric-6-box"
-      link: "https://www.cloudflare.com/ipv6/"
+
     - title: "Bot-Management"
       description: "Bekämpfe bösartige Bots und Spam-Traffic, um die Qualität deines Datenverkehrs zu steigern."
       icon: "mdi:robot"
-      link: "https://www.cloudflare.com/bot-management/"
+
     - title: "Kostenlose SSL-Zertifikate"
       description: "Sorge für sichere Verbindungen und Vertrauen bei deinen Besuchern mit kostenlosen SSL-Zertifikaten von Cloudflare."
       icon: "mdi:lock"
-      link: "https://www.cloudflare.com/ssl/"
 
 ctaSection:
   actionCall: "Bereit, deine Online-Präsenz auf die nächste Stufe zu heben? Kontaktiere uns jetzt und erfahre, wie Cloudflare dir helfen kann."
