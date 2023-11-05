@@ -128,13 +128,16 @@ const { Content } = await page.render();
                 </h2>
                 <dl class="mt-10 pt-4 divide-y divide-white/10">
                     {data.faq.questions.map((q) => (
-                        <div class="py-4">
-                            <dt class="text-base font-semibold leading-7">
+                        <div class="py-4" itemscope itemtype="https://schema.org/Question">
+                            <dt class="text-base font-semibold leading-7" itemprop="name">
                                 {q.question}    
                             </dt>
+                            
                             <dd class="mt-2 text-base leading-7 text-gray-300"
-                                set:html={marked.parse(q.answer)}
-                            />
+                                itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="https://schema.org/Answer"
+                            >
+                                <p itemprop="text" set:html={marked.parse(q.answer)} />
+                            </dd>
                         </div>
                     ))}
                 </dl>
