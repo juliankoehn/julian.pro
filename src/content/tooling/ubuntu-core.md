@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Core - Das sichere IoT Betriebssystem für Edge Geräte"
 name: "Ubuntu Core"
-category: os
+category: infrastructure
 description: "Ubuntu Core ist ein minimales, sicheres und verwaltbares Betriebssystem von Canonical, das speziell für IoT und Edge Computing entwickelt wurde."
 
 benefits:

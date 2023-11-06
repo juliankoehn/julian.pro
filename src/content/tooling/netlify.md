@@ -1,6 +1,7 @@
 ---
 title: "Netlify - Das ultimative Webhosting für moderne Jamstack Sites"
 name: "Netlify"
+category: hosting
 description: "Netlify ist die ideale Plattform für das Hosting von statischen Websites und Serverless Functions im modernen Jamstack."
 
 benefits:

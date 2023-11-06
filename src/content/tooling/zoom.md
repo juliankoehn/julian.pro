@@ -1,6 +1,7 @@
 ---
 title: "Zoom – Deine Plattform für Videokonferenzen"
 name: Zoom
+category: collaboration
 description: "Entdecke die Vorteile von Zoom für effektive Videokonferenzen und virtuelle Zusammenarbeit. Trete noch heute bei und bleibe in Verbindung!"
 ctaLabel: "Jetzt beitreten"
 benefits:

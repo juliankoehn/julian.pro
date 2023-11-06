@@ -1,6 +1,7 @@
 ---
 title: PostgreSQL - Deine Datenbanklösung
 name: PostgreSQL
+category: databases
 description: Erfahre, warum PostgreSQL die ideale Wahl für deine Datenbankanforderungen ist. Unsere PostgreSQL-Experten bieten umfassende Dienstleistungen und Lösungen.
 ctaLabel: "Jetzt testen"
 benefits:

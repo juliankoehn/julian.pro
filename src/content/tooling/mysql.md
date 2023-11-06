@@ -1,6 +1,7 @@
 ---
 title: MySQL - Die bewährte Wahl für deine Datenbankanforderungen
 name: "MySQL"
+category: databases
 description: Erfahre, warum MySQL die richtige Wahl für deine Datenbankanforderungen ist. Unsere MySQL-Experten stehen dir zur Seite.
 ctaLabel: "Jetzt starten"
 benefits:

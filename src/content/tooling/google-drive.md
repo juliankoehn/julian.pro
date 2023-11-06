@@ -1,6 +1,7 @@
 ---
 title: "Google Drive – Dein Cloud-Speicher und mehr"
 name: Google Drive
+category: collaboration
 description: "Entdecke die Vorteile von Google Drive und wie es dir hilft, Dateien zu speichern, zu organisieren und nahtlos zusammenzuarbeiten. Tritt jetzt bei und greif auf deine Daten von überall aus zu!"
 ctaLabel: "Jetzt beitreten"
 benefits:

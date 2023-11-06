@@ -20,6 +20,9 @@ export default {
       spacing: {
         "5vw": "5vw",
       },
+      fontSize: {
+        xss: "0.6rem",
+      },
       typography: (theme) => {
         const fontSize = (size: string) => {
           const result = theme(`fontSize.${size}`);

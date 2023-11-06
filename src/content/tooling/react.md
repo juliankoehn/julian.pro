@@ -1,6 +1,7 @@
 ---
 title: "React - Das UI Framework für moderne Webanwendungen"
 name: "React"
+category: frameworks
 description: "React ist ein effizientes und flexibles JavaScript-Framework zum Erstellen von nutzerfreundlichen Web-Oberflächen und Anwendungen."
 
 benefits:

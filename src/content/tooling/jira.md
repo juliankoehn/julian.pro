@@ -1,6 +1,7 @@
 ---
 title: Jira - Dein Werkzeug für effizientes Projektmanagement
 name: "Jira"
+category: collaboration
 description: Entdecke Jira, das leistungsstarke Werkzeug, um deine Projekte effizient zu planen, verfolgen und verwalten. Unsere Jira-Experten unterstützen dich bei deinem Projektmanagement.
 ctaLabel: "Jetzt starten"
 benefits:

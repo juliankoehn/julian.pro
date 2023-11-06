@@ -1,6 +1,7 @@
 ---
 title: "Entdecke die Vorteile von OVH: Dein Partner für zuverlässiges Hosting und Cloud-Dienste"
 name: "OVH"
+category: hosting
 description: "Erfahre, wie OVH als vertrauenswürdiger Hosting- und Cloud-Provider deine Online-Präsenz stärken kann."
 benefits:
   - title: "Zuverlässigkeit"

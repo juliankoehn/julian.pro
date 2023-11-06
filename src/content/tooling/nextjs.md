@@ -1,6 +1,7 @@
 ---
 title: "Next.js - Das React Framework für server-side rendered Apps"
 name: "Next.js"
+category: frameworks
 description: "Next.js kombiniert die Vorteile von React mit serverseitigem Rendering und ermöglicht so SEO-freundliche, performante Webanwendungen."
 
 benefits:

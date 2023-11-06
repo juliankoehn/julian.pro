@@ -66,6 +66,7 @@ const toolingCollection = defineCollection({
     schema: ({ image }) => z.object({
         name: z.string(),
         title: z.string(),
+        icon: z.string().optional(),
         description: z.string(),
         category: reference('categories').optional(),
         benefits: z.array(z.object({

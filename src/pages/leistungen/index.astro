@@ -1,7 +1,8 @@
 ---
+import Hero from '@/components/hero.astro';
 import Layout from '@/layouts/layout.astro';
 import { getSinglePage } from '@/lib/content-parser.astro';
-import { Icon } from 'astro-icon/components';
+import Icon from "astro-icon";
 import { type CollectionEntry, getEntry } from 'astro:content';
 import clsx from 'clsx';
 
@@ -37,7 +38,11 @@ const categories = await collectCategories();
     description="Meine Leistungen für deine Digitalisierung."
     index={false}
 >
-
+<Hero
+    subtitle='Unsere Expertise'
+    heading='IT-Dienstleistungen für deinen Erfolg'
+    description='Unsere Dienstleistungen umfassen ein breites Spektrum, darunter Web-Entwicklung, App-Entwicklung, Individualsoftware, SEO-Optimierung und Prozesssoftware. Wir bieten umfassende Unterstützung und maßgeschneiderte Lösungen für alle deine IT-Anforderungen. Egal, ob du nach individuellen Anwendungen, Online-Präsenzen oder Suchmaschinenoptimierung suchst – wir haben die Erfahrung und das Fachwissen, um deine Ziele zu erreichen.'
+/>
 <section class="relative px-5vw w-full py-24 sm:py-32">
     <div class="max-w-8xl mx-auto w-full">
         <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl max-w-2xl">
@@ -57,22 +62,25 @@ const categories = await collectCategories();
                     <h5 class="font-display text-2xl font-medium text-gray-950">
                         {category.data.name}
                     </h5>
-                    <div class="relative mb-4 flex flex-wrap gap-2">
+                    <div class="relative mb-4 flex flex-wrap gap-2 mt-2">
                         {allToolings.filter((t) => {
                             if (!t.data.category) {
                                 return false;
                             }
                             return t.data.category?.id === category.id;
                         }).map((tool) => {
-                            if (!tool.data.icon) return null;
-
                             return (
-                                <div>
-                                    <Icon
-                                        class="w-6 h-6"
-                                        name={tool.data.icon}
-                                    />
-                                </div>
+                                <a
+                                    href={`/tooling/${tool.slug}`}
+                                    class={clsx(
+                                        "relative grid items-center font-sans font-medium uppercase whitespace-nowrap select-none",
+                                        "transition-colors bg-gray-900 hover:bg-gray-700 text-white py-1 px-2 text-xs rounded-lg"
+                                    )}
+                                >
+                                    <span>
+                                        {tool.data.name}
+                                    </span>
+                                </a>
                             )
                         })}   
                     </div>
@@ -84,63 +92,7 @@ const categories = await collectCategories();
                 
             </li>
         ))}
-        {/** Toolset */}
-        <div class={clsx(
-            "relative pt-6",
-            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
-            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
-        )}>
-            <h5 class="font-display text-2xl font-medium text-gray-950">
-                Projektmanagement & Kollaboration
-            </h5>
-        </div>
-        <div class={clsx(
-            "relative",
-            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
-            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
-        )}>
-            <h5>
-               Web- & App-Entwicklung
-            </h5>
-        </div>
- 
-   
-        <div class={clsx(
-            "relative",
-            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
-            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
-        )}>
-            <h5>
-               Hosting & Virtualisierung
-            </h5>
-        </div>
-        <div class={clsx(
-            "relative",
-            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
-            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
-        )}>
-            <h5>
-               Datenbanken
-            </h5>
-        </div>
-        <div class={clsx(
-            "relative",
-            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
-            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
-        )}>
-            <h5>
-               DevTools
-            </h5>
-        </div>
-        <div class={clsx(
-            "relative",
-            'before:absolute after:absolute before:bg-gray-950 after:bg-gray-950/10 before:left-0 before:top-0',
-            'before:h-[2px] before:w-8 after:left-8 after:right-0 after:top-0 after:h-[2px]',
-        )}>
-            <h5>
-               Dokumentation
-            </h5>
-        </div>
+        
     </ul>
 </section>
 

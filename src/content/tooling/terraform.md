@@ -1,6 +1,7 @@
 ---
 title: "Terraform - Die flexible Infrastructure-as-Code Lösung"
 name: Terraform
+category: infrastructure
 description: "Terraform automatisiert die Bereitstellung von Cloud-Infrastruktur und ermöglicht Collaboration innerhalb von Teams."
 
 benefits:
