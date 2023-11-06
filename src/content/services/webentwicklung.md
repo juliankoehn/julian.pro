@@ -1,6 +1,8 @@
 ---
 title: Webentwicklung
 name: Webentwicklung
+icon: "mdi:web-check"
+shortDescription: Wir bieten umfassende Webentwicklungsdienstleistungen, darunter Webdesign, Front-End-Entwicklung, Back-End-Entwicklung und Full-Stack-Entwicklung.
 description: Wir bieten umfassende Webentwicklungsdienstleistungen, darunter Webdesign, Front-End-Entwicklung, Back-End-Entwicklung und Full-Stack-Entwicklung. Egal, ob du eine benutzerfreundliche Website, eine individuelle Webanwendung oder eine maßgeschneiderte E-Commerce-Lösung benötigst, wir haben die Expertise, um deine Vision zum Leben zu erwecken.
 keywords:
     - Webentwicklung

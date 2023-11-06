@@ -117,6 +117,8 @@ const servicesCollection = defineCollection({
     schema: ({ image }) => z.object({
         title: z.string(), // Titel der Dienstleistung
         name: z.string(), // Name der Dienstleistung für word cloud
+        shortDescription: z.string(), // Kurze Beschreibung der Dienstleistung für word cloud
+        icon: z.string(), // Icon der Dienstleistung "mdi:icon"
         description: z.string(), // Kurze Beschreibung der Dienstleistung
         keywords: z.array(z.string()), // Relevante Keywords für SEO
 

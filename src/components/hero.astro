@@ -1,28 +1,46 @@
 ---
+import { Image } from 'astro:assets';
 export type Props = {
     subtitle?: string;
     heading: string;
     description: string;
+    image?: {
+        src: ImageMetadata
+        alt: string
+    }
 }
-const { subtitle, heading, description} = Astro.props;
+const { subtitle, heading, description, image } = Astro.props;
 
 ---
 
-<section class="w-full bg-white px-5vw py-24 sm:py-32">
+<section class="w-full bg-white px-5vw py-24 sm:py-32 overflow-hidden">
     <div class="max-w-8xl mx-auto w-full">
-        <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl max-w-2xl">
-            {subtitle && (
-                <span class="block font-display text-base font-semibold text-neutral-950">
-                    {subtitle}    
-                </span>
-                <span class="sr-only"> - </span>
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:pr-8 lg:pt-4">
+                <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl max-w-2xl">
+                    {subtitle && (
+                        <span class="block font-display text-base font-semibold text-neutral-950">
+                            {subtitle}    
+                        </span>
+                        <span class="sr-only"> - </span>
+                    )}
+                    <span class="text-3xl sm:text-4xl mt-6 max-w-5xl font-display">
+                        {heading}
+                    </span>
+                </h1>
+                <p class="text-primary max-w-xl leading-7 mt-6">
+                    {description}
+                </p>
+            </div>
+            {image && (
+                <Image
+                    src={image.src}
+                    alt={image.alt}
+                    class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                    width={960}
+                />
             )}
-            <span class="text-3xl sm:text-4xl mt-6 max-w-5xl font-display">
-                {heading}
-            </span>
-        </h1>
-        <p class="text-primary max-w-xl leading-7 mt-6">
-            {description}
-        </p>
+        </div>
+        
     </div>
 </section>
