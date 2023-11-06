@@ -1,0 +1,105 @@
+---
+import Hero from '@/components/hero.astro';
+import Layout from '@/layouts/layout.astro';
+import { getSinglePage } from '@/lib/content-parser.astro';
+import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from 'astro:content';
+import clsx from 'clsx';
+import { marked } from 'marked';
+
+export const getStaticPaths = ( async () => {
+    const pages = await getSinglePage("services");
+    
+    const paths = pages.map((service) => ({
+        params: {
+            service: service.slug,
+        },
+        props: { service },
+    }));
+    return paths;
+}) satisfies GetStaticPaths;
+
+export type Props = {
+    service: CollectionEntry<"services">
+}
+
+const { service } = Astro.props;
+const { title, description} = service.data;
+---
+
+<Layout
+    title={title}
+    description={description}
+    index={false}
+>
+    <Hero
+        heading={title}
+        description={description}
+    />
+
+
+{/** FAQ Block */}
+{service.data.faqSection && (
+    <section class="w-full px-5vw py-24 sm:py-32 bg-gray-950 text-white">
+        <div class="max-w-8xl mx-auto w-full">
+            <div class="mx-auto max-w-4xl divide-y divide-white/10">
+                <h2 class="text-2xl font-bold leading-10 tracking-tight">
+                    {service.data.faqSection.heading}    
+                </h2>
+                <dl class="mt-10 pt-4 divide-y divide-white/10">
+                    {service.data.faqSection.questions.map((q) => (
+                        <div class="py-4" itemscope itemtype="https://schema.org/Question">
+                            <dt class="text-base font-semibold leading-7" itemprop="name">
+                                {q.question}    
+                            </dt>
+                            
+                            <dd class="mt-2 text-base leading-7 text-gray-300"
+                                itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="https://schema.org/Answer"
+                            >
+                                <p itemprop="text" set:html={marked.parse(q.answer)} />
+                            </dd>
+                        </div>
+                    ))}
+                </dl>
+            </div>
+        </div>
+    </section>
+)}
+
+{service.data.benefitsSection && (
+    <section class="w-full px-5vw py-24 sm:py-32 ">
+        <div class="max-w-8xl mx-auto w-full">
+            <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                <div>
+                    <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        {service.data.benefitsSection.title}
+                    </h2>
+                    <p class="mt-6 text-base leading-7 text-gray-600">
+                        {service.data.benefitsSection.description}     
+                    </p>
+                </div>
+                <ul class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
+                    {service.data.benefitsSection.benefits.map((benefit) => (
+                        <li class={clsx(
+                            "relative",
+                            "before:absolute after:absolute",
+                            "before:bg-gray-950 after:bg-gray-950/10",
+                            "before:left-0 before:bottom-0 before:h-px before:w-6 after:left-8 after:right-0 after:bottom-0 after:h-px"
+
+                        )}>
+                            <p
+                                class={clsx(
+                                    "py-6",
+                                )}
+                            >
+                                {benefit}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+ 
+            </div>    
+        </div>
+    </section>
+)}
+</Layout>

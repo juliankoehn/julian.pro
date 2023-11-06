@@ -1,40 +1,42 @@
 ---
 import Icon from 'astro-icon';
 import Link from './link.astro';
-
+import CoWorkingImage from "@/assets/images/coworking.jpg"
+import { Image, Picture } from 'astro:assets';
 ---
 
 
-<section class="w-full mx-auto px-5vw max-w-8xl mt-24 sm:mt-32 lg:mt-40">
-    <div class="mx-auto max-w-2xl lg:max-w-none">
-        <div class="rounded-3xl bg-gray-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
-            <div class="mx-auto max-w-4xl">
-                <div class="max-w-xl">
-                    <h2 class="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">Erzähl mir von deinem Projekt</h2>
+<section class="w-full mx-auto px-5vw max-w-8xl mt-24 sm:mt-32 lg:mt-40 bg-gray-950 py-24 sm:py-32 overflow-hidden">
+    <div class="mx-auto max-w-8xl lg:max-w-none">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div class="lg:pr-8 lg:pt-4">
+                <div class="lg:max-w-lg">
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Wir sind dein digitaler Problemlöser
+                    </p>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">
+                        Du brauchst Unterstützung bei der Entwicklung, dem Hosting oder der Optimierung deiner Webanwendung oder deines Online-Shops? Oder suchst du Hilfe bei der Erstellung deiner Marketingstrategie?
+                        <br /><br />
+                        Wir sind dein One-Stop-Shop für alles Digitale! Mit über 20 Jahren Erfahrung in den Bereichen Webentwicklung, SEO, Cloud und SaaS wissen wir, worauf es ankommt. Unser Motto: Wir lieben es, technische Probleme zu lösen und digitale Lösungen auf die Beine zu stellen. Dabei gehen wir immer mit der Zeit und setzen auf die neuesten Technologien. Also worauf wartest du noch? Lass uns ins Gespräch kommen und dein nächstes Digitalprojekt zum Erfolg führen!                    </p>
                     <div class="mt-6 flex">
-                        <Link variant="secondary" href="https://www.linkedin.com/in/julian-koehn/">
-                            Say Hej
+                        <Link variant="secondary" href="/contact">
+                            Lass uns deine Herausforderung lösen!
                         </Link>
-                    </div>
-                    <div class="mt-10 border-t border-white/10 pt-10">
-                        <h3 class="font-display text-base font-semibold text-white">office</h3>
-                        <ul class="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                            <li>
-                                <address class="text-sm not-italic text-neutral-300">
-                                    <strong class="text-white">Neumünster</strong><br>
-                                    Unterjörn 19a<br>24536 Neumünster 
-                                </address>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
+            <Image src={CoWorkingImage}
+                alt="Bild von einem Büro mit Küche, mit Laptop, Kaffee und Notizbuch"
+                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                width={940}
+            />
         </div>
+        
     </div>
 </section>
 
 
-<footer class="relative px-5vw print:hidden border-t border-gray-200 pb-16 pt-16 dark:border-gray-600 mt-14">
+<footer class="relative px-5vw print:hidden  pb-16 pt-16 dark:border-gray-600 mt-14">
     <div class="relative mx-auto grid max-w-8xl grid-cols-4 grid-rows-max-content gap-x-4 md:grid-cols-8 xl:grid-cols-12 xl:gap-x-6">
         <div class="col-span-full md:col-span-3 xl:row-span-2">
             <div class="text-xl font-medium md:text-2xl text-black dark:text-white">

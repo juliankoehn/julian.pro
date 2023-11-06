@@ -112,10 +112,41 @@ const toolingCollection = defineCollection({
 });
 
 
+const servicesCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) => z.object({
+        title: z.string(), // Titel der Dienstleistung
+        name: z.string(), // Name der Dienstleistung für word cloud
+        description: z.string(), // Kurze Beschreibung der Dienstleistung
+        keywords: z.array(z.string()), // Relevante Keywords für SEO
+
+
+
+
+        // section faq
+        faqSection: z.object({
+            heading: z.string(), // Überschrift z.B. "Häufig gestellte Fragen zu ... thema"
+            questions: z.array(z.object({
+                question: z.string(), // Frage in den FAQ
+                answer: z.string(), // Antwort auf die Frage
+            }))
+        }).optional(),
+
+        benefitsSection: z.object({
+            title: z.string(), // Titel der Vorteile
+            description: z.string(), // Beschreibung der Vorteile
+            benefits: z.array(z.string()), // Vorteile der Dienstleistung als Stichpunkte
+        }).optional(), // Vorteile der Dienstleistung
+
+        // nach FAQ wird Kontakt CTA angezeigt vom template
+    }),
+});
+
 export const collections = {
   'blog': blogCollection,
   'cases': caseCollection,
   'categories': categoryCollection,
   'pages': pagesCollection,
   'tooling': toolingCollection,
+  'services': servicesCollection,
 };
