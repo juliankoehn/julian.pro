@@ -22,6 +22,10 @@ export const primaryNav = [
         to: '/about'
     },
     {
+        name: 'Services',
+        to: '/leistungen'
+    },
+    {
         name: 'Cases',
         to: '/cases'
     },
