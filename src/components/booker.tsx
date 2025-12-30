@@ -1,6 +1,5 @@
 import "@calcom/atoms/globals.min.css";
 import { CalProvider, BookerEmbed } from "@calcom/atoms";
-import React from "react";
 
 interface BookerProps {
     username?: string;

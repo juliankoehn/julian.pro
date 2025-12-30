@@ -9,9 +9,6 @@ export default {
             spacing: {
                 "5vw": "5vw",
             },
-            fontSize: {
-                xss: "0.6rem",
-            },
             typography: (theme) => {
                 const fontSize = (size) => {
                     const result = theme(`fontSize.${size}`);
@@ -187,37 +184,6 @@ export default {
                 ".underlined:hover:after, .underlined:focus:after": {
                     backgroundColor: "currentColor",
                     transform: "scaleX(1)",
-                },
-                ".sticky-border": {
-                    borderColor: theme("colors.foreground"),
-                    borderRadius: theme("borderRadius.xl"),
-                    boxShadow: `4px 4px ${theme("colors.black")}`,
-                    position: "relative",
-                },
-                ".sticky-border .page-scroll-progress": {
-                    backgroundColor: theme("colors.blue.400"),
-                    bottom: "-5px",
-                    height: "4px",
-                    maxWidth: "calc(100% - 50px)",
-                    position: "absolute",
-                },
-                ".shadow-fill": {
-                    boxShadow: `4px 4px 0 ${theme("colors.black")}`,
-                },
-                ".shadow-fill:hover": {
-                    "--tw-translate-x": "2px",
-                    "--tw-translate-y": "2px",
-                    "--tw-shadow": "0 0 #0000",
-                    "--tw-shadow-colored": "0 0 #0000",
-                    boxShadow:
-                        "var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)",
-                    transform:
-                        "translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))",
-                },
-                ".stack-sm": {
-                    boxShadow: `10px 10px 0 -1px ${theme(
-                        "colors.black"
-                    )}, 10px 10px 0 ${theme("colors.black")}`,
                 },
             });
         }),
