@@ -1,12 +1,12 @@
 ---
 import Layout from "@/layouts/layout.astro";
 import type { Person, WithContext } from "schema-dts"
-import TechStack from "@/components/tech-stack/tech-stack.astro" // Keep just in case or remove if unused. It was used in replaced content, so I should remove it.
-import SocialProof from "@/components/social-proof.astro";
-import Competencies from "@/components/competencies.astro";
 
 import PageHero from "@/sections/hero.astro"
-// Hero component removed from usage
+import Agitation from "@/sections/agitation.astro"
+import Philosophy from "@/sections/philosophy.astro"
+import Authority from "@/sections/authority.astro"
+
 import { getSinglePage } from '@/lib/content-parser.astro';
 import { sortByDate } from '@/lib/utils/sort';
 import BlogPost from '@/components/blog-post.astro';
@@ -15,7 +15,7 @@ import Link from '@/components/link.astro';
 
 const metaData = {
     title: "Julian Koehn",
-    summary: "I'm a software engineer, currently working at Astro.",
+    summary: "GRC Engineering & Asset-First Security. Building trust through deterministic systems.",
     get description() {
         return `${this.title} - ${this.summary}`
     },
@@ -37,49 +37,58 @@ if (Astro.site) {
 
 const posts = await getSinglePage("blog")
 const sortedPosts = sortByDate(posts)
-
-const totalPages: number = Math.ceil(posts.length / 3);
 const currentPosts = sortedPosts.slice(0, 3);
-
-
 ---
 <Layout>
+    <!-- 1. Hero: Asset-First Security -->
     <PageHero />
-    <Competencies />
-    
-    <section class="w-full px-5vw relative py-20 border-t border-white/10">
+
+    <!-- 2. The Agitation: Compliance Theater -->
+    <Agitation />
+
+    <!-- 3. The Shift: Philosophy / 3 Pillars -->
+    <Philosophy />
+
+    <!-- 4. The Authority: Builder. CTO. Realist. -->
+    <Authority />
+
+    <!-- 5. Engineering Logs: Content -->
+    <section class="w-full px-5vw relative py-32 border-t border-white/5">
         <div class="mx-auto max-w-8xl">
-            <div class="mb-12">
-                 <span class="font-sans font-semibold text-secondary text-sm uppercase tracking-widest mb-2 block">
-                    Thoughts & Analysis
+            <div class="mb-16">
+                 <span class="font-sans font-semibold text-secondary text-sm uppercase tracking-widest mb-4 block">
+                    Deep Dives
                 </span>
-                <h2 class="font-serif font-bold text-primary text-3xl lg:text-5xl">
-                    Key Insights
+                <h2 class="font-serif font-bold text-white text-4xl lg:text-6xl tracking-tight">
+                    Field Notes &<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">Engineering Logs.</span>
                 </h2>
-                <p class="mt-4 text-lg text-gray-400 font-sans max-w-2xl">
-                    Deep dives into security architecture, risk management, and the future of compliance.
+                <p class="mt-6 text-lg text-gray-400 font-sans max-w-2xl">
+                    Thoughts on dismantling the bureaucracy of security.
                 </p>
             </div>
 
             <div
-            class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-8xl"
+            class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
             {
                 currentPosts.map((post) => (
-                <div class="col-span-4 mb-10 flex">
+                <div class="flex flex-col group h-full">
                     <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image}
                         description={post.data.description}
                     />
                 </div>
                 ))
             }
-
-            <div class="col-span-full mt-4">
-                <Link href="/blog">
-                    View Archive
-                </Link>
             </div>
+
+            <div class="mt-12">
+                <Link href="/blog">
+                    View All Logs →
+                </Link>
             </div>
         </div>
     </section>
+
+    <!-- Footer is included via Layout -->
 </Layout>
