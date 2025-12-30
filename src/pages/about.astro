@@ -12,7 +12,7 @@ const techStack = [
 
 <Layout title="About Julian Koehn">
     <!-- Hero Section -->
-    <section class="relative w-full pt-32 pb-24 overflow-hidden">
+    <section class="relative w-full pt-32 pb-24">
         <!-- Aurora Background -->
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/15 blur-[150px] rounded-full animate-pulse-slow"></div>
@@ -34,6 +34,50 @@ const techStack = [
                     Born in '89, building on the web for over 15 years.<br/>
                     <span class="text-white/80">I believe that security is not a feeling – it's a deterministic state.</span>
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Anchors -->
+    <section class="relative w-full py-16 border-t border-white/5">
+        <div class="max-w-8xl mx-auto px-5vw">
+            <p class="text-center text-sm text-gray-500 uppercase tracking-widest mb-10 font-sans">Trusted by leaders in</p>
+            <div class="flex flex-wrap items-center justify-center gap-10 lg:gap-16 opacity-70 hover:opacity-100 transition-all duration-500">
+                <!-- IONOS Logo (dark logo, needs invert) -->
+                <img 
+                    src="/logos/ionos.svg" 
+                    alt="IONOS" 
+                    class="h-8 lg:h-10"
+                />
+                
+                <!-- ITZ Bund (dark logo, needs invert) -->
+                <img 
+                    src="/logos/itzbund.svg" 
+                    alt="ITZ Bund" 
+                    class="h-10 lg:h-12"
+                />
+                
+                <!-- Microsoft Logo -->
+                <svg class="h-6 lg:h-8" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="11" height="11" fill="#f25022"/>
+                    <rect x="12" width="11" height="11" fill="#7fba00"/>
+                    <rect y="12" width="11" height="11" fill="#00a4ef"/>
+                    <rect x="12" y="12" width="11" height="11" fill="#ffb900"/>
+                </svg>
+                
+                <!-- Messe Berlin (dark logo, needs invert) -->
+                <img 
+                    src="/logos/messe-berlin.svg" 
+                    alt="Messe Berlin" 
+                    class="h-8 lg:h-10"
+                />
+                
+                <!-- Kopexa Logo (already light) -->
+                <img 
+                    src="/logos/kopexa.png" 
+                    alt="Kopexa" 
+                    class="h-8 lg:h-10"
+                />
             </div>
         </div>
     </section>
@@ -60,7 +104,7 @@ const techStack = [
                             That taught me one thing: Software exists to solve business problems.
                         </p>
                         <p>
-                            Since then, I've architected cloud-native solutions for the <strong class="text-white">German Government (ITZ Bund)</strong>, built AI-driven content systems with <strong class="text-white">Microsoft</strong>, and scaled complex SaaS architectures.
+                            Since then, I've architected sovereign cloud platforms at <strong class="text-white">IONOS</strong> for the <strong class="text-white">German Government (ITZ Bund)</strong>, built AI-driven content systems with <strong class="text-white">Microsoft</strong>, and scaled complex SaaS architectures.
                         </p>
                         <p class="text-gray-500 italic">
                             I've seen what happens when systems scale, and I've seen what happens when they break.
