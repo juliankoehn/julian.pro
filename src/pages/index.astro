@@ -1,10 +1,12 @@
 ---
 import Layout from "@/layouts/layout.astro";
 import type { Person, WithContext } from "schema-dts"
-import TechStack from "@/components/tech-stack/tech-stack.astro"
+import TechStack from "@/components/tech-stack/tech-stack.astro" // Keep just in case or remove if unused. It was used in replaced content, so I should remove it.
+import SocialProof from "@/components/social-proof.astro";
+import Competencies from "@/components/competencies.astro";
 
 import PageHero from "@/sections/hero.astro"
-import Hero from '@/components/hero.astro';
+// Hero component removed from usage
 import { getSinglePage } from '@/lib/content-parser.astro';
 import { sortByDate } from '@/lib/utils/sort';
 import BlogPost from '@/components/blog-post.astro';
@@ -43,37 +45,41 @@ const currentPosts = sortedPosts.slice(0, 3);
 ---
 <Layout>
     <PageHero />
-
-
+    <Competencies />
     
-    <Hero
-        heading='Neueste Blogbeiträge'
-        description='Bleib auf dem Laufenden mit unseren aktuellsten Blogbeiträgen, in denen ich Einblicke, Tipps und Trends im Bereich der Softwareentwicklung und Technologie teile. Hier sind meine drei letzten Veröffentlichungen, die dir wertvolles Wissen bieten.'
-    />
-    <section class="w-full px-5vw relative">
-    <div
-      class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-8xl"
-    >
-      {
-        currentPosts.map((post) => (
-          <div class="col-span-4 mb-10 flex">
-            <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image}
-                description={post.data.description}
-            />
-          </div>
-        ))
-      }
+    <section class="w-full px-5vw relative py-20 border-t border-white/10">
+        <div class="mx-auto max-w-8xl">
+            <div class="mb-12">
+                 <span class="font-sans font-semibold text-secondary text-sm uppercase tracking-widest mb-2 block">
+                    Thoughts & Analysis
+                </span>
+                <h2 class="font-serif font-bold text-primary text-3xl lg:text-5xl">
+                    Key Insights
+                </h2>
+                <p class="mt-4 text-lg text-gray-400 font-sans max-w-2xl">
+                    Deep dives into security architecture, risk management, and the future of compliance.
+                </p>
+            </div>
 
-      <div class="col-span-full">
-        <Link href="/blog">
-            Mehr lesen
-        </Link>
-       
-      </div>
-    </div>
-  </section>
-    
-    <section class="relative w-full py-24 sm:py-32">
-        <TechStack />
+            <div
+            class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-8xl"
+            >
+            {
+                currentPosts.map((post) => (
+                <div class="col-span-4 mb-10 flex">
+                    <BlogPost url={`/blog/${post.slug}`} title={post.data.title} date={post.data.date} image={post.data.image}
+                        description={post.data.description}
+                    />
+                </div>
+                ))
+            }
+
+            <div class="col-span-full mt-4">
+                <Link href="/blog">
+                    View Archive
+                </Link>
+            </div>
+            </div>
+        </div>
     </section>
 </Layout>

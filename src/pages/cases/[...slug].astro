@@ -36,13 +36,13 @@ const { Content } = await entry.render();
       >
         <div class="mx-auto max-w-2xl lg:max-w-none">
             <h1>
-                <span class="block font-display text-base font-semibold text-gray-950">Case Study</span>
+                <span class="block font-display text-base font-semibold text-secondary">Case Study</span>
                 <span class="sr-only"> - </span>
-                <span class="mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-gray-950 text-balance sm:text-6xl mx-auto">
+                <span class="mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-primary text-balance sm:text-6xl mx-auto">
                     {entry.data.title}
                 </span>
             </h1>  
-            <div class="mt-6 max-w-3xl text-xl text-gray-600 mx-auto">
+            <div class="mt-6 max-w-3xl text-xl text-muted-foreground mx-auto">
                 <p>
                     {entry.data.description}
                 </p>
@@ -50,7 +50,7 @@ const { Content } = await entry.render();
         </div>
 
         <div class="mx-auto max-w-2xl mt-24">
-            <h3 class="font-display font-semibold text-gray-950 text-2xl">
+            <h3 class="font-display font-semibold text-secondary text-2xl">
                 Was wir eingesetzt haben
             </h3>
             <ul role="list" class="my-6 flex flex-wrap items-center justify-center gap-4">
@@ -58,7 +58,7 @@ const { Content } = await entry.render();
                 <li>
                     <a
                         href={`/tooling/${tool.slug}`}
-                        class="inline-flex items-center px-3 py-1.5 rounded-full bg-gray-950 text-white text-sm font-medium transition-colors hover:bg-gray-700"
+                        class="inline-flex items-center px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium transition-colors hover:bg-gray-700"
                     >
                         {tool.data.name}    
                     </a>    
@@ -70,26 +70,26 @@ const { Content } = await entry.render();
       </div>
 
       <div class="mt-24">
-        <div class="border-t border-gray-200 bg-white/50 sm:mt-32 lg:mt-40">
+        <div class="border-t border-muted bg-muted/80 sm:mt-32 lg:mt-40">
             <div class="mx-auto max-w-8xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl lg:max-w-none">
                     <div class="mx-auto max-w-5xl">
-                        <dl class="-mx-6 grid grid-cols-1 text-sm text-gray-950 sm:mx-0 sm:grid-cols-3">
-                            <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
-                                <dt class="font-semibold">Kunde</dt>
+                        <dl class="-mx-6 grid grid-cols-1 text-sm text-secondary sm:mx-0 sm:grid-cols-3">
+                            <div class="border-t border-muted px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
+                                <dt class="font-semibold text-secondary">Kunde</dt>
                                 <dd>
                                     {entry.data.kunde}
                                 </dd>
                             </div>
-                            <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
-                                <dt class="font-semibold">Laufzeit</dt>
+                            <div class="border-t border-muted px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
+                                <dt class="font-semibold text-secondary">Laufzeit</dt>
                                 <dd>
                                     {entry.data.laufzeit}
                                 </dd>
                             </div>
                            
-                            <div class="border-t border-gray-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
-                                <dt class="font-semibold">Links</dt>
+                            <div class="border-t border-muted px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0 hover:bg-gray-950 hover:text-white transition-colors">
+                                <dt class="font-semibold text-secondary">Links</dt>
                                 <dd class="flex flex-col gap-y-1">
                                     {entry.data.links?.map((link) => (
                                         <a href={link.url} class="inline-block mr-2" target="_blank" rel="noopener noreferrer">
@@ -103,7 +103,7 @@ const { Content } = await entry.render();
                 </div>
             </div>
         </div>
-        <div class="border-y border-gray-200 bg-gray-100">
+        <div class="border-y border-muted bg-muted/80">
             <div class="-my-px mx-auto max-w-304 bg-gray-200">
                 <div class="group relative">
                     {
@@ -127,7 +127,7 @@ const { Content } = await entry.render();
     <main class="mx-auto max-w-8xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
         <div class="mx-auto max-w-2xl lg:max-w-none">
             <div class="*:mx-auto *:max-w-3xl *:first:mt-0! *:last:mb-0!">
-                <div class="prose">
+                <div class="prose prose-invert prose-stone">
                     <Content />
                 </div>
             </div>

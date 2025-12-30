@@ -2,6 +2,7 @@
 import BackLink from '@/components/back-link.astro';
 import BlogPost from '@/components/blog-post.astro';
 import Layout from '@/layouts/layout.astro';
+import TopicScroll from '@/components/topic-scroll.astro';
 import { Image } from 'astro:assets';
 import { type CollectionEntry} from 'astro:content'
 import { getSinglePage } from '@/lib/content-parser.astro';
@@ -34,6 +35,8 @@ const getRelatedPosts = (post: CollectionEntry<'blog'>) => {
 }
 
 const relatedPosts = getRelatedPosts(entry)
+
+const allTags = [...new Set(posts.map((post) => post.data.topics).flat())];
 
 const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
@@ -107,10 +110,14 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
         
     </header>
 
+    <div class="px-5vw w-full mx-auto max-w-7xl mb-12">
+        <TopicScroll tags={allTags} />
+    </div>
+
     <main>
         <div
             itemprop="articleBody"
-            class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl prose prose-light mb-24 wrap-break-word dark:prose-dark">
+            class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl prose prose-invert prose-stone mb-24 wrap-break-word">
             <Content />
         </div>
     </main>

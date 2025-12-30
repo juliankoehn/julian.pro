@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon/components";
+---
+<section class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:text-center">
+      <h2 class="text-base font-semibold leading-7 text-secondary uppercase tracking-widest font-sans">Core Competencies</h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-serif">
+        Engineering Trust in a Complex World
+      </p>
+      <p class="mt-6 text-lg leading-8 text-muted-foreground font-sans max-w-3xl mx-auto">
+        Moving beyond "Check-the-box" compliance to build resilient, security-first organizations that scale.
+      </p>
+    </div>
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <!-- Asset First Security -->
+        <div class="flex flex-col">
+          <dt class="flex items-center gap-x-3 text-xl font-bold leading-7 text-foreground font-serif">
+            <Icon name="mdi:shield-lock-outline" class="h-6 w-6 flex-none text-secondary" />
+            <Icon name="mdi:shield-lock-outline" class="h-6 w-6 flex-none text-primary" />
+            Asset-First Security
+          </dt>
+          <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground font-sans">
+            <p class="flex-auto">Focusing on what truly matters: your critical assets. Identifying, classifying, and protecting data where it lives, ensuring your security posture is robust from the inside out.</p>
+          </dd>
+        </div>
+         <!-- GRC Engineering -->
+        <div class="flex flex-col">
+          <dt class="flex items-center gap-x-3 text-xl font-bold leading-7 text-foreground font-serif">
+            <Icon name="mdi:code-braces" class="h-6 w-6 flex-none text-primary" />
+            GRC Engineering
+          </dt>
+          <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground font-sans">
+            <p class="flex-auto">Treating compliance as code. Automating controls, implementing continuous monitoring, and tightly integrating security requirements into your development lifecycle.</p>
+          </dd>
+        </div>
+         <!-- Strategic Advisory -->
+         <div class="flex flex-col">
+          <dt class="flex items-center gap-x-3 text-xl font-bold leading-7 text-foreground font-serif">
+            <Icon name="mdi:compass-outline" class="h-6 w-6 flex-none text-primary" />
+             Governance Strategy
+          </dt>
+          <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-muted-foreground font-sans">
+            <p class="flex-auto">Aligning security initiatives with business goals. Creating flexible governance frameworks that enable speed and innovation without compromising trust or safety.</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>

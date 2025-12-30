@@ -13,13 +13,13 @@ const { subtitle, heading, description, image } = Astro.props;
 
 ---
 
-<section class="w-full bg-white px-5vw py-24 sm:py-32 overflow-hidden">
+<section class="w-full px-5vw py-24 sm:py-32 overflow-hidden">
     <div class="max-w-8xl mx-auto w-full">
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
                 <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl max-w-2xl">
                     {subtitle && (
-                        <span class="block font-display text-base font-semibold text-neutral-950">
+                        <span class="block font-display text-base font-semibold text-secondary">
                             {subtitle}    
                         </span>
                         <span class="sr-only"> - </span>

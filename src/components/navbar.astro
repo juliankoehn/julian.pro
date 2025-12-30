@@ -7,66 +7,108 @@ import { primaryNav } from '@/config';
 
 const navigationClasses = cva([
     // mobile
-    'hidden max-lg:absolute max-lg:top-full max-lg:inset-x-0 max-lg:shadow max-lg:w-full gap-0 max-lg:overflow-auto max-lg:z-50',
-    'max-lg:py-8 max-lg:bg-background',
+    'hidden max-lg:absolute max-lg:top-[calc(100%+1rem)] max-lg:inset-x-0 max-lg:w-full gap-0 max-lg:overflow-auto max-lg:z-50',
+    'max-lg:p-4 max-lg:bg-[#0a0a0a]/90 max-lg:backdrop-blur-xl max-lg:border max-lg:border-white/10 max-lg:rounded-2xl',
     // desktop
-    'lg:flex lg:items-center gap-8'])
+    'lg:flex lg:items-center lg:gap-1'
+])
 ---
 <script>
     let initialized = false;
 
     function initialize() {
+        const burger = document.getElementById('navbar-burger');
+        const close = document.getElementById('mobile-menu-close');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
 
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('#navbar-burger'), 0);
+        if (!burger || !menu || !close) return;
 
-        $navbarBurgers.forEach( el => {
-            el.addEventListener('click', () => {
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
+        const toggleMenu = (show) => {
+            if (show) {
+                menu.classList.remove('hidden');
+                // Force flow
+                menu.offsetHeight;
+                menu.classList.remove('opacity-0');
+                links.forEach(link => {
+                    link.classList.remove('translate-y-4', 'opacity-0');
+                });
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('opacity-0');
+                links.forEach(link => {
+                    link.classList.add('translate-y-4', 'opacity-0');
+                });
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+        };
 
-            if (!$target) return;
-
-            $target.classList.toggle('hidden');    
-            });
-        });
+        burger.addEventListener('click', () => toggleMenu(true));
+        close.addEventListener('click', () => toggleMenu(false));
     }
 
-    window.addEventListener("DOMContentLoaded", () => {
-        if (!initialized) {
-            initialize();
-        }
-    });
-
-    document.addEventListener("astro:after-swap", () => {
-        if (!initialized) {
-            initialize();
-        }
-    });
-
+    window.addEventListener("DOMContentLoaded", () => { if (!initialized) initialize(); });
+    document.addEventListener("astro:after-swap", () => { if (!initialized) initialize(); });
 </script>
 
-<div class="px-5vw py-9 lg:py-12 relative">
-    <div class="text-primary mx-auto flex max-w-8xl items-center justify-between">
-        <div class="flex justify-center gap-4 align-middle">
-            <a href="/" class="flex items-center justify-between lg:mr-3 lg:w-auto flex-row w-full underlined">
-                <span class="font-sans font-semibold text-slate-950 select-none">Julian Koehn</span>
-            </a>
-        </div>
-        <div class="flex lg:hidden">
-            <button id="navbar-burger" data-target="primary-nav" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Open main menu</span>
-                <Icon name="mdi:menu" class="h-6 w-6" />
-            </button>
-        </div>
-        <nav id="primary-nav" class={cx(navigationClasses())}>
-            {primaryNav.map((link) => (
-                <a href={link.to} class="text-lg lg:text-sm block text-center w-auto py-px font-sans relative underlined">
-                    {link.name}    
+<div class="fixed top-6 inset-x-0 z-50 px-4 sm:px-6 pointer-events-none flex justify-center">
+    <div class="w-full max-w-4xl pointer-events-auto">
+        <div class="relative flex items-center justify-between px-6 py-3 rounded-full border border-white/10 bg-[#0a0a0a]/60 backdrop-blur-md shadow-2xl shadow-black/50 transition-all hover:bg-[#0a0a0a]/80">
+            
+            <!-- Logo -->
+            <div class="flex justify-center gap-4 align-middle">
+                <a href="/" class="flex items-center gap-2 group">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center border border-white/10 group-hover:border-white/30 transition-colors">
+                        <span class="font-serif font-bold text-white text-lg">J</span>
+                    </div>
+                    <span class="font-sans font-medium text-white/90 group-hover:text-white transition-colors">Julian Koehn</span>
                 </a>
-            ))}
-        </nav>
-        <div class="hidden"></div>
-       
-    </div>  
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="flex lg:hidden">
+                <button id="navbar-burger" data-target="primary-nav" type="button" class="p-2 text-gray-400 hover:text-white transition-colors">
+                    <span class="sr-only">Open main menu</span>
+                    <Icon name="mdi:menu" class="h-6 w-6" />
+                </button>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav id="primary-nav" class={cx(navigationClasses())}>
+                {primaryNav.map((link) => (
+                    <a href={link.to} class="relative px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors rounded-full hover:bg-white/5 group overflow-hidden">
+                        <span class="relative z-10">{link.name}</span>
+                    </a>
+                ))}
+                <div class="pl-4 ml-2 border-l border-white/10 hidden lg:block">
+                     <a href="/contact" class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-black bg-white rounded-full hover:bg-gray-200 transition-colors">
+                        Get in Touch
+                    </a>
+                </div>
+            </nav>
+        </div>  
+    </div>
 </div>
+
+<!-- Mobile Menu Overlay (Moved outside to ensure full screen coverage) -->
+<div id="mobile-menu" class="fixed inset-0 h-[100dvh] z-[100] bg-black/95 backdrop-blur-3xl hidden flex flex-col justify-center items-center opacity-0 transition-opacity duration-300">
+    <button id="mobile-menu-close" class="absolute top-8 right-8 p-2 text-gray-400 hover:text-white">
+            <Icon name="mdi:close" class="h-8 w-8" />
+    </button>
+    <nav class="flex flex-col items-center gap-8 w-full px-6">
+        {primaryNav.map((link, index) => (
+            <a href={link.to} class="mobile-link text-3xl sm:text-4xl font-serif font-medium text-white/50 hover:text-white transition-colors translate-y-4 opacity-0" style={`transition-delay: ${index * 100}ms`}>
+                {link.name}
+            </a>
+        ))}
+        <a href="/contact" class="mobile-link mt-8 px-8 py-3 text-lg font-bold uppercase tracking-wider text-black bg-white rounded-full hover:bg-gray-200 transition-colors translate-y-4 opacity-0" style={`transition-delay: ${primaryNav.length * 100}ms`}>
+            Get in Touch
+        </a>
+    </nav>
+</div>
+
+<!-- Spacer to prevent content from going under fixed nav -->
+<div class="h-32"></div>

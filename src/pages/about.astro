@@ -7,24 +7,24 @@ import TechStack from '@/components/tech-stack/tech-stack.astro';
 
 const bullets = [
     {
-        title: 'Softwareentwicklung.',
-        content: 'Von Frontend- und Backend-Technologien bis hin zur Entwicklung von mobilen Apps.'
+        title: 'GRC Engineering.',
+        content: 'Implementing compliance as code and automating security controls.'
     },
     {
-        title: "Technische Beratung.",
-        content: "Für strategische Entscheidungen, technische Herausforderungen und Optimierung deiner Technologieinfrastruktur.",
+        title: "Technical Advisory.",
+        content: "Strategic guidance for ISMS implementation (ISO 27001, TISAX).",
     },
     {
-        title: "Coaching und Mentoring.",
-        content: "Für Einzel- und Teamcoaching zur Stärkung deines Entwicklerteams."
+        title: "Asset-First Security.",
+        content: "Identifying and protecting critical assets to reduce risk exposure."
     },
     {
-        title: "Projektmanagement.",
-        content: "Effiziente Planung, Leitung und erfolgreicher Abschluss von Projekten."
+        title: "Interim CTO / CISO.",
+        content: "Leadership for engineering teams and security organizations."
     },
     {
-        title: "Qualitäts- und Performance-Optimierung.",
-        content: "Steigerung der Leistung und Qualität deiner Anwendungen."
+        title: "Audits & Assessments.",
+        content: "Evaluating security posture and readiness for certification."
     }
 ]
 
@@ -32,9 +32,9 @@ const bullets = [
 
 <Layout>
     <Hero
-        subtitle='Softwareentwickler, Consultant und Mentor.'
+        subtitle='CTO & GRC Expert'
         heading="Julian Köhn"
-        description="ich bin hier, um dir zu helfen. Mein Ziel ist es, dich und dein Team dabei zu unterstützen, bessere Software zu entwickeln und technologische Herausforderungen zu meistern."
+        description="I bridge the gap between technical engineering and corporate governance. My mission is to help organizations build secure, compliant, and resilient systems without sacrificing velocity."
     />
     <section class="relative px-5vw w-full">
         <div class="max-w-8xl w-full">
@@ -55,14 +55,14 @@ const bullets = [
                     <div>
                         <ul
                             role="list"
-                            class="text-base text-gray-600 mt-16 lg:mt-0 lg:w-1/2 lg:min-w-132 lg:pl-4"
+                            class="text-base text-muted-foreground mt-16 lg:mt-0 lg:w-1/2 lg:min-w-132 lg:pl-4 font-sans"
                         >
                         {bullets.map((bullet) => (
                             <li class="group mt-10 first:mt-0">
                                 <div
                                     class="pt-10 group-first:pt-0 group-first:before:hidden group-first:after:hidden relative before:absolute after:absolute before:bg-neutral-950 after:bg-neutral-950/10 before:left-0 before:top-0 before:h-px before:w-6 after:left-8 after:right-0 after:top-0 after:h-px"
                                 >
-                                    <strong class="font-semibold text-gray-950">
+                                    <strong class="font-semibold text-secondary font-serif text-lg block mb-2">
                                         {bullet.title}{" "}
                                     </strong>
                                     {bullet.content}
@@ -77,17 +77,12 @@ const bullets = [
     </section>
     <section class="relative px-5vw py-24">
         <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Warum du auf mich<br /> zählen kannst
+            <h2 class="text-3xl font-bold tracking-tight text-secondary sm:text-4xl font-serif">
+                Why partner with me?
             </h2>
-            <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-                Meine Leidenschaft für Technologie und Softwareentwicklung treibt mich an, die besten Lösungen
-                für meine Kunden zu finden. Mein Ziel ist es, deine technologische Vision in die Realität
-                umzusetzen und dich auf dem Weg zum Erfolg zu begleiten.
+            <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground font-sans">
+                My passion for asset-first security and engineering excellence drives me to find the most effective solutions. I don't just advise; I build the systems that secure your future.
             </p>
         </div>
-    </section>
-    <section class="relative w-full py-24 sm:py-32">
-        <TechStack />
     </section>
 </Layout>

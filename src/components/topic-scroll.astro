@@ -1,0 +1,76 @@
+---
+import { slugify } from '@/lib/utils/slugify';
+
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<div class="mb-20 animate-fade-in-up relative group topic-scroll-container" style="animation-delay: 0.1s;">
+    <div class="flex items-center justify-between mb-6 border-b border-white/10 pb-2">
+        <div class="text-sm font-bold text-white/40 uppercase tracking-widest">Explore Topics</div>
+    </div>
+    
+    <div class="relative -mx-5vw px-5vw">
+        <!-- Fade Masks -->
+        <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none sticky-mask"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none sticky-mask-right"></div>
+
+        <div class="flex overflow-x-auto gap-3 pb-4 scrollbar-hide snap-x cursor-grab active:cursor-grabbing select-none" id="topic-scroll-list">
+            {
+                tags.map((tag) => (
+                    <a href={`/blog/topics/${slugify(tag)}`} class="snap-start shrink-0 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/30 transition-all duration-300 group/pill draggable-link">
+                        <span class="text-sm font-medium text-white/70 group-hover/pill:text-white whitespace-nowrap pointer-events-none">{tag}</span>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    const slider = document.getElementById('topic-scroll-list');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    if (slider) {
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        });
+        
+        // Prevent default link behavior when dragging
+        const links = slider.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // If we moved significantly, preventing default
+                if (Math.abs(slider.scrollLeft - scrollLeft) > 5) {
+                    e.preventDefault(); 
+                }
+            });
+        });
+    }
+</script>

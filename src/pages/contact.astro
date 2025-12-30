@@ -1,20 +1,42 @@
 ---
-import ContactForm from '@/components/contact-form.astro';
+import Booker from '@/components/booker.tsx';
 import Hero from '@/components/hero.astro';
 import Layout from '@/layouts/layout.astro';
 ---
 
 <Layout title={`Kontakt`}>
-    <Hero
-        subtitle='Bille Bille'
-        heading='Kontakt'
-        description='Dein Anliegen ist mir wichtig. Schreib mir eine Nachricht und ich melde mich so schnell wie möglich bei dir.'
-    />
-    
+    <section class="relative w-full min-h-[90vh] flex items-center justify-center">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 pointer-events-none">
+             <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 blur-[150px] rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[150px] rounded-full animate-pulse-slow" style="animation-delay: 2s;"></div>
+             <!-- Noise Texture -->
+            <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/noise.png')] mix-blend-overlay"></div>
+        </div>
 
-    <section class="relative px-5vw w-full">
-         <div class="grid gap-10 max-w-4xl w-full">
-            <ContactForm />
+         <div class="max-w-8xl mx-auto w-full px-5vw py-20">
+            <div class="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-20 animate-fade-in-up">
+                 <span class="font-sans font-semibold text-secondary text-sm uppercase tracking-widest mb-6">
+                    Get in Touch
+                </span>
+                <h1 class="font-serif font-bold text-white text-5xl lg:text-7xl tracking-tight leading-[1.1] mb-8">
+                    Let's build <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">The Future.</span>
+                </h1>
+                <p class="text-xl text-white/60 leading-relaxed font-sans max-w-lg mx-auto">
+                    Ready to elevate your engineering strategy? Whether it's ISO 27001 implementation, SOC 2 compliance, or scaling your tech stack—I'm here to help.
+                </p>
+            </div>
+
+            <!-- Booker Embed Full Width -->
+            <div class="w-full animate-fade-in-up" style="animation-delay: 0.2s;">
+                 <!-- Glass Container -->
+                <div class="w-full bg-white/[0.02] backdrop-blur-3xl rounded-3xl border border-white/10 shadow-2xl z-10 overflow-hidden min-h-[700px]">
+                    <div class="w-full h-full p-4 md:p-8">
+                        <Booker client:only="react" />
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
    

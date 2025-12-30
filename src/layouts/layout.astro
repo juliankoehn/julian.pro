@@ -5,6 +5,8 @@ import { ViewTransitions } from 'astro:transitions';
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
 import "@/styles/globals.css";
+import "@fontsource/merriweather";
+import "@fontsource/inter";
 
 const metaData = {
   title: "Julian Koehn",
@@ -80,11 +82,25 @@ const { title, description, index = true, seo } = Astro.props;
   </head>
   <body class="mt-3 bg-background text-foreground">
     <div id="top" />
-    <Navbar />
-    <main class="flex items-center flex-col w-full">
+    
+    <!-- Cinematic Background Effects -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <!-- Noise Texture -->
+        <div class="absolute inset-0 opacity-[0.03] text-transparent" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+        
+        <!-- Ambient Glows -->
+        <div class="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-secondary opacity-10 blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-blue-900 opacity-20 blur-[120px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Main Content wrapper with z-index to sit above background -->
+    <div class="relative z-10 w-full flex flex-col items-center">
+        <Navbar />
+        <main class="flex items-center flex-col w-full">
       <slot />
     </main>
     <Footer />
+    </div> <!-- Close main content wrapper -->
   </body>
 </html>
 
