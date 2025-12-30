@@ -1,5 +1,5 @@
 ---
-import Icon from 'astro-icon';
+import { Icon } from "astro-icon/components";
 import Link from './link.astro';
 import CoWorkingImage from "@/assets/images/coworking.jpg"
 import { Image, Picture } from 'astro:assets';
@@ -36,7 +36,7 @@ import { Image, Picture } from 'astro:assets';
             </div>
             <Image src={CoWorkingImage}
                 alt="Bild von einem Büro mit Küche, mit Laptop, Kaffee und Notizbuch"
-                class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:ml-0"
                 width={940}
             />
         </div>

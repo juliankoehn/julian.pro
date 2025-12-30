@@ -91,3 +91,4 @@ faq:
       answer: "Magento bietet eine breite Palette von Zahlungsgateways, darunter Kreditkarten, PayPal und mehr."
     - question: "Ist Magento skalierbar, um mit dem Wachstum meines Unternehmens Schritt zu halten?"
       answer: "Ja, Magento ermöglicht es, deinen Shop flexibel zu skalieren, um den Anforderungen deines Unternehmens gerecht zu werden."
+---

@@ -1,0 +1,342 @@
+
+> julian.pro@0.0.1 build /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro
+> astro build
+
+16:49:04 [content] Syncing content
+16:49:04 [content] Synced content
+16:49:04 [types] Generated 238ms
+16:49:04 [build] output: "static"
+16:49:04 [build] mode: "static"
+16:49:04 [build] directory: /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/
+16:49:04 [build] Collecting build info...
+16:49:04 [build] ✓ Completed in 259ms.
+16:49:04 [build] Building static entrypoints...
+16:49:06 [astro-icon] Loaded icons from src/icons, mdi, ph, teenyicons
+16:49:08 [vite] ✓ built in 4.03s
+16:49:08 [build] ✓ Completed in 4.06s.
+
+ building client (vite) 
+16:49:08 [vite] transforming...
+16:49:08 [vite] ✓ 36 modules transformed.
+16:49:08 [vite] rendering chunks...
+16:49:08 [vite] computing gzip size...
+16:49:08 [vite] dist/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js   15.33 kB │ gzip:  5.30 kB
+16:49:08 [vite] dist/_astro/client.EAUERNtn.js                                             194.63 kB │ gzip: 60.90 kB
+16:49:08 [vite] ✓ built in 340ms
+
+ generating static routes 
+16:49:08 ▶ src/pages/about.astro
+16:49:08   └─ /about/index.html (+12ms) 
+16:49:08 ▶ src/pages/blog/page/[slug].astro
+16:49:08   ├─ /blog/page/2/index.html (+7ms) 
+16:49:08   ├─ /blog/page/3/index.html (+6ms) 
+16:49:08   ├─ /blog/page/4/index.html (+3ms) 
+16:49:08   ├─ /blog/page/5/index.html (+3ms) 
+16:49:08   ├─ /blog/page/6/index.html (+3ms) 
+16:49:08   ├─ /blog/page/7/index.html (+5ms) 
+16:49:08   ├─ /blog/page/8/index.html (+16ms) 
+16:49:08   ├─ /blog/page/9/index.html (+4ms) 
+16:49:08   ├─ /blog/page/10/index.html (+2ms) 
+16:49:08   ├─ /blog/page/11/index.html (+2ms) 
+16:49:08   └─ /blog/page/12/index.html (+2ms) 
+16:49:09 ▶ src/pages/blog/topics/[topic].astro
+16:49:09   ├─ /blog/topics/agile/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/scrum/index.html (+3ms) 
+16:49:09   ├─ /blog/topics/kanban/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/xp/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/agiles-manifest/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/oss/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/chaos-engineering/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/chaos-testing/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/fault-tolerance/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/resilience/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/reliability/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/webentwicklung/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/wireframe/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/wireflows/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/ux-design/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/webdesign/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/soft-skills/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/qualitäten/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/coding-skills/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/headless-cms/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/saas/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/cms/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/jamstack/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/javascript/index.html (+3ms) 
+16:49:09   ├─ /blog/topics/apis/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/markup/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/static-sites/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/serverless/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/web-development/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/team/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/organisation/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/wordpress/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/static-site-generator/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/astro/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/gatsby/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/nextjs/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/contentful/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/netlify/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/react/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/atomic-design/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/component-driven-development/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/tailwindcss/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/terraform/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/infrastructure-as-code/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/cloud/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/devops/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/performance/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/optimization/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/state-management/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/zustand/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/redux/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/hooks/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/code-quality/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/clean-code/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/callbacks/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/state/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/immutable/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/git/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/conventional-commits/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/commitizen/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/semantic-release/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/developer/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/programmierer/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/einstellungsgespräch/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/vorstellungsgespräch/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/tech-interview/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/coding-interview/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/wireframing/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/wireframes/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/prototyping/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/prototypes/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/user-experience/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/wissenstransfer/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/know-how-teilen/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/knowledge-sharing/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/tech-teams/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/entwicklerteams/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/onboarding/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/dokumentation/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/tools/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/best-practices/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/kubernetes/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/golang/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/controllers/index.html (+1ms) 
+16:49:09   ├─ /blog/topics/typescript/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/type-safety/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/bem/index.html (+2ms) 
+16:49:09   ├─ /blog/topics/scss/index.html (+1ms) 
+16:49:09   └─ /blog/topics/css/index.html (+1ms) 
+16:49:09 ▶ src/pages/blog/index.astro
+16:49:09   └─ /blog/index.html (+3ms) 
+16:49:09 ▶ src/pages/blog/[...slug].astro
+16:49:09   ├─ /blog/agile-entwicklung-fuer-effektives-team-management/index.html (+2ms) 
+16:49:09   ├─ /blog/bedeutung-von-open-source-software/index.html (+2ms) 
+16:49:09   ├─ /blog/chaos-engineering-resilienz/index.html (+1ms) 
+16:49:09   ├─ /blog/bedeutung-von-wireframes/index.html (+1ms) 
+16:49:09   ├─ /blog/eigenschaften-guter-softwareentwickler/index.html (+1ms) 
+16:49:09   ├─ /blog/headless-cms-vergleich-der-top-systeme/index.html (+1ms) 
+16:49:09   ├─ /blog/jamstack-web-architektur/index.html (+2ms) 
+16:49:09   ├─ /blog/kanban-loesungen-arbeitsprobleme/index.html (+2ms) 
+16:49:09   ├─ /blog/statische-site-generatoren-vs-wordpress/index.html (+1ms) 
+16:49:09   ├─ /blog/atomic-design-und-component-driven-development/index.html (+1ms) 
+16:49:09   ├─ /blog/getting-started-with-terraform/index.html (+3ms) 
+16:49:09   ├─ /blog/react-performance-optimization/index.html (+2ms) 
+16:49:09   ├─ /blog/state-management-mit-zustand-statt-redux-in-react/index.html (+2ms) 
+16:49:09   ├─ /blog/separate-business-logic-from-layout/index.html (+2ms) 
+16:49:09   ├─ /blog/react-state-updates-mit-callbacks/index.html (+1ms) 
+16:49:09   ├─ /blog/git-commits-mit-conventional-commits-strukturieren/index.html (+1ms) 
+16:49:09   ├─ /blog/technical-interview-vorbereitung/index.html (+1ms) 
+16:49:09   ├─ /blog/was-sind-wireframes-schluessel-zum-webdesign/index.html (+1ms) 
+16:49:09   ├─ /blog/wireframes-vs-prototypen/index.html (+1ms) 
+16:49:09   ├─ /blog/tipps-fur-effektive-wireframes/index.html (+1ms) 
+16:49:09   ├─ /blog/wissenstransfer-entwicklerteam/index.html (+4ms) 
+16:49:09   ├─ /blog/kubernetes-controller-golang/index.html (+3ms) 
+16:49:09   ├─ /blog/type-safe-react-components-in-typescript/index.html (+1ms) 
+16:49:09   └─ /blog/tailwindcss-meets-react-any-why-its-better-than-scss-and-bem/index.html (+1ms) 
+16:49:09 λ src/pages/blog-feed.xml.ts
+16:49:09   └─ /blog-feed.xml (+7ms) 
+16:49:09 ▶ src/pages/cases/index.astro
+16:49:09   └─ /cases/index.html (+2ms) 
+16:49:09 ▶ src/pages/cases/[...slug].astro
+16:49:09   ├─ /cases/bestmed360-employee-surveys/index.html (+2ms) 
+16:49:09   ├─ /cases/kit-group-event-plattform/index.html (+2ms) 
+16:49:09   ├─ /cases/knk-content-management-solutions/index.html (+3ms) 
+16:49:09   ├─ /cases/mode-centrum-hamburg-digital-signage/index.html (+2ms) 
+16:49:09   ├─ /cases/velcure-nemt-software/index.html (+1ms) 
+16:49:09   └─ /cases/wizdom-digital-learning/index.html (+1ms) 
+16:49:09 ▶ src/pages/contact.astro
+16:49:09   └─ /contact/index.html (+1ms) 
+16:49:09 ▶ src/pages/leistungen/[service].astro
+16:49:09   ├─ /leistungen/cloud-computing/index.html (+12ms) 
+16:49:09   ├─ /leistungen/content-marketing/index.html (+1ms) 
+16:49:09   ├─ /leistungen/datenanalyse-visualisierung/index.html (+1ms) 
+16:49:09   ├─ /leistungen/datenbankentwicklung/index.html (+1ms) 
+16:49:09   ├─ /leistungen/cybersicherheit/index.html (+1ms) 
+16:49:09   ├─ /leistungen/ecommerce-entwicklung/index.html (+1ms) 
+16:49:09   ├─ /leistungen/mobile-app-entwicklung/index.html (+1ms) 
+16:49:09   ├─ /leistungen/saas-entwicklung/index.html (+1ms) 
+16:49:09   ├─ /leistungen/seo/index.html (+1ms) 
+16:49:09   ├─ /leistungen/iot-entwicklung/index.html (+1ms) 
+16:49:09   ├─ /leistungen/softwareentwicklung/index.html (+1ms) 
+16:49:09   └─ /leistungen/webentwicklung/index.html (+1ms) 
+16:49:09 ▶ src/pages/leistungen/index.astro
+16:49:09   └─ /leistungen/index.html (+5ms) 
+16:49:09 ▶ src/pages/tooling/[...slug].astro
+(node:81889) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+16:49:09   ├─ /tooling/aws/index.htmlError: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Error: Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at renderNodeDestructive (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5297:7)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at renderElement (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4787:7)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at performWork (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:6344:13)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:7021:27
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+Objects are not valid as a React child (found: object with keys {name, hooks}). If you meant to render a collection of children, use an array instead.
+  Stack trace:
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5544:13)
+    at finishFunctionComponent (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:4688:9)
+    at retryNode (/Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/cjs/react-dom-server.node.production.js:5503:16)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at node:internal/process/task_queues:151:7
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+ ELIFECYCLE  Command failed with exit code 1.

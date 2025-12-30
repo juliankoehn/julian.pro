@@ -109,3 +109,4 @@ faq:
     - question: "Wie kann ich Kontakt aufnehmen, um weitere Informationen zu erhalten?"
       answer: "Bereit, die Vorteile von Google Cloud zu nutzen? Kontaktiere uns jetzt, um mehr über unsere Dienstleistungen zu erfahren."
 
+---

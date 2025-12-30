@@ -96,3 +96,4 @@ faq:
       answer: "Hetzner akzeptiert verschiedene Zahlungsmethoden, darunter Kreditkarten, Lastschrift und Überweisung."
     - question: "Kann ich Hetzner-Dienste international nutzen?"
       answer: "Ja, Hetzner bietet weltweite Dienste und unterstützt Kunden auf der ganzen Welt."
+---

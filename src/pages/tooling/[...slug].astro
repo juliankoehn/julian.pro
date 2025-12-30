@@ -3,7 +3,7 @@ import type { GetStaticPaths } from "astro";
 import { getSinglePage } from '@/lib/content-parser.astro';
 import Layout from '@/layouts/layout.astro';
 import { marked } from 'marked';
-import Icon from 'astro-icon';
+import { Icon } from "astro-icon/components";
 import Link from '@/components/link.astro';
 
 export const getStaticPaths = ( async () => {
@@ -152,7 +152,7 @@ const { Content } = await page.render();
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl max-w-2xl">
                 {data.ctaSection.actionCall}
             </h2>
-            <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+            <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
                 <Link
                     href="/contact"
                 >

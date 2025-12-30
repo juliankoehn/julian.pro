@@ -80,4 +80,4 @@ faq:
       answer: "Ja, AWS bietet Tools und Ressourcen zur Unterstützung der Migration von vorhandenen Anwendungen und Workloads in die Cloud."
     - question: "Wie kann ich mit AWS in Kontakt treten, um weitere Informationen zu erhalten?"
       answer: "Du kannst die offizielle AWS-Website besuchen, um mehr über die Dienste und Kontaktoptionen zu erfahren."
-
+---

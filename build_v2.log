@@ -1,0 +1,185 @@
+
+> julian.pro@0.0.1 build /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro
+> astro build
+
+16:47:03 [vite] Re-optimizing dependencies because vite config has changed
+16:47:04 [content] Syncing content
+16:47:04 [content] Synced content
+16:47:04 [types] Generated 415ms
+16:47:04 [build] output: "static"
+16:47:04 [build] mode: "static"
+16:47:04 [build] directory: /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/
+16:47:04 [build] Collecting build info...
+16:47:04 [build] ✓ Completed in 476ms.
+16:47:04 [build] Building static entrypoints...
+16:47:06 [astro-icon] Loaded icons from src/icons, mdi, teenyicons
+16:47:08 [vite] ✓ built in 4.11s
+16:47:08 [build] ✓ Completed in 4.14s.
+
+ building client (vite) 
+16:47:08 [vite] transforming...
+16:47:08 [vite] ✓ 36 modules transformed.
+16:47:08 [vite] rendering chunks...
+16:47:08 [vite] computing gzip size...
+16:47:08 [vite] dist/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js   15.33 kB │ gzip:  5.30 kB
+16:47:08 [vite] dist/_astro/client.EAUERNtn.js                                             194.63 kB │ gzip: 60.90 kB
+16:47:08 [vite] ✓ built in 346ms
+
+ generating static routes 
+16:47:08 ▶ src/pages/about.astro
+16:47:08   └─ /about/index.html (+11ms) 
+16:47:08 ▶ src/pages/blog/page/[slug].astro
+16:47:08   ├─ /blog/page/2/index.html (+7ms) 
+16:47:08   ├─ /blog/page/3/index.html (+6ms) 
+16:47:08   ├─ /blog/page/4/index.html (+3ms) 
+16:47:08   ├─ /blog/page/5/index.html (+3ms) 
+16:47:08   ├─ /blog/page/6/index.html (+4ms) 
+16:47:08   ├─ /blog/page/7/index.html (+5ms) 
+16:47:08   ├─ /blog/page/8/index.html (+16ms) 
+16:47:08   ├─ /blog/page/9/index.html (+5ms) 
+16:47:08   ├─ /blog/page/10/index.html (+3ms) 
+16:47:08   ├─ /blog/page/11/index.html (+3ms) 
+16:47:08   └─ /blog/page/12/index.html (+3ms) 
+16:47:08 ▶ src/pages/blog/topics/[topic].astro
+16:47:08   ├─ /blog/topics/agile/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/scrum/index.html (+3ms) 
+16:47:08   ├─ /blog/topics/kanban/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/xp/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/agiles-manifest/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/oss/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/chaos-engineering/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/chaos-testing/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/fault-tolerance/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/resilience/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/reliability/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/webentwicklung/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/wireframe/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/wireflows/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/ux-design/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/webdesign/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/soft-skills/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/qualitäten/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/coding-skills/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/headless-cms/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/saas/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/cms/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/jamstack/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/javascript/index.html (+3ms) 
+16:47:08   ├─ /blog/topics/apis/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/markup/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/static-sites/index.html (+3ms) 
+16:47:08   ├─ /blog/topics/serverless/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/web-development/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/team/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/organisation/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/wordpress/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/static-site-generator/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/astro/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/gatsby/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/nextjs/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/contentful/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/netlify/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/react/index.html (+3ms) 
+16:47:08   ├─ /blog/topics/atomic-design/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/component-driven-development/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/tailwindcss/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/terraform/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/infrastructure-as-code/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/cloud/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/devops/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/performance/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/optimization/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/state-management/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/zustand/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/redux/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/hooks/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/code-quality/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/clean-code/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/callbacks/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/state/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/immutable/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/git/index.html (+1ms) 
+16:47:08   ├─ /blog/topics/conventional-commits/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/commitizen/index.html (+2ms) 
+16:47:08   ├─ /blog/topics/semantic-release/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/developer/index.html (+1ms) 
+16:47:09   ├─ /blog/topics/programmierer/index.html (+1ms) 
+16:47:09   ├─ /blog/topics/einstellungsgespräch/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/vorstellungsgespräch/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/tech-interview/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/coding-interview/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/wireframing/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/wireframes/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/prototyping/index.html (+1ms) 
+16:47:09   ├─ /blog/topics/prototypes/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/user-experience/index.html (+1ms) 
+16:47:09   ├─ /blog/topics/wissenstransfer/index.html (+1ms) 
+16:47:09   ├─ /blog/topics/know-how-teilen/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/knowledge-sharing/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/tech-teams/index.html (+3ms) 
+16:47:09   ├─ /blog/topics/entwicklerteams/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/onboarding/index.html (+4ms) 
+16:47:09   ├─ /blog/topics/dokumentation/index.html (+3ms) 
+16:47:09   ├─ /blog/topics/tools/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/best-practices/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/kubernetes/index.html (+1ms) 
+16:47:09   ├─ /blog/topics/golang/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/controllers/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/typescript/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/type-safety/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/bem/index.html (+2ms) 
+16:47:09   ├─ /blog/topics/scss/index.html (+2ms) 
+16:47:09   └─ /blog/topics/css/index.html (+1ms) 
+16:47:09 ▶ src/pages/blog/index.astro
+16:47:09   └─ /blog/index.html (+3ms) 
+16:47:09 ▶ src/pages/blog/[...slug].astro
+16:47:09   ├─ /blog/agile-entwicklung-fuer-effektives-team-management/index.html (+3ms) 
+16:47:09   ├─ /blog/bedeutung-von-open-source-software/index.html (+2ms) 
+16:47:09   ├─ /blog/chaos-engineering-resilienz/index.html (+2ms) 
+16:47:09   ├─ /blog/bedeutung-von-wireframes/index.html (+2ms) 
+16:47:09   ├─ /blog/eigenschaften-guter-softwareentwickler/index.html (+1ms) 
+16:47:09   ├─ /blog/headless-cms-vergleich-der-top-systeme/index.html (+1ms) 
+16:47:09   ├─ /blog/jamstack-web-architektur/index.html (+2ms) 
+16:47:09   ├─ /blog/kanban-loesungen-arbeitsprobleme/index.html (+2ms) 
+16:47:09   ├─ /blog/statische-site-generatoren-vs-wordpress/index.html (+2ms) 
+16:47:09   ├─ /blog/atomic-design-und-component-driven-development/index.html (+2ms) 
+16:47:09   ├─ /blog/getting-started-with-terraform/index.html (+3ms) 
+16:47:09   ├─ /blog/react-performance-optimization/index.html (+2ms) 
+16:47:09   ├─ /blog/state-management-mit-zustand-statt-redux-in-react/index.html (+1ms) 
+16:47:09   ├─ /blog/separate-business-logic-from-layout/index.html (+1ms) 
+16:47:09   ├─ /blog/react-state-updates-mit-callbacks/index.html (+1ms) 
+16:47:09   ├─ /blog/git-commits-mit-conventional-commits-strukturieren/index.html (+2ms) 
+16:47:09   ├─ /blog/technical-interview-vorbereitung/index.html (+2ms) 
+16:47:09   ├─ /blog/was-sind-wireframes-schluessel-zum-webdesign/index.html (+1ms) 
+16:47:09   ├─ /blog/wireframes-vs-prototypen/index.html (+2ms) 
+16:47:09   ├─ /blog/tipps-fur-effektive-wireframes/index.html (+1ms) 
+16:47:09   ├─ /blog/wissenstransfer-entwicklerteam/index.html (+4ms) 
+16:47:09   ├─ /blog/kubernetes-controller-golang/index.html (+3ms) 
+16:47:09   ├─ /blog/type-safe-react-components-in-typescript/index.html (+2ms) 
+16:47:09   └─ /blog/tailwindcss-meets-react-any-why-its-better-than-scss-and-bem/index.html (+1ms) 
+16:47:09 λ src/pages/blog-feed.xml.ts
+16:47:09   └─ /blog-feed.xml (+7ms) 
+16:47:09 ▶ src/pages/cases/index.astro
+16:47:09   └─ /cases/index.htmlUnable to locate the "ph" icon set!
+  Stack trace:
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/layout_CQ109Xqa.mjs:443:17
+    at AstroComponentInstance.init (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5618:29)
+    at Object.render (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:6032:23)
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5135:18
+    at createBufferedRenderer (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:970:10)
+    at Array.map (<anonymous>)
+    at renderChild (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5526:18)
+    at AstroComponentInstance.render (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5632:17)
+    at renderChild (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5526:18)
+    at new BufferedRenderer (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:946:26)
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5133:14
+    at RenderTemplateResult.render (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5132:39)
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5549:14
+    at createBufferedRenderer (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:970:10)
+    at Array.map (<anonymous>)
+    at renderChild (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5513:12)
+    at new BufferedRenderer (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:946:26)
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5133:14
+    at RenderTemplateResult.render (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5132:39)
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5502:30
+ ELIFECYCLE  Command failed with exit code 1.

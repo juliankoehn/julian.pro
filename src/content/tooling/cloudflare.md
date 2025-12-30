@@ -76,3 +76,4 @@ faq:
       answer: "Cloudflare betreibt Rechenzentren weltweit in über 200 Städten, um den Datenverkehr so nah wie möglich an den Endbenutzern zu optimieren."
     - question: "Wie kann ich Kontakt zu Cloudflare aufnehmen, um weitere Informationen zu erhalten?"
       answer: "Wir kümmern uns um die Kommunikation mit Cloudflare, um deine Fragen zu beantworten und dir Unterstützung zu bieten."
+---

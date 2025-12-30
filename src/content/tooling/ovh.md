@@ -97,3 +97,4 @@ faq:
       answer: "OVH akzeptiert verschiedene Zahlungsmethoden, darunter Kreditkarten, Lastschrift und Überweisung."
     - question: "Kann ich OVH-Dienste international nutzen?"
       answer: "Ja, OVH bietet weltweite Dienste und unterstützt Kunden auf der ganzen Welt."
+---

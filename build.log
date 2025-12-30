@@ -1,0 +1,56 @@
+
+> julian.pro@0.0.1 build /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro
+> astro build
+
+16:46:21 [content] Syncing content
+16:46:21 [content] Synced content
+16:46:21 [types] Generated 240ms
+16:46:21 [build] output: "static"
+16:46:21 [build] mode: "static"
+16:46:21 [build] directory: /Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/
+16:46:21 [build] Collecting build info...
+16:46:21 [build] ✓ Completed in 262ms.
+16:46:21 [build] Building static entrypoints...
+16:46:23 [astro-icon] Loaded icons from src/icons
+16:46:24 [vite] ✓ built in 3.53s
+16:46:24 [build] ✓ Completed in 3.55s.
+
+ building client (vite) 
+16:46:24 [vite] transforming...
+16:46:25 [vite] ✓ 36 modules transformed.
+16:46:25 [vite] rendering chunks...
+16:46:25 [vite] computing gzip size...
+16:46:25 [vite] dist/_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js   15.33 kB │ gzip:  5.30 kB
+16:46:25 [vite] dist/_astro/client.EAUERNtn.js                                             194.63 kB │ gzip: 60.90 kB
+16:46:25 [vite] ✓ built in 329ms
+
+ generating static routes 
+16:46:25 ▶ src/pages/about.astro
+16:46:25   └─ /about/index.htmlUnable to locate the "mdi" icon set!
+  Stack trace:
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/layout_CJ1bFDSo.mjs:443:17
+    at AstroComponentInstance.init (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5618:29)
+    at Object.render (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:6032:23)
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5135:18
+    at createBufferedRenderer (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:970:10)
+    at Array.map (<anonymous>)
+    at renderChild (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5526:18)
+    at AstroComponentInstance.render (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5632:17)
+    at renderChild (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5526:18)
+    at new BufferedRenderer (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:946:26)
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5133:14
+    at RenderTemplateResult.render (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5132:39)
+    at AstroComponentInstance.renderImpl (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5638:14)
+    at Object.render (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:6032:23)
+    at file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:5135:18
+    at createBufferedRenderer (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/dist/chunks/astro/server_-bTUMADH.mjs:970:10)
+    at Array.map (<anonymous>)
+    at renderToString (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/astro@5.16.6_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.30.2_rollup@4.54.0_typescript@5.9.3_yaml@2.8.2/node_modules/astro/dist/runtime/server/render/astro/render.js:35:24)
+    at async lastNext (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/astro@5.16.6_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.30.2_rollup@4.54.0_typescript@5.9.3_yaml@2.8.2/node_modules/astro/dist/core/render-context.js:215:25)
+    at async callMiddleware (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/astro@5.16.6_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.30.2_rollup@4.54.0_typescript@5.9.3_yaml@2.8.2/node_modules/astro/dist/core/middleware/callMiddleware.js:11:10)
+    at async generatePath (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/astro@5.16.6_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.30.2_rollup@4.54.0_typescript@5.9.3_yaml@2.8.2/node_modules/astro/dist/core/build/generate.js:381:16)
+    at async generatePage (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/astro@5.16.6_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.30.2_rollup@4.54.0_typescript@5.9.3_yaml@2.8.2/node_modules/astro/dist/core/build/generate.js:195:9)
+    at async staticBuild (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/astro@5.16.6_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.30.2_rollup@4.54.0_typescript@5.9.3_yaml@2.8.2/node_modules/astro/dist/core/build/static-build.js:87:5)
+    at async AstroBuilder.run (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/astro@5.16.6_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.30.2_rollup@4.54.0_typescript@5.9.3_yaml@2.8.2/node_modules/astro/dist/core/build/index.js:188:7)
+    at async build (file:///Users/juliankoehn/workbox/github.com/juliankoehn/julian.pro/node_modules/.pnpm/astro@5.16.6_@types+node@25.0.3_jiti@2.6.1_lightningcss@1.30.2_rollup@4.54.0_typescript@5.9.3_yaml@2.8.2/node_modules/astro/dist/cli/build/index.js:29:3)
+ ELIFECYCLE  Command failed with exit code 1.
