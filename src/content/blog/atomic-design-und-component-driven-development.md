@@ -1,6 +1,7 @@
 ---
 title: Atomic Design und Component Driven Development in React
 description: Lerne wie sich mit Atomic Design wiederverwendbare Components erstellen lassen. Mit praktischen Beispielen und Tailwind CSS.
+language: de
 topics:
   - react
   - atomic design

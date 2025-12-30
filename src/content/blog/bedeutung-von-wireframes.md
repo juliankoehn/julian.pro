@@ -1,6 +1,7 @@
 ---
 title: Die Bedeutung von Wireframes in der Webentwicklung
 description: Lerne warum Wireframes ein essenzieller Bestandteil des Webdesigns sind und wie sie optimal eingesetzt werden.
+language: de
 topics:
   - webentwicklung
   - wireframe

@@ -1,6 +1,7 @@
 ---
 title: Wireframes vs. Prototypen – Der entscheidende Unterschied
 description: Erfahre wie sich Wireframes und Prototypes unterscheiden und warum beide wichtige Rollen im Webdesign-Prozess spielen. 
+language: de
 topics:
   - wireframes
   - prototyping 

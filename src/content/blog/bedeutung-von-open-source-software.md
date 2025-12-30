@@ -1,6 +1,7 @@
 ---
 title: Die Bedeutung von Open Source Software - Vorteile, Herausforderungen und Einsatz
 description: Dieser Artikel untersucht die Vorzüge von Open Source Software sowie Herausforderungen. Zudem wird die Rolle von Open Source in der IT-Branche beleuchtet.
+language: de
 topics:
   - oss
 author: "Julian Köhn"

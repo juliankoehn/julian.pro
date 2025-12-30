@@ -1,6 +1,7 @@
 ---
 title: Agile Entwicklung für effektives Team Management
 description: Lerne die Prinzipien der agilen Software-Entwicklung kennen und wie sich diese in der Praxis umsetzen lassen.
+language: de
 topics:
   - agile
   - scrum

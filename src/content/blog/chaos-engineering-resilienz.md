@@ -1,6 +1,7 @@
 ---
 title: Chaos Engineering - So erhöhst du die Resilienz und Fehlertoleranz deines Systems
 description: Lerne wie Chaos Engineering durch realistische Tests Ausfälle simuliert und so die Fehlertoleranz von Software erhöht.
+language: de
 topics:
   - chaos engineering
   - chaos testing

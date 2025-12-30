@@ -1,6 +1,7 @@
 ---
 title: 11 Tipps zur Erstellung effektiver Wireframes für optimales UX-Design
 description: Mit diesen Tipps gelingt die Erstellung nutzerfreundlicher Wireframes, die die User Experience verbessern.
+language: de
 topics:
   - wireframing
   - wireframes

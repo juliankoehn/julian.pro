@@ -1,6 +1,7 @@
 ---
 title: "Saubere Git Commits mit Conventional Commits"
 description: Lerne wie sich mit Conventional Commits eine konsistente und maschinenlesbare Git Commit History erzeugen lässt.
+language: de
 author: "Julian Köhn"
 image:
   url: "../../assets/images/brett-jordan-4vMfb8srdTQ-unsplash.jpg"

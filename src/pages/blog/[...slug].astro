@@ -43,6 +43,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 <Layout
     title={entry.data.title}
     description={entry.data.description}
+    language={entry.data.language}
     seo={{
         openGraph: {
             basic: {

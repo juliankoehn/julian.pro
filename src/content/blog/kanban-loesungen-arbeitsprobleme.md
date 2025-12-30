@@ -1,6 +1,7 @@
 ---
 title: "Kanban in der Arbeitswelt - Was sind die Vorteile dieser Methode?"
 description: Erfahre, wie Kanban gängige Arbeitsprobleme löst und die Organisation optimiert.
+language: de
 topics:
   - kanban
   - team

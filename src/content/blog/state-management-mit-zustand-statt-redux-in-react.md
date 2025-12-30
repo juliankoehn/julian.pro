@@ -1,6 +1,7 @@
 ---
 title: State Management mit Zustand statt Redux in React (2023)
 description: Redux ist überholt. Lerne wie Zustand eine einfachere Alternative für State Management in React Apps bietet.
+language: de
 author: "Julian Köhn"
 image:
   url: "../../assets/images/artem-sapegin-ZMraoOybTLQ-unsplash.jpg"

@@ -1,6 +1,7 @@
 ---
 title: Wissenstransfer in Entwicklerteams gezielt gestalten
 description: Dieser Leitfaden stellt effektive Methoden und Best Practices vor, um Wissen in Tech Teams optimal auszutauschen und zu teilen.
+language: de
 topics:  
     - wissenstransfer  
     - know-how teilen

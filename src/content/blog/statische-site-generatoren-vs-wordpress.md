@@ -1,6 +1,7 @@
 ---
 title: Overengineering vermeiden - Warum Statische Site Generatoren WordPress überlegen sind
 description: Vergleich zwischen WordPress und Static Site Generatoren. Wann lohnt sich ein moderner SSG wie Astro statt WordPress?
+language: de
 topics:  
     - wordpress
     - static site generator 

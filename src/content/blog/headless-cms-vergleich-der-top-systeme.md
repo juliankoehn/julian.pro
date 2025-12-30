@@ -1,6 +1,7 @@
 ---
 title: "Headless CMS im Vergleich: Die besten Systeme für SaaS und On-Premise"
 description: Erfahre, welches Headless CMS am besten zu deinen Anforderungen passt. Unser Vergleich der führenden Systeme zeigt die Vorteile gegenüber traditionellen CMS wie Contao, Wordpress und Typo3.
+language: de
 topics:
   - headless-cms
   - saas

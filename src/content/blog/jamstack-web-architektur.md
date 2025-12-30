@@ -1,6 +1,7 @@
 ---
 title: "JAMstack - die moderne Web-Architektur für schnellere, sicherere Sites"
 description: Dieser umfassende Artikel erklärt das Konzept von JAMstack - den Aufbau, die Prinzipien, Vorteile und Anwendungsfälle dieser zukunftsweisenden Web-Architektur.
+language: de
 topics:
   - jamstack
   - javascript

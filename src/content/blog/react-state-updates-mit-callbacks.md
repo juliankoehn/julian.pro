@@ -1,6 +1,7 @@
 ---
 title: React State Updates mit Callbacks - Warum ist das sinnvoll?
 description: Lerne die Vorteile von Callbacks bei React State Updates kennen. So schreibst du sauberen und sicheren Code.
+language: de
 author: "Julian Köhn"
 image:
   url: "../../assets/images/ferenc-almasi-tvHtIGbbjMo-unsplash.jpg"

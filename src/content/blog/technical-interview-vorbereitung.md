@@ -1,6 +1,7 @@
 ---
 title: So meisterst du das Technical Interview als Entwickler
 description: Mit diesem Artikel perfekt vorbereitet in das Bewerbungsgespräch als Developer. Inklusive Tipps zu Technischen Fragen, Soft Skills und Mindset.
+language: de
 topics:  
   - developer
   - programmierer

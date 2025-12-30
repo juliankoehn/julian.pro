@@ -1,6 +1,7 @@
 ---
 title: Was zeichnet einen guten Softwareentwickler aus? 12 Must-have Eigenschaften
 description: Dieser Artikel erklärt ausführlich welche Fähigkeiten, Skills und Eigenschaften hervorragende Softwareentwickler kennzeichnen. Mit konkreten Beispielen und Tipps.
+language: de
 topics:
   - soft skills
   - qualitäten

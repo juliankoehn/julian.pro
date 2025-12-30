@@ -1,6 +1,7 @@
 ---
 title: Was sind Wireframes und warum sind sie der Schlüssel zum erfolgreichen Webdesign?
 description: Dieser Artikel erklärt grundlegend was Wireframes sind und warum sie für effektives digitales Design unersetzlich sind.
+language: de
 topics:
   - wireframing
   - wireframes
